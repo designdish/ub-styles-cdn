@@ -1,0 +1,520 @@
+html,
+body {
+    overflow: unset;
+}
+
+
+/* ############### Global site sizes and paddings ############### */
+
+
+/* Global site paddings for large Desktops */
+
+.section_wrapper,
+.container,
+.with_aside .content_wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+
+/* Global site paddings for small Desktops */
+
+@media only screen and (min-width: 960px) and (max-width: 1239px) {
+
+    #Wrapper {
+        max-width: 1239px;
+    }
+    .section_wrapper,
+    .container,
+    .with_aside .content_wrapper {
+        max-width: 1239px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+
+/* Global site paddings for Tablets */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+    #Wrapper {
+        max-width: 959px;
+    }
+    .section_wrapper,
+    .container,
+    .with_aside .content_wrapper {
+        max-width: 959px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+/* Global site paddings for Smartphones */
+
+@media only screen and (max-width: 767px) {
+
+    #Wrapper {
+        max-width: 90%;
+        max-width: calc(100% - 67px);
+    }
+    .section_wrapper,
+    .container,
+    .four.columns .widget-area {
+        max-width: 768px !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+
+.tel-no {
+    display: none;
+}
+
+
+/* ### Menu ### */
+
+@media only screen and (min-width: 1025px) and (max-width: 1239px) {
+    .header-stack.header-center #Top_bar .logo {
+        margin-top: 0px;
+        height: 10px;
+    }
+    #Top_bar #menu>ul {
+        padding: 30px 0px;
+    }
+    #Top_bar #menu ul li.submenu .menu-toggle {
+        color: #ffffff;
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1239px) {
+    #Top_bar .menu>li#menu-item-1167>a span:not(.description) {
+        padding: 5px 15px!important;
+    }
+    #Top_bar #menu {
+        width: 100%;
+    }
+}
+
+#Top_bar .menu li ul li {
+    width: 225px;
+}
+
+.menu-item a.menu-image-title-before.menu-image-not-hovered img,
+.menu-item a.menu-image-hovered.menu-image-title-before .menu-image-hover-wrapper {
+    width: 16px;
+    height: 16px;
+}
+
+.external-top:after {
+    color: #7a7a7a!important;
+    opacity: .8;
+    background: url(https://www.teamviewer.com/resources/images/icons/external-link-arrow.svg) top right no-repeat;
+}
+
+.external-top:after,
+.external:after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 10px;
+    margin-top: 15px;
+}
+
+#Footer,
+#Footer .widget_recent_entries ul li a {
+    z-index: 99;
+}
+
+
+/* ###### Start Price Box for Solution Pages ###### */
+
+.pricebox {
+    background-color: #fdfdfd;
+    box-shadow: 2px 2px 6px 0 rgba(157, 164, 168, 0.4);
+    /* border: 1px solid #00adf7; */
+}
+
+.pricebox .hr_color {
+    margin-bottom: 0;
+    width: 60%;
+}
+
+.pricebox-inside {
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.pricebox-inside ul {
+    list-style: none;
+    margin: 0px;
+}
+
+.pricebox-inside a,
+a:active {
+    color: #038ff4;
+}
+
+.pricebox-inside ul li {
+    text-align: center;
+    padding: 11px 10px;
+    display: block;
+    margin: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.pricebox .vc_column-inner {
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+}
+
+@media (min-width: 1920px) {
+    .pricebox {
+        width: 30%;
+        margin: 15px;
+    }
+}
+
+@media (min-width: 1240px) and (max-width: 1919px) {
+    .pricebox {
+        width: 32%;
+        margin: 6px;
+    }
+    .prixebox-sub {
+        font-size: 1.2em!important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1239px) {
+    .pricebox {
+        width: 30.6%;
+        margin: 10px;
+    }
+    .prixebox-sub {
+        font-size: 1.2em!important;
+    }
+}
+
+@media (max-width: 767px) {
+    .pricebox {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+
+
+/* ###### End Price Box for Solution Pages ###### */
+
+.frontpage-img-wrapper-01 .mcb-wrap-inner,
+.frontpage-img-wrapper-04 .mcb-wrap-inner {
+    max-width: 1100px;
+    float: left !important;
+}
+
+
+/*Updated Css*/
+
+
+/* ############### Global site sizes and paddings ############### */
+
+
+/* Global site paddings for large Desktops */
+
+.section_wrapper,
+.container,
+.with_aside .content_wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+
+/* Global site paddings for small Desktops */
+
+@media only screen and (min-width: 960px) and (max-width: 1239px) {
+
+    #Wrapper {
+        max-width: 1239px;
+    }
+    .section_wrapper,
+    .container,
+    .with_aside .content_wrapper {
+        max-width: 1239px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+
+/* Global site paddings for Tablets */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+    #Wrapper {
+        max-width: 959px;
+    }
+    .section_wrapper,
+    .container,
+    .with_aside .content_wrapper {
+        max-width: 959px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+/* Global site paddings for Smartphones */
+
+@media only screen and (max-width: 767px) {
+
+    #Wrapper {
+        max-width: 90%;
+        max-width: calc(100% - 67px);
+    }
+    .section_wrapper,
+    .container,
+    .four.columns .widget-area {
+        max-width: 768px !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+
+.tel-no {
+    display: none;
+}
+
+
+/* ### Menu ### */
+
+@media only screen and (min-width: 1025px) and (max-width: 1239px) {
+    .header-stack.header-center #Top_bar .logo {
+        margin-top: 0px;
+        height: 10px;
+    }
+    #Top_bar #menu>ul {
+        padding: 30px 0px;
+    }
+    #Top_bar #menu ul li.submenu .menu-toggle {
+        color: #ffffff;
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1239px) {
+    #Top_bar .menu>li#menu-item-1167>a span:not(.description) {
+        padding: 5px 15px!important;
+    }
+    #Top_bar #menu {
+        width: 100%;
+    }
+}
+
+#Top_bar .menu li ul li {
+    width: 255px;
+}
+
+.menu-item a.menu-image-title-before.menu-image-not-hovered img,
+.menu-item a.menu-image-hovered.menu-image-title-before .menu-image-hover-wrapper {
+    width: 16px;
+    height: 16px;
+}
+
+.external-top:after {
+    color: #7a7a7a!important;
+    opacity: .8;
+    background: url(https://www.teamviewer.com/resources/images/icons/external-link-arrow.svg) top right no-repeat;
+}
+
+.external-top:after,
+.external:after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 10px;
+    margin-top: 15px;
+}
+
+#Footer,
+#Footer .widget_recent_entries ul li a {
+    z-index: 99;
+}
+
+
+/* ###### Start Price Box for Solution Pages ###### */
+
+.pricebox {
+    background-color: #fdfdfd;
+    box-shadow: 2px 2px 6px 0 rgba(157, 164, 168, 0.4);
+    /* border: 1px solid #00adf7; */
+}
+
+.pricebox .hr_color {
+    margin-bottom: 0;
+    width: 60%;
+}
+
+.pricebox-inside {
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.pricebox-inside ul {
+    list-style: none;
+    margin: 0px;
+}
+
+.pricebox-inside a,
+a:active {
+    color: #038ff4;
+}
+
+.pricebox-inside ul li {
+    text-align: center;
+    padding: 11px 10px;
+    display: block;
+    margin: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.pricebox .vc_column-inner {
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+}
+
+span.idp-modal-trigger {
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (min-width: 1920px) {
+    .pricebox {
+        width: 30%;
+        margin: 15px;
+    }
+}
+
+@media (min-width: 1240px) and (max-width: 1919px) {
+    .pricebox {
+        width: 32%;
+        margin: 6px;
+    }
+    .prixebox-sub {
+        font-size: 1.2em!important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1239px) {
+    .pricebox {
+        width: 30.6%;
+        margin: 10px;
+    }
+    .prixebox-sub {
+        font-size: 1.2em!important;
+    }
+}
+
+@media (max-width: 767px) {
+    .pricebox {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+
+
+/* ###### End Price Box for Solution Pages ###### */
+
+@media (min-width: 1024px) {
+    .frontpage-img-wrapper-01 .mcb-wrap-inner,
+    .frontpage-img-wrapper-04 .mcb-wrap-inner {
+        max-width: 1100px;
+        float: left !important;
+    }
+    .equal-height-wrap .frontpage-img-wrapper-05 .mcb-wrap-inner {
+        float: left!important;
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 1023px) {
+    .frontpage-img-wrapper-04.bg-cover {
+        background-position: 75% 0% !important;
+    }
+    .equal-height-wrap .frontpage-img-wrapper-05 {
+        background-position: unset !important;
+    }
+}
+
+.section-heading-h2 a:focus {
+    color: #000;
+}
+
+.light-text a:link,
+.light-text a:visited {
+    color: #fff;
+}
+
+.frontpage-img-wrapper-05 h2 a {
+    color: #fff;
+}
+
+a.button {
+    margin-bottom: 15px !important;
+}
+
+@media (min-width:769px) {
+    .phone-mobile {
+        display: none!important
+    }
+}
+
+
+/*= Team Viewer Header code custom=================== */
+
+
+/** General >> Background Extension **/
+
+#menu-item-4137 a {
+    width: 300px !important;
+    margin-left: -10px !important;
+}
+
+
+/** General >> Team 13 Text **/
+
+#menu-item-4137>a:nth-of-type(1)>span:nth-of-type(1)>span {
+    margin-left: -5px !important;
+}
+
+
+/** header contact number injection **/
+
+h3.js-featured-phone {
+    font-size: 26px;
+    line-height: 30px;
+}
+
+h3.js-featured-phone span {
+    font-size: 36px;
+    display: block;
+    margin-left: 35px;
+    margin-top: 5px;
+}
+
+h3.js-featured-phone span:before {
+    font-family: "dashicons";
+    content: "\f525";
+    border: 0px solid red;
+    width: 50px;
+    position: absolute;
+    left: 5px;
+    height: 50px;
+}
+
+.text-underline {
+    text-decoration: underline;
+}

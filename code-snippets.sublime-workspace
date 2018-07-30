@@ -1,0 +1,431 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"get",
+				"getCookie"
+			],
+			[
+				"tar",
+				"targetParamVal"
+			],
+			[
+				"new",
+				"newParamVal"
+			],
+			[
+				"post",
+				"postMessageToIframe"
+			],
+			[
+				"tvRef",
+				"tvReferralKey"
+			],
+			[
+				"session",
+				"sessionParams"
+			],
+			[
+				"utm",
+				"utm_content"
+			],
+			[
+				"s",
+				"sessionInfo"
+			],
+			[
+				"ut",
+				"utm_campaign"
+			],
+			[
+				"marg",
+				"margin-top\tproperty"
+			],
+			[
+				"cta",
+				"cta-float"
+			],
+			[
+				"open",
+				"drawer-open"
+			],
+			[
+				"deciml",
+				"decimal\tlist-style-type"
+			],
+			[
+				"list",
+				"list-style-type\tproperty"
+			],
+			[
+				"counter",
+				"counter-increment\tproperty"
+			],
+			[
+				"cl",
+				"clientVersion"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"term",
+				"Terminal: Open"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"lint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"lin",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"lint this",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"sublimelinter",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"wra",
+				"HTML: Wrap Selection With Tag"
+			],
+			[
+				"javascr",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"incr",
+				"Increment Selection"
+			],
+			[
+				"wrap",
+				"HTML: Wrap Selection With Tag"
+			],
+			[
+				"wr",
+				"HTML: Wrap Selection With Tag"
+			],
+			[
+				"upper",
+				"Convert Case: Upper Case"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"lower",
+				"Convert Case: Lower Case"
+			],
+			[
+				"lowe",
+				"Convert Case: Lower Case"
+			],
+			[
+				"text",
+				"Set Syntax: reStructuredText"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"case",
+				"Convert Case: Title Case"
+			],
+			[
+				"\t",
+				"Bookmarks: Select Previous"
+			],
+			[
+				"scss",
+				"Set Syntax: SCSS"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 214.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/bowieleidy/Box/Bowie/code-snippets"
+	],
+	"file_history":
+	[
+		"/Users/bowieleidy/Box/Bowie/code-snippets/marketlink-integration.js",
+		"/Users/bowieleidy/Box/Bowie/code-snippets/cjIntegration.js",
+		"/Users/bowieleidy/Box/Bowie/code-snippets/unbounce-ga-event-tracking.js",
+		"/Users/bowieleidy/Box/Bowie/code-snippets/dynamicGA-unbounce.js",
+		"/Users/bowieleidy/Box/Bowie/code-snippets/checkUpgrades-0709.js",
+		"/Users/bowieleidy/Box/Bowie/code-snippets/checkForUpgrades - unbounce.js",
+		"/Users/bowieleidy/Sites/TeamViewer/server-1/tv-us/wp-content/themes/betheme-child/functions.php",
+		"/Users/bowieleidy/Sites/TeamViewer/server-3/tv-us/wp-content/themes/betheme-child/functions.php",
+		"/Users/bowieleidy/Sites/TeamViewer/server-2/tv-us/wp-content/themes/betheme-child/functions.php",
+		"/Users/bowieleidy/Documents/Snippets/cors.js.txt",
+		"/Users/bowieleidy/Sites/TeamViewer-ComponentGuide/src/scripts/flux/stores/DataStore.js",
+		"/Users/bowieleidy/Sites/TeamViewer-ComponentGuide/src/scripts/index.js",
+		"/Users/bowieleidy/Sites/TeamViewer-ComponentGuide/src/pages/direct-download.js",
+		"/Users/bowieleidy/Sites/TeamViewer-ComponentGuide/src/scripts/flux/actions/DataActions.js",
+		"/Users/bowieleidy/Sites/TeamViewer-ComponentGuide/package.json",
+		"/Users/bowieleidy/Sites/TeamViewer-ComponentGuide/src/SASS/style.scss",
+		"/Users/bowieleidy/Sites/TeamViewer-ComponentGuide/src/SASS/functions/_assets.scss",
+		"/Users/bowieleidy/Sites/TeamViewer-ComponentGuide/src/scripts/descriptors.js",
+		"/Users/bowieleidy/Sites/TeamViewer-ComponentGuide/src/assets/images/30027347-default-checkmark-plain-32px.png",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/teamviewer-global0618.css",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/subscription-options.css",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/it-brain-cta.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/AndroidAppOverhaul.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/New_Version-13.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/getModalContent.js",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/ModalAPIBootstrapper.php",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/UnifiedAndroidAppExperience.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/UnifiedAndroidAppExperience1.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/AndroidAppOverhaul1.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/InstantLog-in1.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/InstantLog-in.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/EnforcedSessionRecording1.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/EnforcedSessionRecording.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/ImprovedUserPermission1.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/ImprovedUserPermission.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/SupportforMotorola.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/MultiMonitorSupportForMac1.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/MultiMonitorSupportForMac.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/IntuitiveDesktopUI1.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/IntuitiveDesktopUI.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/HardwareAcceleration.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/HardwareAcceleration1.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/CustomerPortal1.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/CustomerPortal.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/SwiftpointGTMouseforiOS1.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/SwiftpointGTMouseforiOS.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/NativeForLinux1.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/NativeForLinux.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/AndroidHostEcoMode1.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/AutomatedServiceCaseAssignment1.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/AutomatedServiceCaseAssignment.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/MacBookProTouchBarSupport1.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/MacBookProTouchBarSupport.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/AndroidHostEcoMode.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/ImprovedQuickSupport1.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/ImprovedQuickSupport.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/SamsungAndroidEnhanancement1.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/modals/SamsungAndroidEnhanancement.html",
+		"/Users/bowieleidy/Desktop/Wordpress Updates/New_Version-13-050818.html",
+		"/Users/bowieleidy/Desktop/bowie.leidy-pubkey.txt",
+		"/Users/bowieleidy/Sites/TeamViewer-ComponentGuide/webpack.dev.js",
+		"/Users/bowieleidy/Sites/TeamViewer-ComponentGuide/src/index.js",
+		"/Users/bowieleidy/Sites/TeamViewer-ComponentGuide/src/scripts/flux/alt/Alt.js",
+		"/Users/bowieleidy/Sites/TeamViewer-ComponentGuide/src/components/Home.js",
+		"/Users/bowieleidy/Sites/TeamViewer-ComponentGuide/src/index.html",
+		"/Users/bowieleidy/Sites/TeamViewer-ComponentGuide/package-lock.json",
+		"/Users/bowieleidy/Sites/TeamViewer-ComponentGuide/webpack.production.config.js",
+		"/Users/bowieleidy/Sites/TeamViewer-ComponentGuide/src/scripts/components/Home.js"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "/Users/bowieleidy/Box/Bowie/code-snippets"
+		}
+	],
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 192.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 251.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 582.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
