@@ -116,6 +116,21 @@ var injectDiscount = function(couponCode) {
 };
 
 
+var updateValue = function(el, value) {
+    el.value = value;
+    __doPostBack(el, value);
+};
+
+var injectNewPromoCode = function() {
+    var couponBox = document.getElementById('UpdateShop1_couponTextBox');
+    var newPromo = getParameterByName('coupon');
+    var currentPromo = couponBox.value;
+
+    if ((newPromo != currentPromo) && (newPromo != null)) {
+        updateValue(couponBox, newPromo);
+    }
+};
+
 // Pass our license to the address params
 var updateAddress = function() {
     var newURL = "update.aspx?license=" + sessionInfo.licenseNumber;
@@ -280,6 +295,9 @@ var runUpgradeProcess = function() {
         licenseInfo = document.querySelector('[data-version]');
         licenseType = document.querySelector('[data-licensetype]').dataset.licensetype,
             licenseVersion = document.querySelector('[data-version]').dataset.version;
+
+
+
 
         if (licenseVersion != -1) {
             injectModalTrigger();

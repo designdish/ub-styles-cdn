@@ -29,10 +29,11 @@ var toggleBreakpointClasses = function(el, cl, bp) {
     }
 };
 
-var ubModal = document.getElementsByClassName('ub-emb-container')[0];
-var toggleUbModal = toggleBreakpointClasses(ubModal, 'hidden', 800);
+var toggleUbModal = function() {
+    var ubModal = document.getElementsByClassName('ub-emb-container')[0];
+    toggleBreakpointClasses(ubModal, 'hidden', 800);
+};
+
 window.ready = function() {
-
-    addEvent(window, onresize, toggleUbModal);
-
+    addEvent(window, 'resize', toggleUbModal);
 };
