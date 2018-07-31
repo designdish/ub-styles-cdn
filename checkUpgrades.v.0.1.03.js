@@ -107,20 +107,6 @@ var composeURL = function(params) {
 
 //replace an existing input field in the form with our new coupon code. 
 
-var injectDiscount = function(couponCode) {
-    checkForElement(document.querySelector('[name="UpdateShop1:couponTextBox"]'), 6E7, function() {
-        var updateForm = document.getElementById("FormUpdate");
-        var couponInputField = updateForm.querySelector('[name="UpdateShop1:couponTextBox"]');
-        var existingCoupon = couponInputField.value;
-
-        if (couponCode != existingCoupon) {
-            existingCoupon = couponCode;
-            __doPostBack();
-        }
-    });
-};
-
-
 var updateValue = function(el, value) {
     el.value = value;
     __doPostBack(el, value);
@@ -229,11 +215,11 @@ var displayModalOnOfferDismissal = function() {
 // display the modal 
 var displayModal = function() {
     if (!modalFired) {
+        setCookie("retention-score", 1, daily);
         unbounceModalContainer = document.getElementsByClassName('ub-emb-iframe-wrapper')[0];
         postMessageToIframe(parsedURL);
         modalTrigger.click();
         modalFired = true;
-        setCookie("retention-score", 1, daily);
         removeEventListener('mouseout', injectExitDetection, false);
         removeEventListener('mouseover', injectEntranceDetection, false);
         // addEvent(unbounceModalContainer, 'click', injectDiscount(sessionInfo.coupon));

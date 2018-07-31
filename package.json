@@ -16,5 +16,8 @@
     "url": "https://github.com/designdish/tv/issues"
   },
   "homepage": "https://github.com/designdish/tv#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  }
 }
