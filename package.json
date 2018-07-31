@@ -1,0 +1,20 @@
+{
+  "name": "teamviewer-codesnippets",
+  "version": "0.1.0",
+  "description": "codesnippets in use for various functions throughout the site",
+  "main": "CartAbandonmentUnbounce-bak.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/designdish/tv.git"
+  },
+  "author": "Bowie Leidy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/designdish/tv/issues"
+  },
+  "homepage": "https://github.com/designdish/tv#readme",
+  "dependencies": {}
+}

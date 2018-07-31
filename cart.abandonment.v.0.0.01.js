@@ -20,35 +20,32 @@ var setCookie = function(cName, cValue, cExpires, cPath) {
         cExpires = new Date(today.getTime() + 30 * 24 * 3600 * 1000);
     }
     document.cookie = cName + "=" + cValue + ";expires=" + cExpires.toUTCString() + "; path=" + cPath;
-};
-
-var listenForSelection = function() {
-    var buyButton = document.querySelectorAll('.usBuyButton');
-    addEvent('click', buyButton, injectNewPromoCode);
 }
 
-var updateCookie = function(cName, cValue) {
-    var expireDate = document.cookie.indexOf(cName) === -1 ? new Date(new Date().setTime(new Date().getTime() + 30 * 24 * 3600 * 1000)) : unescape(document.cookie).split('expireDate=')[1];
+var updateCookie = function(cName, cValue, ) {
+    var expireDate = document.cookie.indexOf(cName) === -1 ?
+        new Date(new Date().setTime(new Date().getTime() + 30 * 24 * 3600 * 1000)) :
+        unescape(document.cookie).split('expireDate=')[1];
     document.cookie = cName + '=' + cValue + ',expireDate=' + expireDate + ';expires=' + expireDate;
-};
+}
 
 var getCookie = function(cName) {
     var cStr = document.cookie;
 
     var startSlice = cStr.indexOf(cName + "=");
     if (startSlice == -1) {
-        return false;
+        return false
     }
 
-    var endSlice = cStr.indexOf(";", startSlice + 1);
+    var endSlice = cStr.indexOf(";", startSlice + 1)
     if (endSlice == -1) {
-        endSlice = cStr.length;
+        endSlice = cStr.length
     }
 
     var cData = cStr.substring(startSlice, endSlice);
     var cValue = cData.substring(cData.indexOf("=") + 1, cData.length);
     return cValue;
-};
+}
 
 // check our url for licensing 
 var getParameterByName = function(name, url) {
@@ -81,7 +78,7 @@ var getSessionInfo = function() {
 
     if (unbounceModalContainer != null) {
         checkForElement(unbounceModalContainer, 3E4, postMessageToIframe(parsedURL));
-        console.log('passing ' + parsedURL + ' to unbounce for dynamic linking');
+        console.log('passing ' + parsedURL + ' to unbounce for dynamic linking')
     } else {
         return sessionInfo;
     }
@@ -95,15 +92,15 @@ var composeURL = function(params) {
 
     if (parsedURL.indexOf(params.coupon)) {
         parsedURL = parsedURL.replace('coupon=' + params.coupon, "");
-        console.log('coupon code ' + params.coupon + ' successfully parsed from url');
+        console.log('coupon code ' + params.coupon + ' successfully parsed from url')
     }
 
     if (parsedURL.indexOf('&license') === -1 && parsedURL.indexOf('&License') === -1) {
         parsedURL += "&license=" + params.licenseNumber;
-        console.log('license ' + params.licenseNumber + ' successfully injected into url');
+        console.log('license ' + params.licenseNumber + ' successfully injected into url')
     }
 
-};
+}
 
 //replace an existing input field in the form with our new coupon code. 
 
@@ -120,21 +117,6 @@ var injectDiscount = function(couponCode) {
     });
 };
 
-
-var updateValue = function(el, value) {
-    el.value = value;
-    __doPostBack(el, value);
-};
-
-var injectNewPromoCode = function() {
-    var couponBox = document.getElementById('UpdateShop1_couponTextBox');
-    var newPromo = getParameterByName('coupon');
-    var currentPromo = couponBox.value;
-
-    if ((newPromo != currentPromo) && (newPromo != null)) {
-        updateValue(couponBox, newPromo);
-    }
-};
 
 // Pass our license to the address params
 var updateAddress = function() {
@@ -233,7 +215,7 @@ var displayModal = function() {
         postMessageToIframe(parsedURL);
         modalTrigger.click();
         modalFired = true;
-        setCookie("retention-score", 1, daily);
+        setCookie("retention-score", 1, daily)
         removeEventListener('mouseout', injectExitDetection, false);
         removeEventListener('mouseover', injectEntranceDetection, false);
         // addEvent(unbounceModalContainer, 'click', injectDiscount(sessionInfo.coupon));
@@ -269,7 +251,7 @@ var waitForModal = function() {
             checkForUpgrades();
         }
     }
-};
+}
 
 var checkForElement = function(element, time, fn) {
     // console.warn(element, time, fn);
@@ -283,11 +265,11 @@ var checkForElement = function(element, time, fn) {
             } else if ((timeoutms -= 100) < 0) {
                 console.log("element " + element + " not available!");
             } else {
-                setTimeout(check, 100);
+                setTimeout(check, 100)
             }
-        };
+        }
         setTimeout(check, 100);
-    });
+    })
     setTimeout(() => { element }, (time / 10));
     (async() => {
         waitForElement(time);
@@ -300,9 +282,6 @@ var runUpgradeProcess = function() {
         licenseInfo = document.querySelector('[data-version]');
         licenseType = document.querySelector('[data-licensetype]').dataset.licensetype,
             licenseVersion = document.querySelector('[data-version]').dataset.version;
-
-
-
 
         if (licenseVersion != -1) {
             injectModalTrigger();
