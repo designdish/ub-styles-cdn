@@ -1,0 +1,53 @@
+@import 'base';
+
+#lp-pom-root {
+    &,
+    a,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    span,
+    {
+        font-family: Roboto !important;
+    }
+
+    @for $i from 1 through 6 {
+        h#{$i} {
+            color: $PrimaryBlue
+        }
+    }
+
+    #lp-pom-box-354 {
+        display: block;
+        background: linear-gradient(45deg, rgba($BackgroundBlue, 0.4) 0%, rgba($BackgroundBlue, 0.7) 100%);
+        border: 1px solid $Gray;
+
+        #lp-code-348 {
+            height: auto;
+            width: 100%;
+        }
+
+        .hbspt-form {
+            width: 100%;
+            height: auto;
+            min-height: 390px;
+            padding: 20px;
+
+            .hs-form-field {
+                width: calc(100% - 20px);
+                float: left;
+                margin: 10px auto;
+
+                .input {
+                    input {
+                        @extend %input
+                    }
+                }
+            }
+        }
+    }
+}

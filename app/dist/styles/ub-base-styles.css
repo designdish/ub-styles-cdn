@@ -1,0 +1,60 @@
+/* Import Vendors Contents */
+/* Import Utils Contents */
+/* Import Base Contents */
+/* SASS / Social Media Brand Colors */
+/* Import Components Contents */
+#lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="text"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="email"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="password"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input:not([type="image"]) {
+  height: 30px;
+  background: linear-gradient(white, #e1f5eb);
+  box-shadow: inset 2px 8px 14px 0px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.5); }
+
+/* Import Layout Contents */
+/* Import Pages Contents */
+/* Import Themes Contents */
+#lp-pom-root,
+#lp-pom-root a,
+#lp-pom-root h1,
+#lp-pom-root h2,
+#lp-pom-root h3,
+#lp-pom-root h4,
+#lp-pom-root h5,
+#lp-pom-root h6,
+#lp-pom-root p,
+#lp-pom-root span {
+  font-family: Roboto !important; }
+
+#lp-pom-root h1 {
+  color: #038ff4; }
+
+#lp-pom-root h2 {
+  color: #038ff4; }
+
+#lp-pom-root h3 {
+  color: #038ff4; }
+
+#lp-pom-root h4 {
+  color: #038ff4; }
+
+#lp-pom-root h5 {
+  color: #038ff4; }
+
+#lp-pom-root h6 {
+  color: #038ff4; }
+
+#lp-pom-root #lp-pom-box-354 {
+  display: block;
+  background: linear-gradient(45deg, rgba(0, 175, 248, 0.4) 0%, rgba(0, 175, 248, 0.7) 100%);
+  border: 1px solid #d8d8d8; }
+  #lp-pom-root #lp-pom-box-354 #lp-code-348 {
+    height: auto;
+    width: 100%; }
+  #lp-pom-root #lp-pom-box-354 .hbspt-form {
+    width: 100%;
+    height: auto;
+    min-height: 390px;
+    padding: 20px; }
+    #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field {
+      width: calc(100% - 20px);
+      float: left;
+      margin: 10px auto; }
