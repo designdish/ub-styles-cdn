@@ -3,6 +3,23 @@
 /* Import Base Contents */
 /* SASS / Social Media Brand Colors */
 /* Import Components Contents */
+#lp-pom-root #lp-pom-box-354 .hbspt-form .hs_submit .hs-button {
+  display: inline-block;
+  margin: 0 10px;
+  box-shadow: inset 0 0 0 0;
+  font-size: 16px;
+  line-height: 170%;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  outline: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2.3px;
+  text-align: center; }
+
 #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="text"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="email"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="password"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input:not([type="image"]) {
   height: 30px;
   background: linear-gradient(white, #e1f5eb);
@@ -44,7 +61,7 @@
 
 #lp-pom-root #lp-pom-box-354 {
   display: block;
-  background: linear-gradient(45deg, rgba(0, 175, 248, 0.4) 0%, rgba(0, 175, 248, 0.7) 100%);
+  background: linear-gradient(45deg, rgba(0, 175, 248, 0.1) 0%, rgba(0, 175, 248, 0.1) 100%);
   border: 1px solid #d8d8d8; }
   #lp-pom-root #lp-pom-box-354 #lp-code-348 {
     height: auto;
