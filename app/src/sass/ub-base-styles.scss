@@ -37,7 +37,7 @@
             padding: 20px;
 
             .hs-form-field {
-                width: calc(100% - 20px);
+                width: 100%;
                 float: left;
                 margin: 10px auto;
 
@@ -50,6 +50,7 @@
             .hs_submit {
                 .hs-button {
                     @extend %button;
+                    width: 100%;
                     background: linear-gradient(45deg, rgba($BackgroundBlue, 1), rgba(darken($BackgroundBlue, 5%), 1));
                 }
             }
