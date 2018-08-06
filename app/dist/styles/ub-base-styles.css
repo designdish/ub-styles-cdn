@@ -24,9 +24,9 @@
 
 #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="text"], #lp-pom-root #lp-pom-box-354 .hbspt-form[type="text"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="email"], #lp-pom-root #lp-pom-box-354 .hbspt-form[type="email"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="tel"], #lp-pom-root #lp-pom-box-354 .hbspt-form[type="tel"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="number"], #lp-pom-root #lp-pom-box-354 .hbspt-form[type="number"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="password"], #lp-pom-root #lp-pom-box-354 .hbspt-form[type="password"] {
   height: 30px;
-  background: linear-gradient(white, #e1f5eb);
-  box-shadow: inset 2px 8px 14px 0px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(0, 0, 0, 0.5); }
+  background: linear-gradient(white, #f2f2f2);
+  box-shadow: inset 2px 2px 9px 7px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.2); }
 
 /* Import Layout Contents */
 /* Import Pages Contents */
