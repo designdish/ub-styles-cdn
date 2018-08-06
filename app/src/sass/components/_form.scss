@@ -1,8 +1,12 @@
 %input {
     &[type="text"],
     &[type="email"],
+    &[type="tel"],
+    &[type="number"],
     &[type="password"] {
         height: 30px;
+        background: -webkit-linear-gradient(rgba(255, 255, 255, 1), rgba(225, 245, 235, 1));
+        background: -o-linear-gradient(rgba(255, 255, 255, 1), rgba(225, 245, 235, 1));
         background: linear-gradient(rgba(255, 255, 255, 1), rgba(225, 245, 235, 1));
         box-shadow: inset 2px 8px 14px 0px rgba(0, 0, 0, 0.2);
         border: 1px solid rgba(0, 0, 0, 0.5);

@@ -21,8 +21,7 @@
     }
 
     #lp-pom-box-354 {
-        display: block;
-        background: linear-gradient(45deg, rgba($BackgroundBlue, 0.1) 0%, rgba($BackgroundBlue, 0.1) 100%);
+        display: block; // background: linear-gradient(45deg, rgba($BackgroundBlue, 0.1) 0%, rgba($BackgroundBlue, 0.1) 100%);
         border: 1px solid $Gray;
 
         #lp-code-348 {
@@ -51,7 +50,7 @@
                 .hs-button {
                     @extend %button;
                     width: 100%;
-                    background: linear-gradient(45deg, rgba($BackgroundBlue, 1), rgba(darken($BackgroundBlue, 5%), 1));
+                    background: linear-gradient(45deg, rgba($BackgroundBlue, 1), rgba(darken($BackgroundBlue, 15%), 1));
                 }
             }
             @extend %input

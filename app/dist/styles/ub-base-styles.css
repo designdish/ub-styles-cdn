@@ -19,10 +19,13 @@
   font-weight: 500;
   letter-spacing: 2.3px;
   text-align: center;
-  float: left; }
+  float: left;
+  padding: 10px; }
 
-#lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="text"], #lp-pom-root #lp-pom-box-354 .hbspt-form[type="text"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="email"], #lp-pom-root #lp-pom-box-354 .hbspt-form[type="email"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="password"], #lp-pom-root #lp-pom-box-354 .hbspt-form[type="password"] {
+#lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="text"], #lp-pom-root #lp-pom-box-354 .hbspt-form[type="text"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="email"], #lp-pom-root #lp-pom-box-354 .hbspt-form[type="email"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="tel"], #lp-pom-root #lp-pom-box-354 .hbspt-form[type="tel"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="number"], #lp-pom-root #lp-pom-box-354 .hbspt-form[type="number"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="password"], #lp-pom-root #lp-pom-box-354 .hbspt-form[type="password"] {
   height: 30px;
+  background: -webkit-linear-gradient(white, #e1f5eb);
+  background: -o-linear-gradient(white, #e1f5eb);
   background: linear-gradient(white, #e1f5eb);
   box-shadow: inset 2px 8px 14px 0px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(0, 0, 0, 0.5); }
@@ -62,7 +65,6 @@
 
 #lp-pom-root #lp-pom-box-354 {
   display: block;
-  background: linear-gradient(45deg, rgba(0, 175, 248, 0.1) 0%, rgba(0, 175, 248, 0.1) 100%);
   border: 1px solid #d8d8d8; }
   #lp-pom-root #lp-pom-box-354 #lp-code-348 {
     height: auto;
@@ -78,4 +80,4 @@
       margin: 10px auto; }
     #lp-pom-root #lp-pom-box-354 .hbspt-form .hs_submit .hs-button {
       width: 100%;
-      background: linear-gradient(45deg, #00aff8, #009ddf); }
+      background: linear-gradient(45deg, #00aff8, #0079ac); }
