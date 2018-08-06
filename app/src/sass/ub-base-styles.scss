@@ -49,8 +49,9 @@
             .hs_submit {
                 .hs-button {
                     @extend %button;
-                    width: 100%;
-                    background: linear-gradient(45deg, rgba($BackgroundBlue, 1), rgba(darken($BackgroundBlue, 15%), 1));
+                    width: calc(100% - 30px);
+                    margin: 0px;
+                    background: linear-gradient(0deg, rgba($BackgroundBlue, 1), rgba(darken($BackgroundBlue, 10%), 1));
                 }
             }
             @extend %input

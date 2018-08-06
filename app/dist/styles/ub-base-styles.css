@@ -77,5 +77,6 @@
       float: left;
       margin: 10px auto; }
     #lp-pom-root #lp-pom-box-354 .hbspt-form .hs_submit .hs-button {
-      width: 100%;
-      background: linear-gradient(45deg, #00aff8, #0079ac); }
+      width: calc(100% - 30px);
+      margin: 0px;
+      background: linear-gradient(0deg, #00aff8, #008bc5); }
