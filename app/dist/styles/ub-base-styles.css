@@ -18,7 +18,8 @@
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 2.3px;
-  text-align: center; }
+  text-align: center;
+  float: left; }
 
 #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="text"], #lp-pom-root #lp-pom-box-354 .hbspt-form[type="text"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="email"], #lp-pom-root #lp-pom-box-354 .hbspt-form[type="email"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="password"], #lp-pom-root #lp-pom-box-354 .hbspt-form[type="password"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input:not([type="image"]), #lp-pom-root #lp-pom-box-354 .hbspt-form:not([type="image"]) {
   height: 30px;
@@ -75,3 +76,5 @@
       width: calc(100% - 20px);
       float: left;
       margin: 10px auto; }
+    #lp-pom-root #lp-pom-box-354 .hbspt-form .hs_submit .hs-button {
+      background: linear-gradient(45deg, #00aff8, #009ddf); }

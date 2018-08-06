@@ -10,8 +10,7 @@
     h5,
     h6,
     p,
-    span,
-    {
+    span {
         font-family: Roboto !important;
     }
 
@@ -51,6 +50,7 @@
             .hs_submit {
                 .hs-button {
                     @extend %button;
+                    background: linear-gradient(45deg, rgba($BackgroundBlue, 1), rgba(darken($BackgroundBlue, 5%), 1));
                 }
             }
             @extend %input
