@@ -18,12 +18,14 @@
     @for $i from 1 through 6 {
         h#{$i} {
             color: $PrimaryBlue;
+            color: $PrimaryBlue
         }
     }
 
     #lp-pom-box-354 {
         display: block;
         background: linear-gradient(45deg, rgba($BackgroundBlue, 0.1) 0%, rgba($BackgroundBlue, 0.1) 100%);
+        background: linear-gradient(45deg, rgba($BackgroundBlue, 0.4) 0%, rgba($BackgroundBlue, 0.7) 100%);
         border: 1px solid $Gray;
 
         #lp-code-348 {
@@ -53,6 +55,7 @@
                     @extend %button;
                 }
             }
+            @extend %input
         }
     }
 }
