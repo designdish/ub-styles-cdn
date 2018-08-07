@@ -464,7 +464,7 @@ var handleOutboundLinkClicks = function(event) {
 
 (function() {
     addEvent(document, 'DOMContentLoaded', (function() {
-        var token = md5(getParameterByName('utm_campaign') + getParameterByName('mailId'));
+        var token = md5(getParameterByName('utm_campaign') + getParameterByName('mailid'));
         var mId = 18045513; //mailid
         var utmC = 'news2018-Q3-August-Mig-MeetingUsers-T1-enUS'; //utm_campaign
         var hash = md5(utmC + mId);
