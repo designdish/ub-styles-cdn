@@ -3,7 +3,7 @@ var formatSelection = function() {
     var value = input.value.split(';');
     var formattedValue = '$' + value[0] + ' to $' + value[1];
     input.value(formattedValue);
-}
+};
 
 var injectSlider = function() {
     var min, max;

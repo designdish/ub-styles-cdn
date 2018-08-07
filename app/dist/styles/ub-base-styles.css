@@ -35,6 +35,15 @@
     height: 3rem;
     background: black;
     border-radius: 30px; }
+  #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-input[type="radio"] .hs-form-radio-display {
+    display: inline-block;
+    width: 2rem;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: color 200ms ease-out; }
+    #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-input[type="radio"] .hs-form-radio-display:hover {
+      color: white; }
   #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-input[type="radio"] input#one:checked ~ .switch__indicator {
     background: #3bafbf;
     transform: translate3d(1rem, 0, 0); }
