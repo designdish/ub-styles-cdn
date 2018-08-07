@@ -51,7 +51,10 @@
   height: 30px;
   background: linear-gradient(white, #f2f2f2);
   box-shadow: inset 2px 2px 9px 7px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.2); }
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-family: Roboto;
+  font-size: 1.1rem;
+  color: #4a4a4a; }
 
 /* Import Layout Contents */
 /* Import Pages Contents */
@@ -104,6 +107,9 @@
     height: auto;
     min-height: 390px;
     padding: 10px; }
+    #lp-pom-root #lp-pom-box-354 .hbspt-form label {
+      font-family: Roboto;
+      font-size: .9rem; }
     #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field {
       width: 100%;
       float: left;
@@ -135,12 +141,6 @@
       text-shadow: 1px 2px 10px #b2de37;
       font-size: 0.8rem;
       transition: all .25s ease-in-out; }
-    #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-fieldtype-radio .input li.hs-form-radio label #if_you_accept_my_offer0-7eaaeb92-f486-4996-adff-448c9b276b0c:checked ~ .switch_indicator {
-      background: #3bafbf;
-      transform: translate3d(1rem, 0, 0); }
-    #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-fieldtype-radio .input li.hs-form-radio label #if_you_accept_my_offer1-7eaaeb92-f486-4996-adff-448c9b276b0c:checked ~ .switch_indicator {
-      background: #3bafbf;
-      transform: translate3d(1rem, 0, 0); }
     #lp-pom-root #lp-pom-box-354 .hbspt-form .hs_submit .hs-button {
       width: calc(100% - 30px);
       margin: 0px;
