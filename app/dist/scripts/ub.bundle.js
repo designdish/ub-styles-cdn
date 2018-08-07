@@ -287,9 +287,7 @@
     }
 })(this)
 
-var mId = 18045513; //mailid
-var utmC = 'news2018-Q3-August-Mig-MeetingUsers-T1-enUS'; //utm_campaign
-var hash = md5(mId + utmC);
+
 
 var checkCredentials = function(token, hash) {
     if (token != hash) {
@@ -297,11 +295,7 @@ var checkCredentials = function(token, hash) {
     }
 };
 
-var user = {
-    firstName: getParameterByName('first'),
-    lastName: getParameterByName('last'),
-    email: getParameterByName('email')
-};
+
 
 var injectUserInfo = function(el, str) {
     el.innerText = str;
@@ -340,8 +334,6 @@ var injectSlideToggle = function() {
     radioGroup[0].insertAdjacentElement('beforeend', switchIndicator);
 };
 
-
-var sessionInfo;
 
 var getParameterByName = function(name, url) {
     if (!url)
@@ -473,6 +465,17 @@ addEvent('document', 'DOMContentLoaded', setTimeout(identifyLinks(), 1500));
 
 window.onload = function() {
     var token = getParameterByName(utm_campaign) + getParameterByName(mailId);
+    var mId = 18045513; //mailid
+    var utmC = 'news2018-Q3-August-Mig-MeetingUsers-T1-enUS'; //utm_campaign
+    var hash = md5(mId + utmC);
+
+    var user = {
+        firstName: getParameterByName('first'),
+        lastName: getParameterByName('last'),
+        email: getParameterByName('email')
+    };
+    var sessionInfo;
+
     checkCredentials(token);
     injectSlider();
     injectSlideToggle();
