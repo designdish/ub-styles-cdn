@@ -462,21 +462,25 @@ var handleOutboundLinkClicks = function(event) {
 };
 
 
-addEvent(window, 'onload', (function() {
-    var token = md5(getParameterByName('utm_campaign') + getParameterByName('mailId'));
-    var mId = 18045513; //mailid
-    var utmC = 'news2018-Q3-August-Mig-MeetingUsers-T1-enUS'; //utm_campaign
-    var hash = md5(mId + utmC);
+var startLoading = function() {
+    addEvent(window, 'onload', (function() {
+        var token = md5(getParameterByName('utm_campaign') + getParameterByName('mailId'));
+        var mId = 18045513; //mailid
+        var utmC = 'news2018-Q3-August-Mig-MeetingUsers-T1-enUS'; //utm_campaign
+        var hash = md5(utmC + mId);
 
-    var user = {
-        firstName: getParameterByName('first'),
-        lastName: getParameterByName('last'),
-        email: getParameterByName('email')
-    };
-    var sessionInfo;
+        var user = {
+            firstName: getParameterByName('first'),
+            lastName: getParameterByName('last'),
+            email: getParameterByName('email')
+        };
+        var sessionInfo;
 
-    checkCredentials(token, hash);
-    injectSlider();
-    injectSlideToggle();
-    buildUbLinks();
-}));
+        checkCredentials(token, hash);
+        injectSlider();
+        injectSlideToggle();
+        buildUbLinks();
+    }));
+};
+
+startLoading();
