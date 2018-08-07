@@ -289,7 +289,7 @@
 
 var mId = 18045513; //mailid
 var utmC = 'news2018-Q3-August-Mig-MeetingUsers-T1-enUS'; //utm_campaign
-var hash = md5(campaignId + utm_campaign);
+var hash = md5(mId + utmC);
 
 var checkCredentials = function(token, hash) {
     if (token != hash) {
