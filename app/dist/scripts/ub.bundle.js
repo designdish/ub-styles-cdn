@@ -463,7 +463,6 @@ var handleOutboundLinkClicks = function(event) {
 
 
 addEvent('document', 'DOMContentLoaded', (function() {
-    setTimeout(identifyLinks(), 1500);
     var token = getParameterByName('utm_campaign') + getParameterByName('mailId');
     var mId = 18045513; //mailid
     var utmC = 'news2018-Q3-August-Mig-MeetingUsers-T1-enUS'; //utm_campaign
