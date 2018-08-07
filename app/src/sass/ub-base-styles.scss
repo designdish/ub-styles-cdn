@@ -65,7 +65,7 @@
                 .hs-form-radio-display {
                     span {
                         &:before {
-                            border: 3px solid $PrimaryBlue;
+                            border: 3px solid $DarkBlue;
                             content: "";
                             background: $PrimaryWhite;
                             position: absolute;
@@ -74,15 +74,20 @@
                             left: 0px;
                             height: 1rem;
                             width: 1rem;
+                            transition: all .25s ease-in-out;
                         }
                     }
                     input {
                         &:checked {
                             &~span:before {
-                                border: 3px solid darken($CoffeeMugGreen, 5%);
-                                background: $CoffeeMugGreen;
-                                font-family: IcoMoon;
-                                content: "\e975";
+                                border: 3px solid darken($CTAButtonGreen, 5%);
+                                background: linear-gradient($CTAButtonGreen, lighten($CTAButtonGreen, 10%));
+                                font-family: icomoon;
+                                content: "\e92a";
+                                color: $PrimaryWhite;
+                                text-shadow: 1px 2px 10px $CTAButtonGreen;
+                                font-size: 0.8rem;
+                                transition: all .25s ease-in-out;
                             }
                         }
                     }
