@@ -106,10 +106,14 @@
     #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-fieldtype-radio .hs-form-radio-display span:before {
       border: 3px solid #038ff4;
       content: "";
-      background: white; }
+      background: white;
+      position: absolute;
+      border-radius: 50%;
+      margin-top: -3px;
+      left: 0px; }
     #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-fieldtype-radio .hs-form-radio-display input:checked ~ span:before {
-      border: 3px solid #0380db;
-      background: #038ff4; }
+      border: 3px solid #359dac;
+      background: #3bafbf; }
     #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-fieldtype-radio .input li.hs-form-radio label #if_you_accept_my_offer0-7eaaeb92-f486-4996-adff-448c9b276b0c:checked ~ .switch_indicator {
       background: #3bafbf;
       transform: translate3d(1rem, 0, 0); }

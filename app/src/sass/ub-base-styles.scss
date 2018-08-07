@@ -59,13 +59,17 @@
                             border: 3px solid $PrimaryBlue;
                             content: "";
                             background: $PrimaryWhite;
+                            position: absolute;
+                            border-radius: 50%;
+                            margin-top: -3px;
+                            left: 0px;
                         }
                     }
                     input {
                         &:checked {
                             &~span:before {
-                                border: 3px solid darken($PrimaryBlue, 5%);
-                                background: $PrimaryBlue;
+                                border: 3px solid darken($CoffeeMugGreen, 5%);
+                                background: $CoffeeMugGreen;
                             }
                         }
                     }
