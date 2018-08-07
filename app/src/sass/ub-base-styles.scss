@@ -52,8 +52,28 @@
             }
             .hs-fieldtype-radio {
                 @extend %slideToggle;
+
+                .hs-form-radio-display {
+                    span {
+                        &:before {
+                            border: 3px solid $PrimaryBlue;
+                            content: "";
+                            background: $PrimaryWhite;
+                        }
+                    }
+                    input {
+                        &:checked {
+                            &~span:before {
+                                border: 3px solid darken($PrimaryBlue, 5%);
+                                background: $PrimaryBlue;
+                            }
+                        }
+                    }
+                }
+
                 .input {
                     li.hs-form-radio {
+
                         label {
 
                             #if_you_accept_my_offer0-7eaaeb92-f486-4996-adff-448c9b276b0c {
