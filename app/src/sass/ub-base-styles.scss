@@ -78,6 +78,8 @@
                             &~span:before {
                                 border: 3px solid darken($CoffeeMugGreen, 5%);
                                 background: $CoffeeMugGreen;
+                                font-family: IcoMoon;
+                                content: "\e975";
                             }
                         }
                     }
