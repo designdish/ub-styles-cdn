@@ -307,10 +307,7 @@ var injectUserInfo = function(el, str) {
     el.innerText = str;
 };
 
-window.onload = function() {
-    var token = getParameterByName(utm_campaign) + getParameterByName(mailId);
-    checkCredentials(token);
-};
+
 var formatSelection = function() {
     var input = document.getElementByClassName('irs-hidden-input');
     var value = input.value.split(';');
@@ -336,9 +333,6 @@ var injectSlider = function() {
     });
 };
 
-window.onload = function() {
-    injectSlider();
-};
 var injectSlideToggle = function() {
     var radioGroup = document.getElementsByClassName('hs-fieldtype-radio');
     var switchIndicator = document.createElement('div');
@@ -346,9 +340,6 @@ var injectSlideToggle = function() {
     radioGroup[0].insertAdjacentElement('beforeend', switchIndicator);
 };
 
-window.onload = function() {
-    injectSlideToggle();
-};
 
 var sessionInfo;
 
@@ -400,7 +391,8 @@ var buildUbLinks = function() {
     }
 };
 
-window.onload = buildUbLinks();
+
+
 var linksArray = [];
 var url = window.location.hostname;
 
@@ -478,3 +470,11 @@ var handleOutboundLinkClicks = function(event) {
 };
 
 addEvent('document', 'DOMContentLoaded', setTimeout(identifyLinks(), 1500));
+
+window.onload = function() {
+    var token = getParameterByName(utm_campaign) + getParameterByName(mailId);
+    checkCredentials(token);
+    injectSlider();
+    injectSlideToggle();
+    buildUbLinks();
+};
