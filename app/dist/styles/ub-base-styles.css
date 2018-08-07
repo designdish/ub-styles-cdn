@@ -76,6 +76,8 @@
       width: 100%;
       float: left;
       margin: 10px auto; }
+      #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field.hs_nyop {
+        width: calc(100% - 30px); }
     #lp-pom-root #lp-pom-box-354 .hbspt-form .hs_submit .hs-button {
       width: calc(100% - 30px);
       margin: 0px;

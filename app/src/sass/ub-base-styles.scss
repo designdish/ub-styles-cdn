@@ -40,6 +40,10 @@
                 float: left;
                 margin: 10px auto;
 
+                &.hs_nyop {
+                    width: calc(100% - 30px);
+                }
+
                 .input {
                     input {
                         @extend %input;
