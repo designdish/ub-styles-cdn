@@ -462,8 +462,8 @@ var handleOutboundLinkClicks = function(event) {
 };
 
 
-var startLoading = function() {
-    addEvent(window, 'onload', (function() {
+(function() {
+    addEvent('document', 'DOMContentLoaded', (function() {
         var token = md5(getParameterByName('utm_campaign') + getParameterByName('mailId'));
         var mId = 18045513; //mailid
         var utmC = 'news2018-Q3-August-Mig-MeetingUsers-T1-enUS'; //utm_campaign
@@ -481,6 +481,4 @@ var startLoading = function() {
         injectSlideToggle();
         buildUbLinks();
     }));
-};
-
-startLoading();
+})();
