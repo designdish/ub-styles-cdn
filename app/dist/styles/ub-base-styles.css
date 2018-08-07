@@ -22,6 +22,31 @@
   float: left;
   padding: 10px; }
 
+#lp-pom-root #lp-pom-box-354 .hbspt-form .hs-fieldtype-radio, #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-input[type="radio"] {
+  position: relative;
+  width: 14rem;
+  padding: 0 1rem; }
+  #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-fieldtype-radio:before, #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-input[type="radio"]:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 3rem;
+    background: black;
+    border-radius: 30px; }
+  #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-fieldtype-radio input#one:checked ~ .switch__indicator, #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-input[type="radio"] input#one:checked ~ .switch__indicator {
+    background: #3bafbf;
+    transform: translate3d(1rem, 0, 0); }
+  #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-fieldtype-radio input#two:checked ~ .switch__indicator, #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-input[type="radio"] input#two:checked ~ .switch__indicator {
+    background: #3bafbf;
+    transform: translate3d(1rem, 0, 0); }
+  #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-fieldtype-radio input#three:checked ~ .switch__indicator, #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-input[type="radio"] input#three:checked ~ .switch__indicator {
+    background: #3bafbf;
+    transform: translate3d(1rem, 0, 0); }
+  #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-fieldtype-radio input[type="radio"]:not(:checked), #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-input[type="radio"] input[type="radio"]:not(:checked), #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-fieldtype-radio input[type="radio"]:checked, #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-input[type="radio"] input[type="radio"]:checked {
+    display: none; }
+
 #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="text"], #lp-pom-root #lp-pom-box-354 .hbspt-form[type="text"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="email"], #lp-pom-root #lp-pom-box-354 .hbspt-form[type="email"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="tel"], #lp-pom-root #lp-pom-box-354 .hbspt-form[type="tel"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="number"], #lp-pom-root #lp-pom-box-354 .hbspt-form[type="number"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="password"], #lp-pom-root #lp-pom-box-354 .hbspt-form[type="password"] {
   height: 30px;
   background: linear-gradient(white, #f2f2f2);
@@ -78,6 +103,12 @@
       margin: 10px auto; }
       #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field.hs_nyop {
         width: calc(100% - 30px); }
+    #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-fieldtype-radio .input li.hs-form-radio label #if_you_accept_my_offer0-7eaaeb92-f486-4996-adff-448c9b276b0c:checked ~ .switch_indicator {
+      background: #3bafbf;
+      transform: translate3d(1rem, 0, 0); }
+    #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-fieldtype-radio .input li.hs-form-radio label #if_you_accept_my_offer1-7eaaeb92-f486-4996-adff-448c9b276b0c:checked ~ .switch_indicator {
+      background: #3bafbf;
+      transform: translate3d(1rem, 0, 0); }
     #lp-pom-root #lp-pom-box-354 .hbspt-form .hs_submit .hs-button {
       width: calc(100% - 30px);
       margin: 0px;

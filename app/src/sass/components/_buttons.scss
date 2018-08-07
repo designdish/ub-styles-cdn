@@ -22,7 +22,7 @@
     position: relative;
     width: 14rem;
     padding: 0 1rem;
-    $:before {
+    &:before {
         content: '';
         position: absolute;
         left: 0;
@@ -40,7 +40,7 @@
         cursor: pointer;
         transition: color 200ms ease-out;
         &:hover {
-            color: $white;
+            color: $PrimaryWhite;
         }
     }
 
@@ -53,7 +53,7 @@
         background: $SeafoamGreen;
         border-radius: 50%;
         transition: transform 600ms cubic-bezier(.02, .94, .09, .97),
-        background:300ms cubic-bezier(.17, .67, .14, 1.03);
+        background 300ms cubic-bezier(.17, .67, .14, 1.03);
         transform: translate3d(1rem, 0, 0);
     }
 
