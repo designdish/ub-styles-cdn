@@ -53,6 +53,9 @@
             .hs-fieldtype-radio {
                 // @extend %slideToggle;
                 // 
+                input {
+                    display: none;
+                }
                 .hs-form-radio {
                     label {
                         margin-left: 7px;

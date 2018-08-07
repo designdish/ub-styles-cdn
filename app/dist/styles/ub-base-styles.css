@@ -103,6 +103,8 @@
       margin: 10px auto; }
       #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field.hs_nyop {
         width: calc(100% - 30px); }
+    #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-fieldtype-radio input {
+      display: none; }
     #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-fieldtype-radio .hs-form-radio label {
       margin-left: 7px;
       margin-top: 10px; }
