@@ -105,7 +105,7 @@
         width: calc(100% - 30px); }
     #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-fieldtype-radio input {
       display: none; }
-    #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-fieldtype-radio .hs-form-radio label {
+    #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-fieldtype-radio .hs-form-radio label span {
       margin-left: 7px;
       margin-top: 10px; }
     #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-fieldtype-radio .hs-form-radio-display span:before {
