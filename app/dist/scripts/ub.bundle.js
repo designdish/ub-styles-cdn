@@ -480,4 +480,4 @@ addEvent('window', 'onload', function() {
     injectSlider();
     injectSlideToggle();
     buildUbLinks();
-};);
+});
