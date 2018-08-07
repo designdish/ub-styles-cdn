@@ -480,4 +480,4 @@ addEvent('document', 'DOMContentLoaded', (function() {
     injectSlider();
     injectSlideToggle();
     buildUbLinks();
-};));
+}));
