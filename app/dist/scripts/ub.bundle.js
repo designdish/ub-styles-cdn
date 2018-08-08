@@ -477,6 +477,19 @@ var handleOutboundLinkClicks = function(event) {
     });
 };
 
+var displayLoadingEl = function(el) {
+    var loaderFrame = document.createElement("div");
+    var contentBlock = document.createElement("div");
+
+    loaderFrame.classList.add("loader");
+    contentBlock.classList.add("contentBlock");
+    for (var i = el.length - 1; i >= 0; i--) {
+        el[i].insertAdjacentElement("afterBegin", loaderFrame);
+    }
+};
+var body = document.getElementsByTagName("body");
+window.onload = displayLoadingEl(body);
+
 (function() {
     addEvent(document, "DOMContentLoaded", function() {
         var token = md5(

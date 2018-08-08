@@ -3718,6 +3718,24 @@ readers do not read off random characters that represent icons */
   font-size: 1.1rem;
   color: #4a4a4a; }
 
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 999999;
+  overflow: hidden;
+  background: linear-gradient(160deg, #038ff4, #0564c8, #0266af);
+  background-size: 400%;
+  animation: colorChange 10s ease infinite; }
+
+@keyframes colorChange {
+  0% {
+    background-position: 38% 0; }
+  50% {
+    background-position: 63% 100%; }
+  100% {
+    background-position: 38% 0; } }
+
 /* Import Layout Contents */
 /* Import Pages Contents */
 /* Import Themes Contents */

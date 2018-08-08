@@ -1,38 +1,24 @@
 /* Import Vendors Contents */
 
-
 /* Import Utils Contents */
 
-@import 'utils/breakpoints';
-
-
-
-
+@import "utils/breakpoints";
 
 /* Import Base Contents */
 
-@import 'base/colors';
-@import 'base/typography';
-
-
-
-
+@import "base/colors";
+@import "base/typography";
 
 /* Import Components Contents */
 
-@import 'components/buttons';
-@import 'components/form';
-@import 'components/navigation';
-@import 'components/carousel';
-
-
-
-
+@import "components/buttons";
+@import "components/form";
+@import "components/navigation";
+@import "components/carousel";
+@import "components/loader";
 
 /* Import Layout Contents */
 
-
 /* Import Pages Contents */
-
 
 /* Import Themes Contents */
