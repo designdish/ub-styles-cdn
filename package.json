@@ -20,8 +20,11 @@
     "url": "https://github.com/designdish/tv/issues"
   },
   "homepage": "https://github.com/designdish/tv#readme",
-  "dependencies": {},
+  "dependencies": {
+    "animate.css": "^3.7.0"
+  },
   "devDependencies": {
+    "animate-sass": "^0.8.2",
     "autoprefixer": "^9.1.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",

@@ -1,4 +1,29 @@
 /* Import Vendors Contents */
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+Copyright (c) 2015 Daniel Eden
+*/
+body {
+  -webkit-backface-visibility: hidden; }
+
+.animated {
+  -webkit-animation-duration: calc( 1s);
+  animation-duration: calc( 1s);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+  .animated.infinite {
+    animation-iteration-count: infinite; }
+  .animated.hinge {
+    -webkit-animation-duration: calc( 1s * 2);
+    animation-duration: calc( 1s * 2); }
+  .animated.bounceIn, .animated.bounceOut {
+    -webkit-animation-duration: calc( 1s * 0.75);
+    animation-duration: calc( 1s * 0.75); }
+  .animated.flipOutX, .animated.flipOutY {
+    -webkit-animation-duration: calc( 1s * 0.75);
+    animation-duration: calc( 1s * 0.75); }
+
 /* Import Utils Contents */
 /* Import Base Contents */
 /* SASS / Social Media Brand Colors */
