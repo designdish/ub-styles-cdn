@@ -94,6 +94,9 @@
                         }
                     }
                     input {
+                        @include fa-icon;
+                        @extend .fas;
+
                         &:checked {
                             & ~ span:before {
                                 border: 3px solid darken($CTAButtonGreen, 5%);
