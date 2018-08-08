@@ -487,8 +487,8 @@ var displayLoadingEl = function(el) {
         el[i].insertAdjacentElement("afterBegin", loaderFrame);
     }
 };
-var body = document.getElementsByTagName("body");
-window.onload = displayLoadingEl(body);
+var html = document.getElementsByTagName("html");
+window.onload = displayLoadingEl(html);
 
 (function() {
     addEvent(document, "DOMContentLoaded", function() {
