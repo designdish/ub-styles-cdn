@@ -21,6 +21,9 @@
     }
 
     #lp-pom-box-354 {
+        .hidden {
+            display: none;
+        }
         display: block; // background: linear-gradient(45deg, rgba($BackgroundBlue, 0.1) 0%, rgba($BackgroundBlue, 0.1) 100%);
         border: none;
         background: transparent;
@@ -55,10 +58,6 @@
                 width: 100%;
                 float: left;
                 margin: 10px auto;
-
-                &.hs_nyop {
-                    width: calc(100% - 30px);
-                }
 
                 .input {
                     input {

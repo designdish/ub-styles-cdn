@@ -493,7 +493,9 @@ var handleOutboundLinkClicks = function(event) {
         };
         var sessionInfo;
 
-        checkCredentials(token, hash);
+        if (window.origin !== "https://app.unbounce.com") {
+            checkCredentials(token, hash);
+        }
         buildUbLinks();
     });
 })();
