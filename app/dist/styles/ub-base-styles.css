@@ -3724,9 +3724,16 @@ readers do not read off random characters that represent icons */
   width: 100%;
   z-index: 999999;
   overflow: hidden;
-  background: linear-gradient(160deg, #038ff4, #0564c8, #0266af);
+  background: linear-gradient(160deg, #038ff4, #00aff8, #295b8e);
   background-size: 400%;
   animation: colorChange 10s ease infinite; }
+  .loader-content {
+    margin: 35vh auto;
+    width: 30vw;
+    height: 30vh;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 34px;
+    border: 4px inset rgba(255, 255, 255, 0.2); }
 
 @keyframes colorChange {
   0% {

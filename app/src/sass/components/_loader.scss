@@ -4,9 +4,22 @@
 	width: 100%;
 	z-index: 999999;
 	overflow: hidden;
-	background: linear-gradient(160deg, $PrimaryBlue, $MediumBlue, $OceanBlue);
+	background: linear-gradient(
+		160deg,
+		$PrimaryBlue,
+		$BackgroundBlue,
+		$DarkBlue
+	);
 	background-size: 400%;
 	animation: colorChange 10s ease infinite;
+	&-content {
+		margin: 35vh auto;
+		width: 30vw;
+		height: 30vh;
+		background: rgba($PrimaryWhite, 0.3);
+		border-radius: 34px;
+		border: 4px inset rgba($PrimaryWhite, 0.2);
+	}
 }
 
 @keyframes colorChange {
