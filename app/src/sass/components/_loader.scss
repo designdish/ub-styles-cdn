@@ -20,6 +20,14 @@
 		border-radius: 34px;
 		border: 4px inset rgba($PrimaryWhite, 0.2);
 	}
+
+	h1 {
+		color: $PrimaryWhite;
+		font-size: 2.5rem;
+		font-family: Roboto;
+		margin: calc(50% - 1.25rem), auto;
+		width: 100%;
+	}
 }
 
 @keyframes colorChange {
