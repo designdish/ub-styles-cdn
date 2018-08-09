@@ -530,8 +530,8 @@ var constructWelcomeExperience = function(el) {
 var fadeDisplay = function(el, delay) {
     fadeIn(el);
     setTimeout(function() {
-        setTimeout(fadeOut(el), del);
-    }, del + 1500);
+        setTimeout(fadeOut(el), delay);
+    }, delay + 1500);
 };
 
 var replaceMessage = function(container, str) {
