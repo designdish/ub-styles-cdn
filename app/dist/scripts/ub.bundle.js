@@ -500,10 +500,13 @@ var wrap = function(el, wrapper) {
 
 var constructWelcomeExperience = function(el) {
     var user = getUser();
-    var greeting = wrap("Hello" + user.firstName, document.createElement("h1"));
+    var greeting = "Hello " + user.firstName + "...";
+    var greetingContainer = document.createElement("h1");
+    greetingContainer.innerText(greeting);
+
     greeting.classList.add("bounceIn");
     greeting.classList.add("fadeIn");
-    el.appendChild(greeting);
+    el.appendChild(greetingContainer);
 };
 
 var getUser = function() {
