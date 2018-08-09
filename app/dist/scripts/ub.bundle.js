@@ -548,12 +548,12 @@ var replaceMessage = function(container, str) {
 
 var fadeIn = function(el) {
     el.classList.remove("fadeOutDown");
-    el.classList.add("fadeInUp");
+    setTimeout(el.classList.add("fadeInUp"), 500);
 };
 
 var fadeOut = function(el) {
     el.classList.remove("fadeInUp");
-    el.classList.add("fadeOutDown");
+    setTimeout(el.classList.add("fadeOutDown"), 500);
 };
 
 var getUser = function() {
