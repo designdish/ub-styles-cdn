@@ -502,7 +502,7 @@ var constructWelcomeExperience = function(el) {
     var user = getUser();
     var greeting = "Hello " + user.firstName + "...";
     var greetingContainer = document.createElement("h1");
-    greetingContainer.innerText(greeting);
+    greetingContainer.innerText = greeting;
 
     greeting.classList.add("bounceIn");
     greeting.classList.add("fadeIn");
