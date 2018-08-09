@@ -511,21 +511,19 @@ var constructWelcomeExperience = function(el) {
     setTimeout(function() {
         greetingContainer.classList.remove("bounceIn");
         fadeOut(greetingContainer);
+        greeting = "Thank You For Your Continued Loyalty";
+        greetingContainer.classList.add("fadeIn");
     }, 1500);
-
-    greeting = "Thank You For Your Continued Loyalty";
-    greetingContainer.classList.add("fadeIn");
 
     setTimeout(function() {
         greetingContainer.classList.remove("fadeIn");
         fadeOut(greetingContainer);
+        greeting = "We think you're gonna like this...";
+        greetingContainer.classList.add("fadeIn");
     }, 1500);
 
-    greeting = "We think you're gonna like this...";
-    greetingContainer.classList.add("fadeIn");
-
-    var loader = document.querySelectorAll(".loader");
     setTimeout(function() {
+        var loader = document.querySelector(".loader");
         fadeOut(greetingContainer);
         fadeOut(loader);
     }, 1500);
