@@ -524,7 +524,7 @@ var constructWelcomeExperience = function(el) {
         fadeOut(greetingContainer);
         fadeOut(loader);
             loader.parentNode.removeChild(loader);
-    };
+    });
 };
 
 var fadeDisplay = function(el){
