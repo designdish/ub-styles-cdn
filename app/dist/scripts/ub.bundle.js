@@ -401,6 +401,37 @@ var addEvent = function(obj, evt, fn) {
     }
 };
 
+var getUser = function() {
+    var user = {
+        firstName: getParameterByName("first"),
+        lastName: getParameterByName("last"),
+        email: getParameterByName("email")
+    };
+    return user;
+};
+
+var messages = [{
+        "message": "Hi " + getUser().firstName + "!",
+        "container": "h1",
+        "intro": ["fadeInUp", "slower"],
+        "outro": ["fadeOutDown", "slower"],
+        "delay": 1500
+    },
+    {
+        "message": "Thank You For Your Continued Loyalty",
+        "container": "h1",
+        "intro": ["fadeInUp", "slower"],
+        "outro": ["fadeOutDown", "slower"],
+        "delay": 1500
+    },
+    {
+        "message": "We think you're gonna like this...",
+        "container": "h1",
+        "intro": ["fadeInUp", "slower"],
+        "outro": ["fadeOutDown", "slower"],
+        "delay": 1500
+    }
+];
 var identifyLinks = function() {
     var links = document.querySelectorAll("a");
     var pageTitle = document.getElementsByTagName("title")[0].innerText;
@@ -440,14 +471,7 @@ var assignGAEvent = function(obj) {
     if (label != undefined) {
         addEvent(obj, action, function() {
             console.log("ga event triggered");
-            //  ga('send', {
-            //      hitType: 'event',
-            //      eventCategory: category,
-            //      eventAction: action,
-            //      eventLabel: label,
-            //      transport:'beacon'
 
-            // });
             ga("send", "event", category, action, label, {
                 hitCallback: console.log(
                     "ga event sent to analytics" +
@@ -491,66 +515,23 @@ var injectMessageContainer = function(el) {
     el.insertAdjacentElement("afterBegin", div);
     constructWelcomeExperience(div);
 };
+var constructWelcomeExperience = function(el) {
+    for (var i = messages.length - 1; i >= 0; i--) {
+        initMessage(el, messages[i])
+    }
+};
 
 var wrap = function(el, wrapper) {
     el.parentNode.insertBefore(wrapper, el);
     wrapper.appendChild(el);
 };
 
-var getUser = function() {
-    var user = {
-        firstName: getParameterByName("first"),
-        lastName: getParameterByName("last"),
-        email: getParameterByName("email")
-    };
-    return user;
-};
-
-var msg1 = {
-    message: "Hi " + getUser().firstName + "!",
-    container: "h1",
-    intro: ["fadeInUp", "slower"],
-    outro: ["fadeOutDown", "slower"],
-    delay: 1500
-};
-
-var msg2 = {
-    message: "Thank You For Your Continued Loyalty",
-    container: "h1",
-    intro: ["fadeInUp", "slower"],
-    outro: ["fadeOutDown", "slower"],
-    delay: 1500
-};
-
-var msg3 = {
-    message: "We think you're gonna like this...",
-    container: "h1",
-    intro: ["fadeInUp", "slower"],
-    outro: ["fadeOutDown", "slower"],
-    delay: 1500
-};
-
-var greeting1 = function() {
-    var message = "Hi " + getUser().firstName + "!";
-    var container = "h1";
-    var intro = ["fadeInUp", "slower"];
-    var outro = ["fadeOutDown", "slower"];
-    var delay = 1500;
-
-    contructMessage(message, container);
-    automateDisplay(msgContainer, intro, outro, delay);
-
-    el.appendChild(greetingContainer);
-};
-
-var constructMessage = function(msg, container, inClass, outClass, delay) {
-
-
+var constructMessage = function(msg, container) {
     var msgContainer = document.createElement(container);
     msgContainer.innerText = msg;
-
     return msgContainer;
 };
+
 
 var automateDisplay = function(el, inClass, outClass, delay) {
 
@@ -572,49 +553,17 @@ var automateDisplay = function(el, inClass, outClass, delay) {
     }
 };
 
-var constructWelcomeExperience = function(el) {
-    var user = getUser();
-    var greeting = "Hi " + user.firstName + "!";
-    var greetingContainer = document.createElement("h1");
-    greetingContainer.innerText = greeting;
 
-    greeting1(el);
-    greeting2(el);
-    greeting3(el);
-    greeting4(el);
+var initMessage = function(el, msg) {
+    var message = msg.message,
+        container = msg.container,
+        intro = msg.intro,
+        outro = msg.outro,
+        delay = msg.delay;
 
-
-    function greeting2() {
-        fadeOut(greetingContainer);
-        greeting = "Thank You For Your Continued Loyalty";
-        replaceMessage(greetingContainer, greeting);
-        fadeIn(greetingContainer);
-    }
-
-    function greeting3() {
-        fadeOut(greetingContainer);
-        greeting = "We think you're gonna like this...";
-        replaceMessage(greetingContainer, greeting);
-        fadeIn(greetingContainer);
-    }
-
-    function greeting4() {
-        var loader = document.querySelector(".loader");
-        fadeOut(greetingContainer);
-        fadeOut(loader);
-        loader.parentNode.removeChild(loader);
-    }
-
-    function runTime() {
-        setTimeout(greeting1, 1000);
-        setTimeout(greeting2, 3000);
-        setTimeout(greeting3, 5000);
-        setTimeout(greeting4, 7000);
-    }
-    runTime();
+    container = el.appendChild(contructMessage(message, container));
+    automateDisplay(container, intro, outro, delay);
 };
-
-
 
 var replaceMessage = function(container, str) {
     container.innerText = str;
