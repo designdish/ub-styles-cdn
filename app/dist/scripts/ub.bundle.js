@@ -523,16 +523,14 @@ var constructWelcomeExperience = function(el) {
         var loader = document.querySelector(".loader");
         fadeOut(greetingContainer);
         fadeOut(loader);
-            loader.parentNode.removeChild(loader);
+        loader.parentNode.removeChild(loader);
     });
 };
 
-var fadeDisplay = function(el){
+var fadeDisplay = function(el) {
     fadeIn(el);
-    setTimeout(function(){
-        fadeOut(el);} 1500);
+    setTimeout(fadeOut(el), 1500);
 };
-
 
 var replaceMessage = function(container, str) {
     container.innerText = str;
