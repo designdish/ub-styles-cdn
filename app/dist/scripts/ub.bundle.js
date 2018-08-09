@@ -513,11 +513,11 @@ var constructWelcomeExperience = function(el) {
 
     greeting = "Thank You For Your Continued Loyalty";
     replaceMessage(greetingContainer, greeting);
-    fadeDisplay(greetingContainer);
+    fadeDisplay(greetingContainer, 1000);
 
     greeting = "We think you're gonna like this...";
     replaceMessage(greetingContainer, greeting);
-    fadeDisplay(greetingContainer);
+    fadeDisplay(greetingContainer, 3500);
 
     setTimeout(function() {
         var loader = document.querySelector(".loader");
@@ -527,11 +527,11 @@ var constructWelcomeExperience = function(el) {
     }, 3500);
 };
 
-var fadeDisplay = function(el) {
+var fadeDisplay = function(el, delay) {
     fadeIn(el);
     setTimeout(function() {
-        setTimeout(fadeOut(el), 1500);
-    }, 2500);
+        setTimeout(fadeOut(el), del);
+    }, del + 1500);
 };
 
 var replaceMessage = function(container, str) {
