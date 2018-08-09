@@ -5,20 +5,22 @@
 	z-index: 999999;
 	overflow: hidden;
 	background: linear-gradient(
-		160deg,
-		$PrimaryBlue,
-		$BackgroundBlue,
-		$DarkBlue
+		0deg,
+		rgba(110, 120, 250, 1),
+		rgba(100, 100, 240, 1),
+		rgba(90, 90, 230, 1),
+		rgba(80, 80, 220, 1)
 	);
 	background-size: 400%;
-	animation: colorChange 10s ease infinite;
+	animation: colorChange 8s ease infinite;
+	box-shadow: inset 0px 0px 224px 30px rgba(60, 60, 70, 0.8);
+
 	&-content {
-		margin: 35vh auto;
+		margin: calc(35vh - 15px) auto;
 		width: 30vw;
 		height: 30vh;
 		background: rgba($PrimaryWhite, 0.3);
-		border-radius: 34px;
-		border: 4px inset rgba($PrimaryWhite, 0.2);
+		border: 1px inset rgba($PrimaryWhite, 0);
 	}
 
 	h1 {

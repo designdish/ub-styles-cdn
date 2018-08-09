@@ -4531,16 +4531,16 @@ readers do not read off random characters that represent icons */
   width: 100%;
   z-index: 999999;
   overflow: hidden;
-  background: linear-gradient(160deg, #038ff4, #00aff8, #295b8e);
+  background: linear-gradient(0deg, #6e78fa, #6464f0, #5a5ae6, #5050dc);
   background-size: 400%;
-  animation: colorChange 10s ease infinite; }
+  animation: colorChange 8s ease infinite;
+  box-shadow: inset 0px 0px 224px 30px rgba(60, 60, 70, 0.8); }
   .loader-content {
-    margin: 35vh auto;
+    margin: calc(35vh - 15px) auto;
     width: 30vw;
     height: 30vh;
     background: rgba(255, 255, 255, 0.3);
-    border-radius: 34px;
-    border: 4px inset rgba(255, 255, 255, 0.2); }
+    border: 1px inset rgba(255, 255, 255, 0); }
   .loader h1 {
     color: white;
     font-size: 2.5rem;
