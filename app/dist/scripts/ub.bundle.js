@@ -527,8 +527,8 @@ var constructWelcomeExperience = function(el) {
                 fadeOut(greetingContainer);
                 fadeOut(loader);
                 loader.parentNode.removeChild(loader);
-            }, 1500);
-        }, 1500);
+            }, 3500);
+        }, 2500);
     }, 1500);
 };
 
