@@ -497,6 +497,15 @@ var wrap = function(el, wrapper) {
     wrapper.appendChild(el);
 };
 
+var getUser = function() {
+    var user = {
+        firstName: getParameterByName("first"),
+        lastName: getParameterByName("last"),
+        email: getParameterByName("email")
+    };
+    return user;
+};
+
 var msg1 = {
     message: "Hi " + getUser().firstName + "!",
     container: "h1",
@@ -621,14 +630,7 @@ var fadeOut = function(el) {
     setTimeout(el.classList.add("fadeOutDown"), 2500);
 };
 
-var getUser = function() {
-    var user = {
-        firstName: getParameterByName("first"),
-        lastName: getParameterByName("last"),
-        email: getParameterByName("email")
-    };
-    return user;
-};
+
 
 var html = document.getElementsByTagName("html");
 
