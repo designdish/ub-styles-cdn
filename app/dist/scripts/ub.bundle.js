@@ -504,8 +504,8 @@ var constructWelcomeExperience = function(el) {
     var greetingContainer = document.createElement("h1");
     greetingContainer.innerText = greeting;
 
-    greeting.classList.add("bounceIn");
-    greeting.classList.add("fadeIn");
+    greetingContainer.classList.add("bounceIn");
+    greetingContainer.classList.add("fadeIn");
     el.appendChild(greetingContainer);
 };
 
