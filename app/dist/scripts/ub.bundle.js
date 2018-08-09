@@ -504,24 +504,30 @@ var constructWelcomeExperience = function(el) {
     var greetingContainer = document.createElement("h1");
     greetingContainer.innerText = greeting;
 
-    greetingContainer.classList.add("animated", "bounceIn", "slow");
+    greetingContainer.classList.add("animated", "fadeInUp", "slow");
 
     el.appendChild(greetingContainer);
 
     setTimeout(function() {
-        greetingContainer.classList.remove("bounceIn");
+        greetingContainer.classList.remove("fadeInUp");
+
         fadeOut(greetingContainer);
+
         greeting = "Thank You For Your Continued Loyalty";
         replaceMessage(greetingContainer, greeting);
-        greetingContainer.classList.remove("fadeOut");
         greetingContainer.classList.add("fadeIn");
+        greetingContainer.classList.remove("fadeOut");
+
         setTimeout(function() {
             greetingContainer.classList.remove("fadeIn");
+
             fadeOut(greetingContainer);
+
             greeting = "We think you're gonna like this...";
             replaceMessage(greetingContainer, greeting);
-            greetingContainer.classList.remove("fadeOut");
             greetingContainer.classList.add("fadeIn");
+            greetingContainer.classList.remove("fadeOut");
+
             setTimeout(function() {
                 var loader = document.querySelector(".loader");
                 fadeOut(greetingContainer);
