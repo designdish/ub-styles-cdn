@@ -512,21 +512,27 @@ var constructWelcomeExperience = function(el) {
         greetingContainer.classList.remove("bounceIn");
         fadeOut(greetingContainer);
         greeting = "Thank You For Your Continued Loyalty";
+        replaceMessage(greetingContainer, greeting);
+        greetingContainer.classList.remove("fadeOut");
         greetingContainer.classList.add("fadeIn");
+        setTimeout(function() {
+            greetingContainer.classList.remove("fadeIn");
+            fadeOut(greetingContainer);
+            greeting = "We think you're gonna like this...";
+            replaceMessage(greetingContainer, greeting);
+            greetingContainer.classList.remove("fadeOut");
+            greetingContainer.classList.add("fadeIn");
+            setTimeout(function() {
+                var loader = document.querySelector(".loader");
+                fadeOut(greetingContainer);
+                fadeOut(loader);
+            }, 1500);
+        }, 1500);
     }, 1500);
+};
 
-    setTimeout(function() {
-        greetingContainer.classList.remove("fadeIn");
-        fadeOut(greetingContainer);
-        greeting = "We think you're gonna like this...";
-        greetingContainer.classList.add("fadeIn");
-    }, 1500);
-
-    setTimeout(function() {
-        var loader = document.querySelector(".loader");
-        fadeOut(greetingContainer);
-        fadeOut(loader);
-    }, 1500);
+var replaceMessage = function(container, str) {
+    container.innerText = str;
 };
 
 var fadeOut = function(el) {
