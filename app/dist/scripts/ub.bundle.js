@@ -532,8 +532,9 @@ var constructWelcomeExperience = function(el) {
         setTimeout(greeting1, 1000);
         setTimeout(greeting2, 2500);
         setTimeout(greeting3, 4000);
-        setTimeout(greeting3, 5500);
+        setTimeout(greeting4, 5500);
     }
+    runTime();
 };
 
 var fadeDisplay = function(el) {
