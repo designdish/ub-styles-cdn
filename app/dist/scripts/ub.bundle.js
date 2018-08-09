@@ -411,24 +411,24 @@ var getUser = function() {
 };
 
 var messages = [{
-        "message": "Hi " + getUser().firstName + "!",
+        "message": "We think you're gonna like this...",
         "container": "h1",
-        "intro": ["fadeInUp", "slower"],
-        "outro": ["fadeOutDown", "slower"],
+        "intro": "fadeInUp slower",
+        "outro": "fadeOutDown slower",
         "delay": 1500
     },
     {
         "message": "Thank You For Your Continued Loyalty",
         "container": "h1",
-        "intro": ["fadeInUp", "slower"],
-        "outro": ["fadeOutDown", "slower"],
+        "intro": "fadeInUp slower",
+        "outro": "fadeOutDown slower",
         "delay": 1500
     },
     {
-        "message": "We think you're gonna like this...",
+        "message": "Hi " + getUser().firstName + "!",
         "container": "h1",
-        "intro": ["fadeInUp", "slower"],
-        "outro": ["fadeOutDown", "slower"],
+        "intro": "fadeInUp slower",
+        "outro": "fadeOutDown slower",
         "delay": 1500
     }
 ];
@@ -516,8 +516,9 @@ var injectMessageContainer = function(el) {
     constructWelcomeExperience(div);
 };
 var constructWelcomeExperience = function(el) {
+    var int = messages.length * 2000;
     for (var i = messages.length - 1; i >= 0; i--) {
-        initMessage(el, messages[i]);
+        setInterval(initMessage(el, messages[i]), int);
     }
 };
 
@@ -535,6 +536,8 @@ var constructMessage = function(msg, container) {
 
 var automateDisplay = function(el, inClass, outClass, delay) {
 
+    var displayContainer = el.parentNode;
+
     inClass = (inClass != undefined) ? inClass : ["fadeInUp", "slower"];
     outClass = (outClass != undefined) ? outClass : ["fadeOutDown", "slower"];
     delay = (delay != undefined) ? delay : 1500;
@@ -550,6 +553,7 @@ var automateDisplay = function(el, inClass, outClass, delay) {
     function toggleOut() {
         el.classList.remove(inClass);
         el.classList.add(outClass);
+        displayContainer.removeChild(el);
     }
     toggleIn();
 };
