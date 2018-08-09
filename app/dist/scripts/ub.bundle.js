@@ -413,22 +413,22 @@ var getUser = function() {
 var messages = [{
         "message": "We think you're gonna like this...",
         "container": "h1",
-        "intro": "fadeInUp slower",
-        "outro": "fadeOutDown slower",
+        "intro": ["fadeInUp", "slower"],
+        "outro": ["fadeOutDown", "slower"],
         "delay": 1500
     },
     {
         "message": "Thank You For Your Continued Loyalty",
         "container": "h1",
-        "intro": "fadeInUp slower",
-        "outro": "fadeOutDown slower",
+        "intro": ["fadeInUp", "slower"],
+        "outro": ["fadeOutDown", "slower"],
         "delay": 1500
     },
     {
         "message": "Hi " + getUser().firstName + "!",
         "container": "h1",
-        "intro": "fadeInUp slower",
-        "outro": "fadeOutDown slower",
+        "intro": ["fadeInUp", "slower"],
+        "outro": ["fadeOutDown", "slower"],
         "delay": 1500
     }
 ];
@@ -537,6 +537,7 @@ var constructMessage = function(msg, container) {
 var automateDisplay = function(el, inClass, outClass, delay) {
 
     var displayContainer = el.parentNode;
+    var cl = el.classList;
 
     inClass = (inClass != undefined) ? inClass : ["fadeInUp", "slower"];
     outClass = (outClass != undefined) ? outClass : ["fadeOutDown", "slower"];
@@ -546,13 +547,13 @@ var automateDisplay = function(el, inClass, outClass, delay) {
         if (el.classList.contains('animated') != true) {
             el.classList.add('animated');
         }
-        el.classList.add(inClass);
+        el.classList.add.apply(cl, inClass);
         setTimeout(toggleOut(), delay);
     }
 
     function toggleOut() {
-        el.classList.remove(inClass);
-        el.classList.add(outClass);
+        el.classList.remove.apply(cl, inClass);
+        el.classList.add.apply(cl, outClass);
         displayContainer.removeChild(el);
     }
     toggleIn();
