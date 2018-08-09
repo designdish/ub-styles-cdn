@@ -4539,14 +4539,17 @@ readers do not read off random characters that represent icons */
     margin: calc(35vh - 15px) auto;
     width: 30vw;
     height: 30vh;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0);
     border: 1px inset rgba(255, 255, 255, 0); }
   .loader h1 {
     color: white;
-    font-size: 2.5rem;
+    font-size: 4.5rem;
     font-family: Roboto;
-    margin: calc(50% - 1.25rem), auto;
-    width: 100%; }
+    margin: calc(25% - 3.25rem) auto;
+    width: 100%;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: block; }
 
 @keyframes colorChange {
   0% {
