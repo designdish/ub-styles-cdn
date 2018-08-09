@@ -517,7 +517,7 @@ var injectMessageContainer = function(el) {
 };
 var constructWelcomeExperience = function(el) {
     for (var i = messages.length - 1; i >= 0; i--) {
-        initMessage(el, messages[i])
+        initMessage(el, messages[i]);
     }
 };
 
@@ -551,6 +551,7 @@ var automateDisplay = function(el, inClass, outClass, delay) {
         el.classList.remove(inClass);
         el.classList.add(outClass);
     }
+    toggleIn();
 };
 
 
