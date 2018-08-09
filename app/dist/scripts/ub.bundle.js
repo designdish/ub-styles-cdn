@@ -360,21 +360,21 @@ var buildLink = function(targetURL, license, coupon) {
     for (var i = links.length - 1; i >= 0; i--) {
         link = targetURL + "?license=" + license + "&coupon=" + coupon;
 
-        sessionInfo.pid != null
-            ? (link += "&pid=" + sessionInfo.pid)
-            : (link = link);
-        sessionInfo.utm_source != null
-            ? (link += "&utm_source=" + sessionInfo.utm_source)
-            : (link = link);
-        sessionInfo.utm_medium != null
-            ? (link += "&utm_medium=" + sessionInfo.utm_medium)
-            : (link = link);
-        sessionInfo.utm_campaign != null
-            ? (link += "&utm_campaign=" + sessionInfo.utm_campaign)
-            : (link = link);
-        sessionInfo.utm_content != null
-            ? (link += "&utm_content=" + sessionInfo.utm_content)
-            : (link = link);
+        sessionInfo.pid != null ?
+            (link += "&pid=" + sessionInfo.pid) :
+            (link = link);
+        sessionInfo.utm_source != null ?
+            (link += "&utm_source=" + sessionInfo.utm_source) :
+            (link = link);
+        sessionInfo.utm_medium != null ?
+            (link += "&utm_medium=" + sessionInfo.utm_medium) :
+            (link = link);
+        sessionInfo.utm_campaign != null ?
+            (link += "&utm_campaign=" + sessionInfo.utm_campaign) :
+            (link = link);
+        sessionInfo.utm_content != null ?
+            (link += "&utm_content=" + sessionInfo.utm_content) :
+            (link = link);
     }
 };
 
@@ -409,10 +409,9 @@ var identifyLinks = function() {
         link = links[i];
 
         props = {
-            category:
-                pageTitle +
+            category: pageTitle +
                 " - " +
-                window.location.pathname.replace("/"[0], ""),
+                window.location.pathname.replace("/" [0], ""),
             action: "click",
             label: link.innerText
         };
@@ -452,16 +451,16 @@ var assignGAEvent = function(obj) {
             ga("send", "event", category, action, label, {
                 hitCallback: console.log(
                     "ga event sent to analytics" +
-                        "\n" +
-                        "   category: " +
-                        category +
-                        "\n" +
-                        "   action: " +
-                        action +
-                        "\n" +
-                        "   label: " +
-                        label +
-                        "\n"
+                    "\n" +
+                    "   category: " +
+                    category +
+                    "\n" +
+                    "   action: " +
+                    action +
+                    "\n" +
+                    "   label: " +
+                    label +
+                    "\n"
                 )
             });
         });
@@ -508,12 +507,14 @@ var constructWelcomeExperience = function(el) {
         greetingContainer.classList.add("animated", "fadeInUp", "slower");
         el.appendChild(greetingContainer);
     }
+
     function greeting2() {
         fadeOut(greetingContainer);
         greeting = "Thank You For Your Continued Loyalty";
         replaceMessage(greetingContainer, greeting);
         fadeIn(greetingContainer);
     }
+
     function greeting3() {
         fadeOut(greetingContainer);
         greeting = "We think you're gonna like this...";
@@ -548,12 +549,12 @@ var replaceMessage = function(container, str) {
 
 var fadeIn = function(el) {
     el.classList.remove("fadeOutDown");
-    setTimeout(el.classList.add("fadeInUp"), 1500);
+    setTimeout(el.classList.add("fadeInUp"), 2500);
 };
 
 var fadeOut = function(el) {
     el.classList.remove("fadeInUp");
-    setTimeout(el.classList.add("fadeOutDown"), 1500);
+    setTimeout(el.classList.add("fadeOutDown"), 2500);
 };
 
 var getUser = function() {
