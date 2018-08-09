@@ -497,16 +497,83 @@ var wrap = function(el, wrapper) {
     wrapper.appendChild(el);
 };
 
+var msg1 = {
+    message: "Hi " + getUser().firstName + "!",
+    container: "h1",
+    intro: ["fadeInUp", "slower"],
+    outro: ["fadeOutDown", "slower"],
+    delay: 1500
+};
+
+var msg2 = {
+    message: "Thank You For Your Continued Loyalty",
+    container: "h1",
+    intro: ["fadeInUp", "slower"],
+    outro: ["fadeOutDown", "slower"],
+    delay: 1500
+};
+
+var msg3 = {
+    message: "We think you're gonna like this...",
+    container: "h1",
+    intro: ["fadeInUp", "slower"],
+    outro: ["fadeOutDown", "slower"],
+    delay: 1500
+};
+
+var greeting1 = function() {
+    var message = "Hi " + getUser().firstName + "!";
+    var container = "h1";
+    var intro = ["fadeInUp", "slower"];
+    var outro = ["fadeOutDown", "slower"];
+    var delay = 1500;
+
+    contructMessage(message, container);
+    automateDisplay(msgContainer, intro, outro, delay);
+
+    el.appendChild(greetingContainer);
+};
+
+var constructMessage = function(msg, container, inClass, outClass, delay) {
+
+
+    var msgContainer = document.createElement(container);
+    msgContainer.innerText = msg;
+
+    return msgContainer;
+};
+
+var automateDisplay = function(el, inClass, outClass, delay) {
+
+    inClass = (inClass != undefined) ? inClass : ["fadeInUp", "slower"];
+    outClass = (outClass != undefined) ? outClass : ["fadeOutDown", "slower"];
+    delay = (delay != undefined) ? delay : 1500;
+
+    function toggleIn() {
+        if (el.classList.contains('animated') != true) {
+            el.classList.add('animated');
+        }
+        el.classList.add(inClass);
+        setTimeout(toggleOut(), delay);
+    }
+
+    function toggleOut() {
+        el.classList.remove(inClass);
+        el.classList.add(outClass);
+    }
+};
+
 var constructWelcomeExperience = function(el) {
     var user = getUser();
     var greeting = "Hi " + user.firstName + "!";
     var greetingContainer = document.createElement("h1");
     greetingContainer.innerText = greeting;
 
-    function greeting1() {
-        greetingContainer.classList.add("animated", "fadeInUp", "slower");
-        el.appendChild(greetingContainer);
-    }
+    greeting1(el);
+    greeting2(el);
+    greeting3(el);
+    greeting4(el);
+
 
     function greeting2() {
         fadeOut(greetingContainer);
@@ -538,10 +605,7 @@ var constructWelcomeExperience = function(el) {
     runTime();
 };
 
-var fadeDisplay = function(el) {
-    fadeIn(el);
-    setTimeout(fadeOut(el), 1500);
-};
+
 
 var replaceMessage = function(container, str) {
     container.innerText = str;
