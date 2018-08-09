@@ -505,7 +505,34 @@ var constructWelcomeExperience = function(el) {
     greetingContainer.innerText = greeting;
 
     greetingContainer.classList.add("animated", "bounceIn");
+
     el.appendChild(greetingContainer);
+
+    setTimeout(function() {
+        greetingContainer.classList.remove("bounceIn");
+        fadeOut(greetingContainer);
+    }, 1500);
+
+    greeting = "Thank You For Your Continued Loyalty";
+    greetingContainer.classList.add("fadeIn");
+
+    setTimeout(function() {
+        greetingContainer.classList.remove("fadeIn");
+        fadeOut(greetingContainer);
+    }, 1500);
+
+    greeting = "We think you're gonna like this...";
+    greetingContainer.classList.add("fadeIn");
+
+    var loader = document.querySelectorAll(".loader");
+    setTimeout(function() {
+        fadeOut(greetingContainer);
+        fadeOut(loader);
+    }, 1500);
+};
+
+var fadeOut = function(el) {
+    el.classList.add("fadeOut");
 };
 
 var getUser = function() {
