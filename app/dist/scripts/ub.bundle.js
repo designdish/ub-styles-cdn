@@ -500,7 +500,7 @@ var wrap = function(el, wrapper) {
 
 var constructWelcomeExperience = function(el) {
     var user = getUser();
-    var greeting = "Hello " + user.firstName + "...";
+    var greeting = "Hi " + user.firstName + "!";
     var greetingContainer = document.createElement("h1");
     greetingContainer.innerText = greeting;
 
@@ -526,6 +526,7 @@ var constructWelcomeExperience = function(el) {
                 var loader = document.querySelector(".loader");
                 fadeOut(greetingContainer);
                 fadeOut(loader);
+                loader.parentNode.removeChild(loader);
             }, 1500);
         }, 1500);
     }, 1500);
