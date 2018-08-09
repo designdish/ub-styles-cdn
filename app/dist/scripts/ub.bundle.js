@@ -530,9 +530,9 @@ var constructWelcomeExperience = function(el) {
 
     function runTime() {
         setTimeout(greeting1, 1000);
-        setTimeout(greeting2, 2500);
-        setTimeout(greeting3, 4000);
-        setTimeout(greeting4, 5500);
+        setTimeout(greeting2, 3000);
+        setTimeout(greeting3, 5000);
+        setTimeout(greeting4, 7000);
     }
     runTime();
 };
@@ -548,12 +548,12 @@ var replaceMessage = function(container, str) {
 
 var fadeIn = function(el) {
     el.classList.remove("fadeOutDown");
-    setTimeout(el.classList.add("fadeInUp"), 500);
+    setTimeout(el.classList.add("fadeInUp"), 1500);
 };
 
 var fadeOut = function(el) {
     el.classList.remove("fadeInUp");
-    setTimeout(el.classList.add("fadeOutDown"), 500);
+    setTimeout(el.classList.add("fadeOutDown"), 1500);
 };
 
 var getUser = function() {
