@@ -490,6 +490,29 @@ var injectMessageContainer = function(el) {
     var div = document.createElement("div");
     div.classList.add("loader-content");
     el.insertAdjacentElement("afterBegin", div);
+    constructWelcomeExperience(div);
+};
+
+var wrap = function(el, wrapper) {
+    el.parentNode.insertBefore(wrapper, el);
+    wrapper.appendChild(el);
+};
+
+var constructWelcomeExperience = function(el) {
+    var user = getUser();
+    var greeting = wrap("Hello" + user.firstName, document.createElement("h1"));
+    greeting.classList.add("bounceIn");
+    greeting.classList.add("fadeIn");
+    el.appendChild(greeting);
+};
+
+var getUser = function() {
+    var user = {
+        firstName: getParameterByName("first"),
+        lastName: getParameterByName("last"),
+        email: getParameterByName("email")
+    };
+    return user;
 };
 
 var html = document.getElementsByTagName("html");
