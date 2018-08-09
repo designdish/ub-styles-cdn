@@ -508,42 +508,44 @@ var constructWelcomeExperience = function(el) {
 
     el.appendChild(greetingContainer);
 
+    greetingContainer.classList.remove("fadeInUp");
+    fadeOut(greetingContainer);
+
+    greeting = "Thank You For Your Continued Loyalty";
+    replaceMessage(greetingContainer, greeting);
+    fadeDisplay(greetingContainer);
+
+    greeting = "We think you're gonna like this...";
+    replaceMessage(greetingContainer, greeting);
+    fadeDisplay(greetingContainer);
+
     setTimeout(function() {
-        greetingContainer.classList.remove("fadeInUp");
-
+        var loader = document.querySelector(".loader");
         fadeOut(greetingContainer);
-
-        greeting = "Thank You For Your Continued Loyalty";
-        replaceMessage(greetingContainer, greeting);
-        greetingContainer.classList.add("fadeIn");
-        greetingContainer.classList.remove("fadeOut");
-
-        setTimeout(function() {
-            greetingContainer.classList.remove("fadeIn");
-
-            fadeOut(greetingContainer);
-
-            greeting = "We think you're gonna like this...";
-            replaceMessage(greetingContainer, greeting);
-            greetingContainer.classList.add("fadeIn");
-            greetingContainer.classList.remove("fadeOut");
-
-            setTimeout(function() {
-                var loader = document.querySelector(".loader");
-                fadeOut(greetingContainer);
-                fadeOut(loader);
-                loader.parentNode.removeChild(loader);
-            }, 3500);
-        }, 2500);
-    }, 1500);
+        fadeOut(loader);
+            loader.parentNode.removeChild(loader);
+    };
 };
+
+var fadeDisplay = function(el){
+    fadeIn(el);
+    setTimeout(function(){
+        fadeOut(el);} 1500);
+};
+
 
 var replaceMessage = function(container, str) {
     container.innerText = str;
 };
 
+var fadeIn = function(el) {
+    el.classList.remove("fadeOut");
+    el.classList.add("fadeIn");
+};
+
 var fadeOut = function(el) {
     el.classList.add("fadeOut");
+    el.classList.remove("fadeIn");
 };
 
 var getUser = function() {
