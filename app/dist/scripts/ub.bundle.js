@@ -505,15 +505,14 @@ var constructWelcomeExperience = function(el) {
     greetingContainer.innerText = greeting;
 
     function greeting1() {
-        greetingContainer.classList.add("animated", "fadeInUp", "slow");
+        greetingContainer.classList.add("animated", "fadeInUp", "slower");
         el.appendChild(greetingContainer);
     }
     function greeting2() {
         greetingContainer.classList.remove("fadeInUp");
-        fadeOut(greetingContainer);
         greeting = "Thank You For Your Continued Loyalty";
         replaceMessage(greetingContainer, greeting);
-        fadeDisplay(greetingContainer);
+        fadeIn(greetingContainer);
     }
     function greeting3() {
         greeting = "We think you're gonna like this...";
@@ -547,13 +546,13 @@ var replaceMessage = function(container, str) {
 };
 
 var fadeIn = function(el) {
-    el.classList.add("fadeIn");
     el.classList.remove("fadeOut");
+    el.classList.add("fadeIn");
 };
 
 var fadeOut = function(el) {
-    el.classList.add("fadeOut");
     el.classList.remove("fadeIn");
+    el.classList.add("fadeOut");
 };
 
 var getUser = function() {
