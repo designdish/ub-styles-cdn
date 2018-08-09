@@ -504,34 +504,41 @@ var constructWelcomeExperience = function(el) {
     var greetingContainer = document.createElement("h1");
     greetingContainer.innerText = greeting;
 
-    greetingContainer.classList.add("animated", "fadeInUp", "slow");
+    function greeting1() {
+        greetingContainer.classList.add("animated", "fadeInUp", "slow");
+        el.appendChild(greetingContainer);
+    }
+    function greeting2() {
+        greetingContainer.classList.remove("fadeInUp");
+        fadeOut(greetingContainer);
+        greeting = "Thank You For Your Continued Loyalty";
+        replaceMessage(greetingContainer, greeting);
+        fadeDisplay(greetingContainer);
+    }
+    function greeting3() {
+        greeting = "We think you're gonna like this...";
+        replaceMessage(greetingContainer, greeting);
+        fadeDisplay(greetingContainer);
+    }
 
-    el.appendChild(greetingContainer);
-
-    greetingContainer.classList.remove("fadeInUp");
-    fadeOut(greetingContainer);
-
-    greeting = "Thank You For Your Continued Loyalty";
-    replaceMessage(greetingContainer, greeting);
-    fadeDisplay(greetingContainer, 1000);
-
-    greeting = "We think you're gonna like this...";
-    replaceMessage(greetingContainer, greeting);
-    fadeDisplay(greetingContainer, 3500);
-
-    setTimeout(function() {
+    function greeting4() {
         var loader = document.querySelector(".loader");
         fadeOut(greetingContainer);
         fadeOut(loader);
         loader.parentNode.removeChild(loader);
-    }, 3500);
+    }
+
+    function runTime() {
+        setTimeout(greeting1, 1000);
+        setTimeout(greeting2, 2500);
+        setTimeout(greeting3, 4000);
+        setTimeout(greeting3, 5500);
+    }
 };
 
-var fadeDisplay = function(el, delay) {
+var fadeDisplay = function(el) {
     fadeIn(el);
-    setTimeout(function() {
-        setTimeout(fadeOut(el), delay);
-    }, delay + 1500);
+    setTimeout(fadeOut(el), 1500);
 };
 
 var replaceMessage = function(container, str) {
@@ -539,8 +546,8 @@ var replaceMessage = function(container, str) {
 };
 
 var fadeIn = function(el) {
-    el.classList.remove("fadeOut");
     el.classList.add("fadeIn");
+    el.classList.remove("fadeOut");
 };
 
 var fadeOut = function(el) {
