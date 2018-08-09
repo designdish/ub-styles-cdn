@@ -524,12 +524,14 @@ var constructWelcomeExperience = function(el) {
         fadeOut(greetingContainer);
         fadeOut(loader);
         loader.parentNode.removeChild(loader);
-    });
+    }, 3500);
 };
 
 var fadeDisplay = function(el) {
     fadeIn(el);
-    setTimeout(fadeOut(el), 1500);
+    setTimeout(function() {
+        setTimeout(fadeOut(el), 1500);
+    }, 2500);
 };
 
 var replaceMessage = function(container, str) {
