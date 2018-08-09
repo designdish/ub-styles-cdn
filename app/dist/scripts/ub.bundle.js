@@ -561,7 +561,7 @@ var initMessage = function(el, msg) {
         outro = msg.outro,
         delay = msg.delay;
 
-    container = el.appendChild(contructMessage(message, container));
+    container = el.appendChild(constructMessage(message, container));
     automateDisplay(container, intro, outro, delay);
 };
 
