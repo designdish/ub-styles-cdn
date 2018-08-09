@@ -479,7 +479,7 @@ var handleOutboundLinkClicks = function(event) {
 
 var displayLoadingEl = function(el) {
     var loaderFrame = document.createElement("div");
-    loaderFrame.classList.add("loader");
+    loaderFrame.classList.add("animated", "fadeIn", "loader");
     for (var i = el.length - 1; i >= 0; i--) {
         el[i].insertAdjacentElement("afterBegin", loaderFrame);
     }
