@@ -401,37 +401,6 @@ var addEvent = function(obj, evt, fn) {
     }
 };
 
-var getUser = function() {
-    var user = {
-        firstName: getParameterByName("first"),
-        lastName: getParameterByName("last"),
-        email: getParameterByName("email")
-    };
-    return user;
-};
-
-var messages = [{
-        "message": "We think you're gonna like this...",
-        "container": "h1",
-        "intro": ["fadeInUp", "slower"],
-        "outro": ["fadeOutDown", "slower"],
-        "delay": 1500
-    },
-    {
-        "message": "Thank You For Your Continued Loyalty",
-        "container": "h1",
-        "intro": ["fadeInUp", "slower"],
-        "outro": ["fadeOutDown", "slower"],
-        "delay": 1500
-    },
-    {
-        "message": "Hi " + getUser().firstName + "!",
-        "container": "h1",
-        "intro": ["fadeInUp", "slower"],
-        "outro": ["fadeOutDown", "slower"],
-        "delay": 1500
-    }
-];
 var identifyLinks = function() {
     var links = document.querySelectorAll("a");
     var pageTitle = document.getElementsByTagName("title")[0].innerText;

@@ -31,6 +31,9 @@ var injectUserInfo = function(el, str) {
 var token = md5(
 	getParameterByName("mailid") + getParameterByName("utm_campaign")
 );
+
+checkCredentials(token);
+
 // checkCredentials(token);
 
 // var firstNameField = document.querySelector(".hs_firstname");

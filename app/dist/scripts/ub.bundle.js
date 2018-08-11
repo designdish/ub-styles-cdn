@@ -78,5 +78,4 @@ promise1.then(function() {
     load.js(
         "https://rawgit.com/designdish/ub-styles-cdn/master/app/src/javascript/unbounce/ub.check.credentials.js"
     );
-    checkCredentials(token);
 });
