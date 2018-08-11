@@ -80,12 +80,11 @@ var injectLoaders = Promise.all([
 ]);
 
 loadHelpers.then(function() {
-    setTimeout(
+    setTimeout(() => {
         injectLoaders.then(function() {
             load.js(
                 "https://rawgit.com/designdish/ub-styles-cdn/master/app/src/javascript/unbounce/ub.check.credentials.js"
             );
-        }),
-        100
-    );
+        });
+    }, 100);
 });
