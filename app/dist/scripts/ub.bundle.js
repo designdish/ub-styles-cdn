@@ -3,13 +3,13 @@ var load = (function() {
         return function(url) {
             return new Promise(function(resolve, reject) {
                 var element = document.createElement(tag);
-                var parent = "body";
+                var parent = "head";
                 var attr = "src";
                 element.onload = function() {
                     resolve(url);
                 };
                 element.onerror = function() {
-                    reject(url);
+                    waitForIt(url);
                 };
                 switch (tag) {
                     case "script":
@@ -34,6 +34,14 @@ var load = (function() {
         img: _load("img")
     };
 })();
+
+var waitForIt = function(obj) {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(obj);
+        }, 250);
+    });
+};
 
 var buildUrl = function(files, cdn) {
     var urls = [];

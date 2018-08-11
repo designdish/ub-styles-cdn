@@ -19,7 +19,8 @@ var injectUserInfo = function(el, str) {
 };
 
 window.onload = function() {
-	var token = getParameterByName(utm_campaign) + getParameterByName(mailId);
+	var token =
+		getParameterByName("utm_campaign") + getParameterByName("mailid");
 	checkCredentials(token);
 
 	var firstNameField = document.querySelector(".hs_firstname");
