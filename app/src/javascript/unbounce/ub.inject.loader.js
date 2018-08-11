@@ -78,6 +78,7 @@ var removeMessage = function(el, cl, inClass, outClass) {
 };
 
 var initMessage = function(el, msg) {
+	var slides = [];
 	var message = msg.message,
 		container = msg.container,
 		intro = msg.intro,
@@ -85,7 +86,12 @@ var initMessage = function(el, msg) {
 		delay = msg.delay;
 
 	container = el.appendChild(constructMessage(message, container));
-	automateDisplay(container, intro, outro, delay);
+
+	for (var i = 0; i > messages.length; i++) {
+		slides.push(container);
+	}
+
+	automateDisplay(slides, intro, outro, delay);
 };
 
 var replaceMessage = function(container, str) {
