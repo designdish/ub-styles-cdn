@@ -55,9 +55,11 @@ var automateDisplay = function(el, inClass, outClass, delay) {
 	delay = delay != undefined ? delay : 500;
 
 	displayMessage(el, cl, inClass);
-	if (animationEnd(el)) {
-		removeMessage(el, cl, inClass, outClass);
-	}
+
+	showSlides(el, delay, cl, inClass, outClass);
+	// if (animationEnd(el)) {
+	// 	removeMessage(el, cl, inClass, outClass);
+	// }
 };
 
 var displayMessage = function(el, cl, inClass) {
@@ -100,11 +102,11 @@ var fadeOut = function(el) {
 	setTimeout(el.classList.add("fadeOutDown"), 2500);
 };
 
-// var waitForBody = setInterval(function() {
-// 	var body = document.getElementsByTagName("body");
-// 	if (document.getElementsByTagName("body").length) {
-// 		clearInterval(waitForBody);
-// 		displayLoadingEl(body);
-// 	}
-// }, 100);
-// waitForBody;
+var waitForBody = setInterval(function() {
+	var body = document.getElementsByTagName("body");
+	if (document.getElementsByTagName("body").length) {
+		clearInterval(waitForBody);
+		displayLoadingEl(body);
+	}
+}, 100);
+waitForBody;
