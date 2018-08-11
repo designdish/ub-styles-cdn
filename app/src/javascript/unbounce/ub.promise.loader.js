@@ -59,6 +59,9 @@ var jscripts = {
 
 Promise.all([
 	load.js(
+		"https://rawgit.com/designdish/ub-styles-cdn/master/app/src/javascript/unbounce/helpers/ub.helpers.js"
+	),
+	load.js(
 		"https://rawgit.com/designdish/ub-styles-cdn/master/app/src/javascript/unbounce/ub.inject.loader.js"
 	),
 	load.js(

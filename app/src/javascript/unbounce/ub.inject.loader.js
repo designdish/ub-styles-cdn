@@ -1,22 +1,3 @@
-var getParameterByName = function(name, url) {
-	if (!url) url = window.location.href;
-	name = name.replace(/[\[\]]/g, "\\$&");
-	var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-		results = regex.exec(url);
-	if (!results) return null;
-	if (!results[2]) return "";
-	return decodeURIComponent(results[2].replace(/\+/g, " "));
-};
-
-var getUser = function() {
-	var user = {
-		firstName: getParameterByName("first"),
-		lastName: getParameterByName("last"),
-		email: getParameterByName("email")
-	};
-	return user;
-};
-
 var messages = [
 	{
 		message: "Hi " + getUser().firstName + "!",
@@ -63,11 +44,6 @@ var constructWelcomeExperience = function(el) {
 	}
 };
 
-var wrap = function(el, wrapper) {
-	el.parentNode.insertBefore(wrapper, el);
-	wrapper.appendChild(el);
-};
-
 var constructMessage = function(msg, container) {
 	var msgContainer = document.createElement(container);
 	msgContainer.innerText = msg;
@@ -81,20 +57,6 @@ var automateDisplay = function(el, inClass, outClass, delay) {
 	displayMessage(el, cl, inClass);
 	if (animationEnd(el)) {
 		removeMessage(el, cl, inClass, outClass);
-	}
-};
-
-var animationEnd = function(el) {
-	var animations = {
-		animation: "animationend",
-		OAnimation: "oAnimationEnd",
-		MozAnimation: "mozAnimationEnd",
-		WebkitAnimation: "webkitAnimationEnd"
-	};
-	for (var t in animations) {
-		if (el.style[t] !== undefined) {
-			return animations[t];
-		}
 	}
 };
 
