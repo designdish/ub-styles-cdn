@@ -1,8 +1,9 @@
 var mId = 18045513; //mailid
 var utmC = "news2018-Q3-August-Mig-MeetingUsers-T1-enUS"; //utm_campaign
-var hash = md5(mId + utmC);
 
-var checkCredentials = function(token, hash) {
+var checkCredentials = function(token) {
+	var hash = md5(mId + utmC);
+
 	if (token != hash) {
 		window.location = "http://teamviewer.us";
 	}
