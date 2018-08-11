@@ -66,7 +66,7 @@ var jscripts = {
 // Promise.all([load.js(buildUrl(jscript.files, jscript.cdn))]);
 var loadHelpers = Promise.all([
     load.js(
-        "https://rawgit.com/designdish/ub-styles-cdn/master/app/dist/scripts/unbounce/ub.helpers.js"
+        "https://rawgit.com/designdish/ub-styles-cdn/master/app/dist/scripts/ub.helpers.js"
     )
 ]);
 
