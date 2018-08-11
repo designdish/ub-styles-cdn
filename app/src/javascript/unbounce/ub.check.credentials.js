@@ -4,7 +4,7 @@ var hash = md5(mId + utmC);
 
 var checkCredentials = function(token, hash) {
 	if (token != hash) {
-		window.location("http://teamviewer.us");
+		window.location = "http://teamviewer.us";
 	}
 };
 
