@@ -51,12 +51,11 @@ var constructMessage = function(msg, container) {
 };
 
 var automateDisplay = function(el, inClass, outClass, delay) {
-	var cl = el.classList;
 	delay = delay != undefined ? delay : 500;
 
-	displayMessage(el, cl, inClass);
+	// 	displayMessage(el, cl, inClass);
 
-	showSlides(el, delay, cl, inClass, outClass);
+	showSlides(el, delay, inClass, outClass);
 	// if (animationEnd(el)) {
 	// 	removeMessage(el, cl, inClass, outClass);
 	// }
@@ -64,9 +63,9 @@ var automateDisplay = function(el, inClass, outClass, delay) {
 
 var displayMessage = function(el, cl, inClass) {
 	inClass = inClass != undefined ? inClass : ["fadeInUp", "slower"];
-	if (el.classList.contains("animated") != true) {
-		el.classList.add("animated");
-	}
+	// 	if (el.classList.contains("animated") != true) {
+	// 		el.classList.add("animated");
+	// 	}
 	el.classList.add.apply(cl, inClass);
 };
 
@@ -87,7 +86,7 @@ var initMessage = function(el, msg) {
 
 	container = el.appendChild(constructMessage(message, container));
 
-	for (var i = 0; i > messages.length; i++) {
+	for (var i = 0; i < messages.length; i++) {
 		slides.push(container);
 	}
 

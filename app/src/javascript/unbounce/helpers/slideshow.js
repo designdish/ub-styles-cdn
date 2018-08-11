@@ -1,4 +1,5 @@
-function showSlides(slides, time, cl, inClass, outClass) {
+function showSlides(slides, time, inClass, outClass) {
+	var cl = el.classList;
 	var slideIndex = 0;
 	var i;
 	for (i = 0; i < slides.length; i++) {
