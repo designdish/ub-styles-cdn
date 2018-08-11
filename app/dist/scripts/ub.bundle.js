@@ -70,7 +70,7 @@ var loadHelpers = promise.all([
     )
 ]);
 
-var promise1 = Promise.all([
+var injectLoaders = Promise.all([
     load.js(
         "https://rawgit.com/designdish/ub-styles-cdn/master/app/src/javascript/unbounce/ub.inject.loader.js"
     ),
@@ -79,8 +79,10 @@ var promise1 = Promise.all([
     )
 ]);
 
-promise1.then(function() {
-    load.js(
-        "https://rawgit.com/designdish/ub-styles-cdn/master/app/src/javascript/unbounce/ub.check.credentials.js"
-    );
+loadHelpers.then(function() {
+    injectLoaders.then(function() {
+        load.js(
+            "https://rawgit.com/designdish/ub-styles-cdn/master/app/src/javascript/unbounce/ub.check.credentials.js"
+        );
+    });
 });
