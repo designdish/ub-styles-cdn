@@ -1,6 +1,6 @@
 var messages = [
 	{
-		message: "Hi " + getUser().firstName + "!",
+		message: "We think you're gonna like this...",
 		container: "h1",
 		intro: ["fadeInUp", "slower"],
 		outro: ["fadeOutDown", "slower"],
@@ -14,7 +14,7 @@ var messages = [
 		delay: 2500
 	},
 	{
-		message: "We think you're gonna like this...",
+		message: "Hi " + getUser().firstName + "!",
 		container: "h1",
 		intro: ["fadeInUp", "slower"],
 		outro: ["fadeOutDown", "slower"],
