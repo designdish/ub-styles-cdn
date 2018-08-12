@@ -14,7 +14,7 @@ var showSlides = function(slides, time, inClass, outClass, slideIndex) {
 					slides[i].style.display = "block";
 				}
 			}
-			slideIndex++;
+			slideIndex = slideIndex++;
 			// if (slideIndex > slides.length) {
 			// 	slideIndex = 1;
 			// }
