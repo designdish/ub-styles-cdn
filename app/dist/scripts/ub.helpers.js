@@ -40,7 +40,7 @@ var getUser = function() {
 };
 
 var removeEl = function(el) {
-	el.parentNode.removeChild(el);
+	el[0].parentNode.removeChild(el);
 };
 
 function showSlides(slides, time, inClass, outClass) {

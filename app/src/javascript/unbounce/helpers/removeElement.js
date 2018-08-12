@@ -1,3 +1,3 @@
 var removeEl = function(el) {
-	el.parentNode.removeChild(el);
+	el[0].parentNode.removeChild(el);
 };
