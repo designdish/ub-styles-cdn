@@ -55,7 +55,7 @@ var automateDisplay = function(el, inClass, outClass, delay) {
 
 	// 	displayMessage(el, cl, inClass);
 
-	showSlides(el, delay, inClass, outClass);
+	showSlides(el, delay, inClass, outClass, 0);
 	// if (animationEnd(el)) {
 	// 	removeMessage(el, cl, inClass, outClass);
 	// }
