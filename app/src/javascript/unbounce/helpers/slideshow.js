@@ -1,7 +1,7 @@
 var showSlides = function(slides, time, inClass, outClass) {
 	var slideIndex;
 
-	function sliding() {
+	var sliding = function() {
 		var i, cl;
 		slideIndex = 0;
 
@@ -27,5 +27,5 @@ var showSlides = function(slides, time, inClass, outClass) {
 		} else {
 			setTimeout(sliding, time);
 		}
-	}
+	};
 };
