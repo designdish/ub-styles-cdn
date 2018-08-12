@@ -39,6 +39,10 @@ var getUser = function() {
 	return user;
 };
 
+var removeEl = function(el) {
+	el.parentNode.removeChild(el);
+};
+
 function showSlides(slides, time, inClass, outClass) {
 	var slideIndex = 0;
 	var i, cl;
