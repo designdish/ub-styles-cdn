@@ -55,7 +55,7 @@ function showSlides(slides, time, inClass, outClass) {
 		slideIndex = 1;
 	}
 	slides[slideIndex - 1].style.display = "block";
-	slides[i].classList.add.apply(cl, inClass);
+	slides[slideIndex - 1].classList.add.apply(cl, inClass);
 
 	setTimeout(showSlides, time);
 }
