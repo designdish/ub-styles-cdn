@@ -1,6 +1,7 @@
 var showSlides = function(slides, time, inClass, outClass, slideIndex) {
 	var currentSlideIndex;
 	var loopTimer;
+	var loader = document.getElementsByClassName("loader");
 
 	var sliding = function() {
 		if (slideIndex < slides.length) {
@@ -32,7 +33,6 @@ var showSlides = function(slides, time, inClass, outClass, slideIndex) {
 			slides[currentSlideIndex].classList.add.apply(cl, inClass);
 
 			if (i < [currentSlideIndex]) {
-				var loader = document.getElementsByClassName("loader");
 				removeEl(loader);
 			} else {
 				loopTimer = setTimeout(sliding, time);
