@@ -1,9 +1,9 @@
 var showSlides = function(slides, time, inClass, outClass) {
 	var slideIndex;
-	var slideIndex = 0;
 
 	function sliding() {
 		var i, cl;
+		slideIndex = 0;
 
 		for (i = 0; i < slides.length; i++) {
 			cl = slides[i].classList;

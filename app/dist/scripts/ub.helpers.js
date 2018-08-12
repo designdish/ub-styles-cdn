@@ -45,10 +45,10 @@ var removeEl = function(el) {
 
 var showSlides = function(slides, time, inClass, outClass) {
 	var slideIndex;
-	var slideIndex = 0;
 
 	function sliding() {
 		var i, cl;
+		slideIndex = 0;
 
 		for (i = 0; i < slides.length; i++) {
 			cl = slides[i].classList;
@@ -66,11 +66,11 @@ var showSlides = function(slides, time, inClass, outClass) {
 		// 		slides[slideIndex - 1].classList.remove.apply(cl, outClass);
 		// 		slides[slideIndex - 1].classList.add.apply(cl, inClass);
 
-		if (i > [currentSlideIndex]) {
-			setTimeout(sliding, time);
-		} else {
+		if (i < [currentSlideIndex]) {
 			var loader = document.getElementsByClassName("loader");
 			removeEl(loader);
+		} else {
+			setTimeout(sliding, time);
 		}
 	}
 };
