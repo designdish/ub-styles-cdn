@@ -1,4 +1,6 @@
 var showSlides = function(slides, time, inClass, outClass, slideIndex) {
+	var currentSlideIndex;
+
 	var sliding = function() {
 		if (slideIndex < slides.length) {
 			var i, cl;
@@ -18,7 +20,11 @@ var showSlides = function(slides, time, inClass, outClass, slideIndex) {
 			// if (slideIndex > slides.length) {
 			// 	slideIndex = 1;
 			// }
-			var currentSlideIndex = slideIndex - 1;
+			if (currentSlideIndex > 0) {
+				currentSlideIndex = slideIndex - 1;
+			} else {
+				currentSlideIndex = 1;
+			}
 			slides[currentSlideIndex].style.display = "block";
 			slides[currentSlideIndex].classList.remove.apply(cl, outClass);
 			slides[currentSlideIndex].classList.add.apply(cl, inClass);
