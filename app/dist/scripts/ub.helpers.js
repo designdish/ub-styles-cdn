@@ -39,10 +39,11 @@ var getUser = function() {
 	return user;
 };
 
-function showSlides(slides, time, cl, inClass, outClass) {
+function showSlides(slides, time, inClass, outClass) {
 	var slideIndex = 0;
-	var i;
+	var i, cl;
 	for (i = 0; i < slides.length; i++) {
+		cl = slides[i].classList;
 		if (i > 0) {
 			slides[i].classList.remove.apply(cl, inClass);
 			slides[i].classList.add.apply(cl, outClass);
