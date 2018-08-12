@@ -89,13 +89,13 @@ var showSlides = function(slides, time, inClass, outClass, slideIndex) {
 		sliding();
 	} else {
 		var loader = document.getElementsByClassName("loader");
-		removeEl(loader);
 		clearTimeout(loopTimer);
 	}
+	return removeEl(loader);
 };
-
 
 var wrap = function(el, wrapper) {
 	el.parentNode.insertBefore(wrapper, el);
 	wrapper.appendChild(el);
+	return wrapper;
 };

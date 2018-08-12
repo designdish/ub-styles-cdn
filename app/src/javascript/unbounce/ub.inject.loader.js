@@ -1,21 +1,21 @@
 var messages = [
 	{
 		message: "We think you're gonna like this...",
-		container: "h1",
+		container: "div",
 		intro: ["fadeInUp", "slower"],
 		outro: ["fadeOutDown", "slower"],
 		delay: 2500
 	},
 	{
 		message: "Thank You For Your Continued Loyalty",
-		container: "h1",
+		container: "div",
 		intro: ["fadeInUp", "slower"],
 		outro: ["fadeOutDown", "slower"],
 		delay: 2500
 	},
 	{
 		message: "Hi " + getUser().firstName + "!",
-		container: "h1",
+		container: "div",
 		intro: ["fadeInUp", "slower"],
 		outro: ["fadeOutDown", "slower"],
 		delay: 2500
@@ -78,15 +78,19 @@ var removeMessage = function(el, cl, inClass, outClass) {
 
 var initMessage = function(el, msg) {
 	var slides = [];
+
 	var message = msg.message,
 		container = msg.container,
 		intro = msg.intro,
 		outro = msg.outro,
 		delay = msg.delay;
 
-	container = el.appendChild(constructMessage(message, container));
-
 	for (var i = 0; i < messages.length; i++) {
+		var slide = document.createElement("div");
+		slide.classList.add("slide");
+		slide.dataset.slide = i;
+		container = el.appendChild(constructMessage(message, container));
+		container = wrap(container, slide);
 		slides.push(container);
 	}
 
