@@ -11,6 +11,7 @@ var showSlides = function(slides, time, inClass, outClass, slideIndex) {
 					slides[i].classList.remove.apply(cl, outClass);
 					slides[i].classList.add.apply(cl, inClass);
 					slides[i - 1].style.display = "none";
+					slides[i].style.display = "block";
 				}
 			}
 			slideIndex++;
