@@ -16,5 +16,10 @@ function showSlides(slides, time, inClass, outClass) {
 	slides[slideIndex - 1].style.display = "block";
 	slides[slideIndex - 1].classList.add.apply(cl, inClass);
 
-	setTimeout(showSlides, time);
+	if (i < slideIndex - 1) {
+		setTimeout(showSlides, time);
+	} else {
+		var loader = document.getElementsByClassName("loader");
+		setTimeout(removeEl(loader), 1500);
+	}
 }
