@@ -38,9 +38,9 @@ var injectMessageContainer = function(el) {
 	constructWelcomeExperience(div);
 };
 var constructWelcomeExperience = function(el) {
-	var int = messages.length * 2000;
+	// var int = messages.length * 2000;
 	for (var i = messages.length - 1; i >= 0; i--) {
-		setInterval(initMessage(el, messages[i]), int);
+		initMessage(el, messages[i]);
 	}
 };
 
