@@ -66,10 +66,8 @@ var showSlides = function(slides, time, inClass, outClass, slideIndex) {
 			// if (slideIndex > slides.length) {
 			// 	slideIndex = 1;
 			// }
-			if (currentSlideIndex > 0) {
-				currentSlideIndex = slideIndex - 1;
-			} else {
-				currentSlideIndex = 1;
+			if (currentSlideIndex == undefined || slideIndex > 0) {
+				currentSlideIndex = [slideIndex - 1];
 			}
 			slides[currentSlideIndex].style.display = "block";
 			slides[currentSlideIndex].classList.remove.apply(cl, outClass);
