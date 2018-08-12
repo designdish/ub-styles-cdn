@@ -1,21 +1,21 @@
 var messages = [
 	{
 		message: "We think you're gonna like this...",
-		container: "div",
+		container: "h1",
 		intro: ["fadeInUp", "slower"],
 		outro: ["fadeOutDown", "slower"],
 		delay: 2500
 	},
 	{
 		message: "Thank You For Your Continued Loyalty",
-		container: "div",
+		container: "h1",
 		intro: ["fadeInUp", "slower"],
 		outro: ["fadeOutDown", "slower"],
 		delay: 2500
 	},
 	{
 		message: "Hi " + getUser().firstName + "!",
-		container: "div",
+		container: "h1",
 		intro: ["fadeInUp", "slower"],
 		outro: ["fadeOutDown", "slower"],
 		delay: 2500
@@ -88,9 +88,8 @@ var initMessage = function(el, msg) {
 	for (var i = 0; i < messages.length; i++) {
 		var slide = document.createElement("div");
 		slide.classList.add("slide");
-		slide.dataset.slide = i;
 		container = el.appendChild(constructMessage(message, container));
-		container = wrap(container, slide);
+		container = slide.appendChild(container);
 		slides.push(container);
 	}
 
