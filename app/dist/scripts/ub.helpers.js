@@ -46,6 +46,7 @@ var removeEl = function(el) {
 
 var showSlides = function(slides, time, inClass, outClass, slideIndex) {
 	var currentSlideIndex;
+	var loopTimer;
 
 	var sliding = function() {
 		if (slideIndex < slides.length) {
@@ -80,7 +81,7 @@ var showSlides = function(slides, time, inClass, outClass, slideIndex) {
 				var loader = document.getElementsByClassName("loader");
 				removeEl(loader);
 			} else {
-				setTimeout(sliding, time);
+				loopTimer = setTimeout(sliding, time);
 			}
 		}
 	};
@@ -89,6 +90,7 @@ var showSlides = function(slides, time, inClass, outClass, slideIndex) {
 	} else {
 		var loader = document.getElementsByClassName("loader");
 		removeEl(loader);
+		clearTimeout(loopTimer);
 	}
 };
 
