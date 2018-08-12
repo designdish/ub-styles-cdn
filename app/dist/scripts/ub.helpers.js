@@ -79,6 +79,9 @@ var showSlides = function(slides, time, inClass, outClass, slideIndex) {
 	};
 	if (slideIndex < slides.length) {
 		sliding();
+	} else {
+		var loader = document.getElementsByClassName("loader");
+		removeEl(loader);
 	}
 };
 
