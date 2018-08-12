@@ -39,7 +39,7 @@ var injectMessageContainer = function(el) {
 };
 var constructWelcomeExperience = function(el) {
 	// var int = messages.length * 2000;
-	for (var i = messages.length - 1; i >= 0; i--) {
+	for (var i = 0; i < messages.length; i++) {
 		initMessage(el, messages[i]);
 	}
 };
