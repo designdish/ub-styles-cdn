@@ -32,12 +32,30 @@ checkCredentials(token);
 
 // checkCredentials(token);
 
+var populateKnownFieldValues = function(){
+var formFields = [];
+var fn, ln, em;
+
+	fn = {
+		input: document.querySelector('[name="firstname"]'),
+		value: user.firstName
+	};
+
+	ln = {
+		input: document.querySelector('[name="lastname"]'),
+		value: user.lastName
+	};
+	em = {
+		input: document.querySelector('[name="email"]'),
+		value: user.email
+	};
+
+	formFields.push(fn, ln, em);
 
 
-var firstNameField = document.querySelector(".hs_firstname");
-var lastNameField = document.querySelector(".hs_lastname");
-var emailField = document.querySelector(".hs_email");
+	for(var i = 0; i > formFields.length; i++){
+		var field = formFields[i];
+		injectUserInfo(field.input, field.value);
+	};
 
-injectUserInfo(firstNameField, user.firstName);
-injectUserInfo(lastNameField, user.lastName);
-injectUserInfo(emailField, user.email);
+}

@@ -73,7 +73,7 @@ var loadHelpers = Promise.all([
 var injectLoaders = Promise.all([
     waitForIt(window.getUser).then(function() {
         load.js(
-            "https://rawgit.com/designdish/ub-styles-cdn/master/app/src/javascript/unbounce/ub.inject.loader.js"
+            "https://rawgit.com/designdish/ub-styles-cdn/master/app/src/javascript/unbounce/ub.inject.loader.dev.js"
         ),
             load.js(
                 "https://rawgit.com/designdish/ub-styles-cdn/master/app/src/javascript/unbounce/ub.md5.js"
@@ -85,7 +85,7 @@ loadHelpers.then(function() {
     injectLoaders.then(function() {
         waitForIt(window.md5).then(function() {
             load.js(
-                "https://rawgit.com/designdish/ub-styles-cdn/master/app/src/javascript/unbounce/ub.check.credentials.js"
+                "https://rawgit.com/designdish/ub-styles-cdn/master/app/src/javascript/unbounce/ub.check.credentials.dev.js"
             );
         });
     });
