@@ -22,7 +22,7 @@ var user = {
 
 var injectUserInfo = function(el, str) {
 	
-	el.('input').value = str;
+	el.value = str;
 
 	if('createEvent' in document){
 		var evt = document.createEvent('HTMLEvents');
