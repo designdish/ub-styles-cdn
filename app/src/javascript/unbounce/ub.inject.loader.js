@@ -39,8 +39,6 @@ var injectMessageContainer = function(el) {
 };
 var constructWelcomeExperience = function(el) {
 	var slides = [];
-	var messages = messages;
-
 	for (var i = 0; i < messages.length; i++) {
 		var intro = messages[i].intro,
 			outro = messages[i].outro,

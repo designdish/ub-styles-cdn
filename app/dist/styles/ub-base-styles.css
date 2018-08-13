@@ -4462,47 +4462,47 @@ readers do not read off random characters that represent icons */
 .fab {
   font-family: 'Font Awesome 5 Brands'; }
 
-.opacity-0 {
+.opacity-0, #lp-pom-root.opacity-0 {
   opacity: 0;
   filter: alpha(opacity=0); }
 
-.opacity-1 {
+.opacity-1, #lp-pom-root.opacity-1 {
   opacity: 0.1;
   filter: alpha(opacity=10); }
 
-.opacity-2 {
+.opacity-2, #lp-pom-root.opacity-2 {
   opacity: 0.2;
   filter: alpha(opacity=20); }
 
-.opacity-3 {
+.opacity-3, #lp-pom-root.opacity-3 {
   opacity: 0.3;
   filter: alpha(opacity=30); }
 
-.opacity-4 {
+.opacity-4, #lp-pom-root.opacity-4 {
   opacity: 0.4;
   filter: alpha(opacity=40); }
 
-.opacity-5 {
+.opacity-5, #lp-pom-root.opacity-5 {
   opacity: 0.5;
   filter: alpha(opacity=50); }
 
-.opacity-6 {
+.opacity-6, #lp-pom-root.opacity-6 {
   opacity: 0.6;
   filter: alpha(opacity=60); }
 
-.opacity-7 {
+.opacity-7, #lp-pom-root.opacity-7 {
   opacity: 0.7;
   filter: alpha(opacity=70); }
 
-.opacity-8 {
+.opacity-8, #lp-pom-root.opacity-8 {
   opacity: 0.8;
   filter: alpha(opacity=80); }
 
-.opacity-9 {
+.opacity-9, #lp-pom-root.opacity-9 {
   opacity: 0.9;
   filter: alpha(opacity=90); }
 
-.opacity-10 {
+.opacity-10, #lp-pom-root.opacity-10 {
   opacity: 1;
   filter: alpha(opacity=100); }
 

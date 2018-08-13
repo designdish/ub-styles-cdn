@@ -20,6 +20,12 @@
         }
     }
 
+    @for $i from 0 through 10 {
+        &.opacity-#{$i} {
+            @extend .opacity-#{$i};
+        }
+    }
+
     #lp-pom-box-354 {
         .hidden {
             display: none;
