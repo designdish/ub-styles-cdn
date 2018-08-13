@@ -78,7 +78,7 @@ var removeMessage = function(el, cl, inClass, outClass) {
 
 var initMessage = function(el, msg) {
 	var slides = [];
-
+	var slide;
 	var message = msg.message,
 		container = msg.container,
 		intro = msg.intro,
@@ -86,11 +86,11 @@ var initMessage = function(el, msg) {
 		delay = msg.delay;
 
 	for (var i = 0; i < messages.length; i++) {
-		var slide = document.createElement("div");
+		slide = document.createElement("div");
 		slide.classList.add("slide");
 		slide.dataset.slide = [i];
 		// 		el.appendChild(constructMessage(message, container));
-		slide.appendChild(constructMessage(message, container));
+		slide.appendChild(constructMessage(msg, container));
 		el.appendChild(slide);
 		slides.push(slide);
 	}
