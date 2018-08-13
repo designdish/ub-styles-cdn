@@ -1,4 +1,5 @@
 var removeEl = function(el) {
-	el = el[0];
-	el[0].parentNode.removeChild(el[0]);
+	if (el != undefined && el.parentNode.innerHTML.length > -1) {
+		el.parentNode.removeChild(el);
+	}
 };

@@ -79,17 +79,20 @@ var removeMessage = function(el, cl, inClass, outClass) {
 var initMessage = function(el, msg) {
 	var slides = [];
 
+	var message = msg.message,
+		container = msg.container,
+		intro = msg.intro,
+		outro = msg.outro,
+		delay = msg.delay;
+
 	for (var i = 0; i < messages.length; i++) {
-		var message = msg.message,
-			container = msg.container,
-			intro = msg.intro,
-			outro = msg.outro,
-			delay = msg.delay;
 		var slide = document.createElement("div");
 		slide.classList.add("slide");
-		container = el.appendChild(constructMessage(message, container));
-		container = slide.appendChild(container);
-		slides.push(container);
+		slide.dataset.slide = [i];
+		// 		el.appendChild(constructMessage(message, container));
+		slide.appendChild(constructMessage(message, container));
+		el.appendChild(slide);
+		slides.push(slide);
 	}
 
 	automateDisplay(slides, intro, outro, delay);
