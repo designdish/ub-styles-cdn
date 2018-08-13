@@ -7,7 +7,9 @@ var checkCredentials = function(token) {
 	if (token != hash) {
 		window.location = "http://teamviewer.us";
 	} else {
-		lpContainer.classList.add.apply("transition-all", "opacity-10");
+		var cl = lpContainer.classList;
+		var classes = ["transition-all", "opacity-10"];
+		lpContainer.classList.add.apply(cl, classes);
 	}
 };
 
