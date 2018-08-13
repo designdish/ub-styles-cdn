@@ -1,24 +1,24 @@
 var messages = [
 	{
+		message: "Hi " + getUser().firstName + "!",
+		container: "h1",
+		intro: ["fadeInUp", "slower"],
+		outro: ["fadeOutDown", "slower"],
+		delay: 1500
+	},
+	{
 		message: "We think you're gonna like this...",
 		container: "h1",
 		intro: ["fadeInUp", "slower"],
 		outro: ["fadeOutDown", "slower"],
-		delay: 2500
+		delay: 1500
 	},
 	{
 		message: "Thank You For Your Continued Loyalty",
 		container: "h1",
 		intro: ["fadeInUp", "slower"],
 		outro: ["fadeOutDown", "slower"],
-		delay: 2500
-	},
-	{
-		message: "Hi " + getUser().firstName + "!",
-		container: "h1",
-		intro: ["fadeInUp", "slower"],
-		outro: ["fadeOutDown", "slower"],
-		delay: 2500
+		delay: 1500
 	}
 ];
 
@@ -45,17 +45,21 @@ var constructWelcomeExperience = function(el) {
 			delay = messages[i].delay,
 			message = messages[i].message;
 		var slide = document.createElement("div");
+		var messageTag = "h1";
 		slide.classList.add("slide");
 		slide.dataset.slide = [i];
 
-		slide.appendChild(initMessage(el, message));
+		slide.appendChild(initMessage(messageTag, message));
 		el.appendChild(slide);
 		slides.push(slide);
 		// automateDisplay(slide, intro, outro,i);
+		if ((slides.length = messages.length)) {
+			showSlides(el, delay, intro, outro, i);
+	}
 
 	}
 	if ((slides.length = messages.length)) {
-		showSlides(el, delay, inClass, outClass, thisSlide);
+// 		showSlides(el, delay, intro, outro, thisSlide);
 	}
 };
 
@@ -87,9 +91,7 @@ var removeMessage = function(el, cl, inClass, outClass) {
 };
 
 var initMessage = function(el, msg) {
-	var message = msg.message,
-		container = msg.container,
-		messageBox = constructMessage(msg, container);
+	var messageBox = constructMessage(msg, el);
 
 	return messageBox;
 };

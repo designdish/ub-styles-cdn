@@ -1,7 +1,8 @@
+
 var showSlides = function(slides, time, inClass, outClass, slideIndex) {
 	var currentSlideIndex;
 	var loopTimer;
-	var loader = document.getElementsByClassName("loader")[0];
+	var loader = document.getElementsByClassName("loader");
 
 	var sliding = function() {
 		if (slideIndex < slides.length) {
@@ -34,7 +35,7 @@ var showSlides = function(slides, time, inClass, outClass, slideIndex) {
 
 			if (i < [currentSlideIndex]) {
 				var loader = document.getElementsByClassName("loader");
-				removeEl(loader);
+				removeEl(loader[0]);
 			} else {
 				loopTimer = setTimeout(sliding, time);
 			}
@@ -45,5 +46,5 @@ var showSlides = function(slides, time, inClass, outClass, slideIndex) {
 	} else {
 		clearTimeout(loopTimer);
 	}
-	return removeEl(loader);
+	removeEl(loader[0]);
 };
