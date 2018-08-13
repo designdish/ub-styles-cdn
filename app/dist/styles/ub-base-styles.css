@@ -4624,13 +4624,10 @@ readers do not read off random characters that represent icons */
 #lp-pom-root p,
 #lp-pom-root span {
   font-family: Roboto !important;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 26px;
-  color: #4a4a4a; }
+  font-style: normal; }
 
 #lp-pom-root p {
-  line-height: 1.2rem;
+  line-height: 1.8rem;
   margin: 10px; }
 
 #lp-pom-root h1 {
