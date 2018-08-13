@@ -12,7 +12,17 @@
     p,
     span {
         font-family: Roboto !important;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 26px;
+        color: rgb(74, 74, 74);
     }
+
+    p {
+        line-height: 1.2rem;
+        margin: 10px;
+    }
+
 
     @for $i from 1 through 6 {
         h#{$i} {
@@ -26,6 +36,7 @@
         }
     }
 
+
     #lp-pom-box-354 {
         .hidden {
             display: none;
@@ -37,12 +48,10 @@
         #lp-code-348 {
             height: auto;
             width: 100%;
-            background: linear-gradient(
-                45deg,
-                rgba(200, 200, 250, 0.2),
-                rgba(230, 240, 250, 0.4),
-                rgba(200, 200, 250, 0.2)
-            );
+            background: linear-gradient( 45deg,
+            rgba(200, 200, 250, 0.2),
+            rgba(230, 240, 250, 0.4),
+            rgba(200, 200, 250, 0.2));
             padding: 0 15px 30px;
             top: 0px;
             left: 0px;
@@ -100,15 +109,13 @@
                     }
                     input {
                         &:checked {
-                            & ~ span:before {
+                            &~span:before {
                                 @include fa-icon;
                                 font-family: "Font Awesome 5 Free";
                                 font-weight: 900;
                                 border: 3px solid darken($CTAButtonGreen, 5%);
-                                background: linear-gradient(
-                                    $CTAButtonGreen,
-                                    lighten($CTAButtonGreen, 10%)
-                                );
+                                background: linear-gradient( $CTAButtonGreen,
+                                lighten($CTAButtonGreen, 10%));
                                 content: fa-content($fa-var-check);
                                 color: $PrimaryWhite;
                                 text-shadow: 1px 2px 10px $CTAButtonGreen;
@@ -128,11 +135,9 @@
                     @extend %button;
                     width: calc(100% - 30px);
                     margin: 0px;
-                    background: linear-gradient(
-                        0deg,
-                        rgba($BackgroundBlue, 1),
-                        rgba(darken($BackgroundBlue, 10%), 1)
-                    );
+                    background: linear-gradient( 0deg,
+                    rgba($BackgroundBlue, 1),
+                    rgba(darken($BackgroundBlue, 10%), 1));
                 }
             }
             @extend %input;
