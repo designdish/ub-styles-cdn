@@ -20,7 +20,8 @@ var user = {
 };
 
 var injectUserInfo = function(el, str) {
-	el.innerText = str;
+	// el.innerText = str;
+	el.querySelector('input').value = str;
 };
 
 var token = md5(
@@ -31,10 +32,12 @@ checkCredentials(token);
 
 // checkCredentials(token);
 
-// var firstNameField = document.querySelector(".hs_firstname");
-// var lastNameField = document.querySelector(".hs_lastname");
-// var licenseField = document.querySelector(".hs_email");
 
-// injectUserInfo(firstNameField, user.firstName);
-// injectUserInfo(lastNameField, user.firstName);
-// injectUserInfo(licenseField, user.firstName);
+
+var firstNameField = document.querySelector(".hs_firstname");
+var lastNameField = document.querySelector(".hs_lastname");
+var licenseField = document.querySelector(".hs_email");
+
+injectUserInfo(firstNameField, user.firstName);
+injectUserInfo(lastNameField, user.firstName);
+injectUserInfo(licenseField, user.firstName);
