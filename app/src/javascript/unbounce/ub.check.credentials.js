@@ -2,9 +2,12 @@ var mId = 18045513; //mailid
 var utmC = "news2018-Q3-August-Mig-MeetingUsers-T1-enUS"; //utm_campaign
 
 var checkCredentials = function(token) {
+	var lpContainer = document.getElementById("lp-pom-root");
 	var hash = md5(mId + utmC);
 	if (token != hash) {
 		window.location = "http://teamviewer.us";
+	} else {
+		lpContainer.classList.add.apply("transition-all", "opacity-10");
 	}
 };
 

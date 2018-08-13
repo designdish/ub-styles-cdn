@@ -1,0 +1,10 @@
+@for $i from 0 to 11 {
+	$n: $i * 0.1;
+	.opacity-#{$i} {
+		@include opacity($n);
+	}
+}
+
+.transition-all {
+	@include transition(ease-in-out all 0.25s);
+}

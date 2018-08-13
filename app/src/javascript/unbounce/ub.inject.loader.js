@@ -38,9 +38,24 @@ var injectMessageContainer = function(el) {
 	constructWelcomeExperience(div);
 };
 var constructWelcomeExperience = function(el) {
-	// var int = messages.length * 2000;
+	var slides = [];
+	var messages = messages;
+
 	for (var i = 0; i < messages.length; i++) {
-		initMessage(el, messages[i]);
+		var intro = messages[i].intro,
+			outro = messages[i].outro,
+			delay = messages[i].delay,
+			message = messages[i].message;
+		var slide = document.createElement("div");
+		slide.classList.add("slide");
+		slide.dataset.slide = [i];
+
+		slide.appendChild(initMessage(el, message));
+		el.appendChild(slide);
+		slides.push(slide);
+	}
+	if ((slides.length = messages.length)) {
+		automateDisplay(slides, intro, outro, delay);
 	}
 };
 
@@ -52,13 +67,7 @@ var constructMessage = function(msg, container) {
 
 var automateDisplay = function(el, inClass, outClass, delay) {
 	delay = delay != undefined ? delay : 500;
-
-	// 	displayMessage(el, cl, inClass);
-
 	showSlides(el, delay, inClass, outClass, 0);
-	// if (animationEnd(el)) {
-	// 	removeMessage(el, cl, inClass, outClass);
-	// }
 };
 
 var displayMessage = function(el, cl, inClass) {
@@ -77,25 +86,11 @@ var removeMessage = function(el, cl, inClass, outClass) {
 };
 
 var initMessage = function(el, msg) {
-	var slides = [];
-	var slide;
 	var message = msg.message,
 		container = msg.container,
-		intro = msg.intro,
-		outro = msg.outro,
-		delay = msg.delay;
+		messageBox = constructMessage(msg, container);
 
-	for (var i = 0; i < messages.length; i++) {
-		slide = document.createElement("div");
-		slide.classList.add("slide");
-		slide.dataset.slide = [i];
-		// 		el.appendChild(constructMessage(message, container));
-		slide.appendChild(constructMessage(msg, container));
-		el.appendChild(slide);
-		slides.push(slide);
-	}
-
-	automateDisplay(slides, intro, outro, delay);
+	return messageBox;
 };
 
 var replaceMessage = function(container, str) {
