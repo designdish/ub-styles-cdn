@@ -36,8 +36,24 @@ checkCredentials(token);
 
 var firstNameField = document.querySelector(".hs_firstname");
 var lastNameField = document.querySelector(".hs_lastname");
-var licenseField = document.querySelector(".hs_email");
+var emailField = document.querySelector(".hs_email");
+// var licenseField = document.querySelector(".hs_license");
 
 injectUserInfo(firstNameField, user.firstName);
-injectUserInfo(lastNameField, user.firstName);
-injectUserInfo(licenseField, user.firstName);
+injectUserInfo(lastNameField, user.lastName);
+// injectUserInfo(licenseField, user.license);
+injectUserInfo(emailField, user.email);
+
+//			 https://try.teamviewer.com/bowie-test-nyop-migration-page/?mailid=18045513
+//			 &utm_campaign=news2018-Q3-August-Mig-MeetingUsers-T1-enUS
+//			 http://try.teamviewer.com/nyop/?license=Premium
+//			 &first=Costa
+//			 &last=Rodis
+//			 &mailid=18045513
+//			 &utm_source=TV-newsletter-en
+//			 &utm_medium=Email
+//			 &utm_campaign=news2018-Q3-August-Mig-MeetingUsers-T1-enUS
+//			 &utm_content=Form
+//			 &pid=news.2018-Q3-August-Mig-MeetingUsers-T1-enUS
+//			 &lid=1567946
+//			 &email=costa%40bergenit.net
