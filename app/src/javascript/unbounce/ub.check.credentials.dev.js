@@ -7,6 +7,7 @@ var checkCredentials = function(token) {
 	if (token != hash) {
 		window.location = "http://teamviewer.us";
 	} else {
+		injectHubSpotForm("3361423","7eaaeb92-f486-4996-adff-448c9b276b0c", "#lp-code-348");
 		var cl = lpContainer.classList;
 		var classes = ["transition-all", "opacity-10"];
 		lpContainer.classList.add.apply(cl, classes);
@@ -20,8 +21,16 @@ var user = {
 };
 
 var injectUserInfo = function(el, str) {
-	// el.innerText = str;
-	el.querySelector('input').value = str;
+	
+	el.('input').value = str;
+
+	if('createEvent' in document){
+		var evt = document.createEvent('HTMLEvents');
+		evt.initEvent('change', false, true);
+		element.dispatchEvent(evt);
+	}else{
+		el.fireEvent("onChange");
+	}
 };
 
 var token = md5(
@@ -32,8 +41,30 @@ checkCredentials(token);
 
 // checkCredentials(token);
 
+// var listenForHubSpotFormEvents = addEvent('message', event => {
+// 	if(event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmit'){
+
+// 	}
+// })
+
+var injectHubSpotForm = function(portalId, formId, target){
+	var hForm = hbspt.forms.create({
+		portalId: portalId,
+		formId: formId,
+		target:target
+	})
+	return hForm;
+};
+
+var injectHubSpotFormValues = function(fName, fValue){
+
+
+}
 var populateKnownFieldValues = function(){
+var hsPortal, hsGuid;
+
 var formFields = [];
+
 var fn, ln, em;
 
 	fn = {
@@ -51,7 +82,6 @@ var fn, ln, em;
 	};
 
 	formFields.push(fn, ln, em);
-
 
 	for(var i = 0; i > formFields.length; i++){
 		var field = formFields[i];
