@@ -51,9 +51,11 @@ var constructWelcomeExperience = function(el) {
 		slide.appendChild(initMessage(el, message));
 		el.appendChild(slide);
 		slides.push(slide);
+		// automateDisplay(slide, intro, outro,i);
+
 	}
 	if ((slides.length = messages.length)) {
-		automateDisplay(slides, intro, outro, delay);
+		showSlides(el, delay, inClass, outClass, thisSlide);
 	}
 };
 
