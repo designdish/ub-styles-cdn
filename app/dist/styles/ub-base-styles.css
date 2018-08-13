@@ -4652,6 +4652,11 @@ readers do not read off random characters that represent icons */
 #lp-pom-root h6 {
   color: #038ff4; }
 
+#lp-pom-root #lp-pom-text-88 a,
+#lp-pom-root #lp-pom-text-88 a span {
+  color: white !important;
+  text-decoration: none !important; }
+
 #lp-pom-root #lp-pom-box-354 {
   display: block;
   border: none;
@@ -4667,10 +4672,6 @@ readers do not read off random characters that represent icons */
     left: 0px;
     box-sizing: border-box;
     border: 1px solid #ddd; }
-  #lp-pom-root #lp-pom-box-354 #lp-pom-text-88 a,
-  #lp-pom-root #lp-pom-box-354 #lp-pom-text-88 a span {
-    color: white !important;
-    text-decoration: none !important; }
   #lp-pom-root #lp-pom-box-354 .hbspt-form {
     width: 100%;
     height: auto;

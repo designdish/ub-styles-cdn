@@ -38,6 +38,13 @@
             @extend .opacity-#{$i};
         }
     }
+    #lp-pom-text-88 {
+        a,
+        a span {
+            color: $PrimaryWhite !important;
+            text-decoration: none !important;
+        }
+    }
 
 
     #lp-pom-box-354 {
@@ -62,13 +69,6 @@
             border: 1px solid #ddd;
         }
 
-        #lp-pom-text-88 {
-            a,
-            a span {
-                color: $PrimaryWhite !important;
-                text-decoration: none !important;
-            }
-        }
 
         .hbspt-form {
             width: 100%;
