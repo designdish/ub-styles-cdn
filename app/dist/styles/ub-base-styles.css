@@ -4630,6 +4630,10 @@ readers do not read off random characters that represent icons */
   line-height: 1.8rem;
   margin: 10px; }
 
+#lp-pom-root a,
+#lp-pom-root a span {
+  color: #038ff4 !important; }
+
 #lp-pom-root h1 {
   color: #038ff4; }
 
