@@ -65,7 +65,8 @@ var constructMessage = function(msg, container) {
 
 var automateDisplay = function(el, inClass, outClass, delay) {
 	delay = delay != undefined ? delay : 500;
-	showSlides(el, delay, inClass, outClass, 0);
+	var thisSlide = el.dataset.slide;
+	showSlides(el, delay, inClass, outClass, thisSlide);
 };
 
 var displayMessage = function(el, cl, inClass) {
