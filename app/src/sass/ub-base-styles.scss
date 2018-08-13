@@ -25,6 +25,8 @@
         color: $PrimaryBlue !important;
     }
 
+
+
     @for $i from 1 through 6 {
         h#{$i} {
             color: $PrimaryBlue;
@@ -58,6 +60,14 @@
             left: 0px;
             box-sizing: border-box;
             border: 1px solid #ddd;
+        }
+
+        #lp-pom-block-82 {
+            a,
+            a span {
+                color: $PrimaryWhite !important;
+                text-decoration: none !important;
+            }
         }
 
         .hbspt-form {
