@@ -2,13 +2,18 @@ var mId = 18045513; //mailid
 var utmC = "news2018-Q3-August-Mig-MeetingUsers-T1-enUS"; //utm_campaign
 
 var injectHubSpotForm = function(portalId, formId, target){
-	waitFor(window.hbspt).then(function(){	
-		var hForm = hbspt.forms.create({
-			portalId: portalId,
-			formId: formId,
-			target:target
-		});
-		return hForm;
+	return new Promise(function(resolve, reject){
+			window.hbspt.onload = function(){
+			var hForm = hbspt.forms.create({
+				portalId: portalId,
+				formId: formId,
+				target:target
+			});
+			return hForm;
+		};
+		window.hbspt.onerror = function(){
+			waitFor(window.hbspt);
+		}
 	})
 };
 

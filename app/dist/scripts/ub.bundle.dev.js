@@ -36,17 +36,11 @@ var load = (function() {
 })();
 
 var waitFor = function(obj) {
-  var check =  setInterval(function(){
-    
-    if (obj != undefined){
-        return new Promise(resolve => {
-            setTimeout(() => {
-                resolve(obj);
-            }, 250);
-            clearInterval(check);
-        });
-    }
-    }, 100);
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(obj);
+        }, 250);
+    });
 };
 
 var buildUrl = function(files, cdn) {
@@ -77,6 +71,7 @@ var loadHelpers = Promise.all([
 ]);
 
 var injectLoaders = Promise.all([
+    
     waitFor(window.getUser).then(function() {
         load.js(
             "https://rawgit.com/designdish/ub-styles-cdn/master/app/src/javascript/unbounce/ub.inject.loader.dev.js"
