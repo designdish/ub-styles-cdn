@@ -51,7 +51,7 @@ var checkCredentials = function(token) {
 	if (token != hash) {
 		window.location = "http://teamviewer.us";
 	} else {
-		injectHubSpotForm("3361423","7eaaeb92-f486-4996-adff-448c9b276b0c", "#lp-code-348", "hbspt-form");
+		injectHubSpotForm("3361423","7eaaeb92-f486-4996-adff-448c9b276b0c", "#lp-code-348", "hbspt-form stacked");
 		populateKnownFieldValues();
 		var cl = lpContainer.classList;
 		var classes = ["transition-all", "opacity-10"];
