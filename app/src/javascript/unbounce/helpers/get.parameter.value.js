@@ -8,7 +8,8 @@ var getValue = function(param) {
         parameter === false ||
         parameter === null
     ) {
-        return undefined;
+        parameter = undefined;
+        return parameter;
     } else {
         return parameter;
     }
