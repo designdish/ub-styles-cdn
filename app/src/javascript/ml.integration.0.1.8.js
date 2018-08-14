@@ -9,7 +9,7 @@ var load = (function() {
                     resolve(url);
                 };
                 element.onerror = function() {
-                    reject(url);
+                    waitFor(url);
                 };
                 switch (tag) {
                     case "script":
@@ -35,13 +35,26 @@ var load = (function() {
     };
 })();
 
-Promise.all([
+
+var waitFor = function(obj) {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(obj);
+        }, 250);
+    });
+};
+
+var loadHelpers = Promise.all([
     load.js(
         "https://rawgit.com/designdish/ub-styles-cdn/master/app/dist/scripts/tv.helpers.js"
     )
 ]);
 
 
+
 var mlp = ["lae_vid", "lae_eg", "ml_eg", "ml_acc", "ml_count"];
 var tvURL = "teamviewer.com";
-updateURL(mlp, tvURL, ["pid", mlp]);
+
+loadHelpers.then(function() {
+    updateURL(mlp, tvURL, ["pid", mlp]);
+});
