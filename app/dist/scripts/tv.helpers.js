@@ -114,7 +114,7 @@ var checkParams = function(url, arr) {
 		    return cValue;
 		};
 var deleteCookieArray = function(cookies) {
-    for (var i = cookies.length - 1; i >= 0; i--) {
+    for (var i = 0; i < cookies.length; i++) {
         cookies[i].eraseCookie(cookies[i]);
     }
 };
