@@ -2,7 +2,7 @@ var mId = 18045513; //mailid
 var utmC = "news2018-Q3-August-Mig-MeetingUsers-T1-enUS"; //utm_campaign
 
 var injectHubSpotForm = function(portalId, formId, target){
-	waitForIt(window.hbspt).then(function(){	
+	waitFor(window.hbspt).then(function(){	
 		var hForm = hbspt.forms.create({
 			portalId: portalId,
 			formId: formId,
