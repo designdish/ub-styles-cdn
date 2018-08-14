@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel": "babel app/src/es6/cart.abandonment.v0.1.03.js --watch --out-file app/dist/scripts/babel-compiled.js",
-    "scripts-dev": "concat-glob-cli -f app/src/javascript/unbounce/helpers/**/*.js -o app/dist/scripts/ub.helpers.dev.js",
-    "scripts-prod": "concat-glob-cli -f app/src/javascript/unbounce/helpers/**/*.js -o app/dist/scripts/ub.helpers.js",
+    "scripts-dev": "concat-glob-cli -f app/src/javascript/unbounce/helpers/**/*.js -o app/dist/scripts/tv.helpers.js",
+    "scripts-prod": "concat-glob-cli -f app/src/javascript/unbounce/helpers/**/*.js -o app/dist/scripts/tv.helpers.js",
     "style": "node-sass-chokidar --include-path ./node_modules/ app/src/sass -o app/dist/styles --watch",
     "dev": "npm-run-all babel style"
   },
