@@ -1,23 +1,48 @@
 var mId = 18045513; //mailid
 var utmC = "news2018-Q3-August-Mig-MeetingUsers-T1-enUS"; //utm_campaign
 
-var injectHubSpotForm = function(portalId, formId, target){
-	return new Promise(resolve => {
-		setTimeout(() =>{
-			var hForm = hbspt.forms.create({
+var injectHubSpotForm = function(portalId, formId, target, style){
+		var hForm = hbspt.forms.create({
 			portalId: portalId,
 			formId: formId,
-			target:target
+			target:target,
+			cssClass:style
 		});
-		resolve(h);
 		return hForm;
-		}, 100);
-	})
-	async function check(){
-		var h = await injectHubSpotForm();
-	}
-	check();
 };
+
+
+var populateKnownFieldValues = function(){
+	var hsPortal, hsGuid, input;
+
+	var formFields = [];
+
+	var fn, ln, em;
+
+		fn = {
+			input:'[name="firstname"]',
+			value: user.firstName
+		};
+
+		ln = {
+			input:'[name="lastname"]',
+			value: user.lastName
+		};
+		em = {
+			input:'[name="email"]',
+			value: user.email
+		};
+
+		formFields.push(fn, ln, em);
+		waitFor(document.querySelector(fn.input)).then(function(){
+			for(var i = 0; i < formFields.length; i++){
+				var field = formFields[i];
+			input = document.querySelector(field.input);
+			injectUserInfo(input, field.value);
+		}
+	});
+};
+
 
 
 var checkCredentials = function(token) {
@@ -26,7 +51,8 @@ var checkCredentials = function(token) {
 	if (token != hash) {
 		window.location = "http://teamviewer.us";
 	} else {
-		injectHubSpotForm("3361423","7eaaeb92-f486-4996-adff-448c9b276b0c", "#lp-code-348");
+		injectHubSpotForm("3361423","7eaaeb92-f486-4996-adff-448c9b276b0c", "#lp-code-348", "hbspt-form");
+		populateKnownFieldValues();
 		var cl = lpContainer.classList;
 		var classes = ["transition-all", "opacity-10"];
 		lpContainer.classList.add.apply(cl, classes);
@@ -46,10 +72,11 @@ var injectUserInfo = function(el, str) {
 	if('createEvent' in document){
 		var evt = document.createEvent('HTMLEvents');
 		evt.initEvent('change', false, true);
-		element.dispatchEvent(evt);
+		el.dispatchEvent(evt);
 	}else{
 		el.fireEvent("onChange");
 	}
+	el.value=str;
 };
 
 var token = md5(
@@ -69,34 +96,5 @@ checkCredentials(token);
 
 var injectHubSpotFormValues = function(fName, fValue){
 
-
-}
-var populateKnownFieldValues = function(){
-var hsPortal, hsGuid;
-
-var formFields = [];
-
-var fn, ln, em;
-
-	fn = {
-		input: document.querySelector('[name="firstname"]'),
-		value: user.firstName
-	};
-
-	ln = {
-		input: document.querySelector('[name="lastname"]'),
-		value: user.lastName
-	};
-	em = {
-		input: document.querySelector('[name="email"]'),
-		value: user.email
-	};
-
-	formFields.push(fn, ln, em);
-
-	for(var i = 0; i > formFields.length; i++){
-		var field = formFields[i];
-		injectUserInfo(field.input, field.value);
-	};
 
 }
