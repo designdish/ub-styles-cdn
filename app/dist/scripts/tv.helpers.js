@@ -151,7 +151,7 @@ var getUser = function() {
 	    var newParamVal, result, newLink, joinedParams, baseParamVal;
 
 	    baseParamVal = getValue(baseParam);
-	    newParamVal = baseParamVal;
+	    newParamVal = (baseParamVal != undefined) ? baseParamVal : "";
 
 	    for (var i = targetParam.length - 1; i >= 0; i--) {
 	        //for each parameter in our target parameter array, check for a parameter or a cookie
