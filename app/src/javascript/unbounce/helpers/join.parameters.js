@@ -9,7 +9,7 @@ var joinParameters = function(url, baseParam, targetParam) {
         var target = targetParam[i],
             targetVal = (getValue(targetParam[i]) != undefined) ? (getValue(targetParam[i])) : undefined,
             newParam = (targetVal != undefined) ? target + "=" + targetVal : "",
-            appendedParam = (targetVal != undefined) ? target + "-" + targetVal : "";
+            appendedParam = (targetVal != undefined) ? target + "-" + targetVal : target + '-';
 
         if (targetVal != undefined) {
             if (newParamVal != undefined) {
