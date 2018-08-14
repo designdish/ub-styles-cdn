@@ -55,7 +55,7 @@
 
 		    var startSlice = cStr.indexOf(cName + "=");
 		    if (startSlice == -1) {
-		        return false;
+		        return undefined;
 		    }
 
 		    var endSlice = cStr.indexOf(";", startSlice + 1);

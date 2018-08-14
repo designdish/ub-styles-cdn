@@ -1,6 +1,6 @@
 var getValue = function(param) {
     var parameter =
-        getParameterByName(param) != null ?
+        getParameterByName(param) != undefined ?
         getParameterByName(param) :
         getCookie(param);
     if (

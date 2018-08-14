@@ -32,9 +32,9 @@ var checkParams = function(url, arr) {
     for (var i = arr.length - 1; i >= 0; i--) {
         var param = arr[i];
         var cookieVal = getCookie(param);
-        var paramVal = (getParameterByName(param, url) === null) ? cookieVal : getParameterByName(param, url);
+        var paramVal = (getParameterByName(param, url) === undefined) ? cookieVal : getParameterByName(param, url);
 
-        if ((paramVal === null) && (cookieVal === false)) {
+        if ((paramVal === undefined) && (cookieVal === undefined)) {
             return url;
         } else {
             setCookie(param, paramVal);
@@ -101,7 +101,7 @@ var checkParams = function(url, arr) {
 
 		    var startSlice = cStr.indexOf(cName + "=");
 		    if (startSlice == -1) {
-		        return false;
+		        return undefined;
 		    }
 
 		    var endSlice = cStr.indexOf(";", startSlice + 1);
@@ -115,7 +115,7 @@ var checkParams = function(url, arr) {
 		};
 var getValue = function(param) {
     var parameter =
-        getParameterByName(param) != null ?
+        getParameterByName(param) != undefined ?
         getParameterByName(param) :
         getCookie(param);
     if (
@@ -129,15 +129,14 @@ var getValue = function(param) {
     }
 };
 var getParameterByName = function(name, url) {
-	if (!url) url = window.location.href;
-	name = name.replace(/[\[\]]/g, "\\$&");
-	var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-		results = regex.exec(url);
-	if (!results) return null;
-	if (!results[2]) return "";
-	return decodeURIComponent(results[2].replace(/\+/g, " "));
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return undefined;
+    if (!results[2]) return "";
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
 };
-
 var getUser = function() {
 	var user = {
 		firstName: getParameterByName("first"),
@@ -147,46 +146,40 @@ var getUser = function() {
 	return user;
 };
 
-	var joinParameters = function(url, baseParam, targetParam) {
-	    var newParamVal, result, newLink, joinedParams, baseParamVal;
+var joinParameters = function(url, baseParam, targetParam) {
+    var newParamVal, result, newLink, joinedParams, baseParamVal;
 
-	    baseParamVal = getValue(baseParam);
-	    newParamVal = (baseParamVal != undefined) ? baseParamVal : "";
+    baseParamVal = getValue(baseParam);
+    newParamVal = (baseParamVal != undefined) ? baseParamVal : undefined;
 
-	    for (var i = targetParam.length - 1; i >= 0; i--) {
-	        //for each parameter in our target parameter array, check for a parameter or a cookie
-	        var target = targetParam[i];
-	        var targetVal = getValue(targetParam[i]);
-	        var newParam = target + "=" + targetVal;
-	        var appendedParam = target + "-" + targetVal;
+    for (var i = targetParam.length - 1; i >= 0; i--) {
+        //for each parameter in our target parameter array, check for a parameter or a cookie
+        var target = targetParam[i],
+            targetVal = (getValue(targetParam[i]) != undefined) ? (getValue(targetParam[i])) : undefined,
+            newParam = (targetVal != undefined) ? target + "=" + targetVal : "",
+            appendedParam = (targetVal != undefined) ? target + "-" + targetVal : "";
 
-	        if (newParamVal.indexOf(appendedParam) === -1) {
-	            newParamVal += "-" + appendedParam;
-	        } else {
-	            newParamVal = updateJoinedParameters(
-	                newParamVal,
-	                target,
-	                targetVal
-	            );
-	            url = updateParam(url, target, targetVal);
-	        }
+        if (newParamVal.indexOf(appendedParam) === -1) {
+            newParamVal += "-" + appendedParam;
+        } else {
+            newParamVal = updateJoinedParameters(
+                newParamVal,
+                target,
+                targetVal
+            );
+            url = updateParam(url, target, targetVal);
+        }
 
-	        if (url.indexOf(newParam) === -1) {
-	            url = appendParam(url, target, targetVal);
-	            if (targetVal === "") {
-	                setCookie(target, "empty");
-	            }
-	        } else {
-	            updateParam(url, target, targetVal);
-	        }
-	        setCookie(target, targetVal);
-	    }
-	    setCookie(baseParam, newParamVal);
-
-	    result = updateParam(url, baseParam, newParamVal);
-
-	    return result;
-	};
+        if (url.indexOf(newParam) === -1) {
+            url = appendParam(url, target, targetVal);
+        } else {
+            updateParam(url, target, targetVal);
+        }
+    }
+    setCookie(baseParam, newParamVal);
+    result = updateParam(url, baseParam, newParamVal);
+    return result;
+};
 var removeEl = function(el) {
 	if (el != undefined && el.parentNode.innerHTML.length > -1) {
 		el.parentNode.removeChild(el);
