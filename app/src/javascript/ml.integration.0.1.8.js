@@ -37,7 +37,7 @@ var load = (function() {
 
 Promise.all([
     load.js(
-        "https://rawgit.com/designdish/ub-styles-cdn/master/app/src/javascript/unbounce/helpers/tv.helpers.js"
+        "https://rawgit.com/designdish/ub-styles-cdn/master/app/dist/scripts/tv.helpers.js"
     )
 ]);
 
