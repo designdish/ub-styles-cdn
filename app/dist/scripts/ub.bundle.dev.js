@@ -65,9 +65,9 @@ var jscripts = {
 
 // Promise.all([load.js(buildUrl(jscript.files, jscript.cdn))]);
 var loadHelpers = Promise.all([
-     load.js(
+ load.js(
         "http://js.hsforms.net/forms/v2.js"
-        )
+        ),
     load.js(
         "https://rawgit.com/designdish/ub-styles-cdn/master/app/dist/scripts/ub.helpers.dev.js"
     )
