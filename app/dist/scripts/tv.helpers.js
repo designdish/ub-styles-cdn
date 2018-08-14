@@ -115,7 +115,7 @@ var checkParams = function(url, arr) {
 		};
 var deleteCookieArray = function(cookies) {
     for (var i = 0; i < cookies.length; i++) {
-        cookies[i].eraseCookie(cookies[i]);
+        eraseCookie(cookies[i]);
     }
 };
 var getValue = function(param) {
@@ -165,24 +165,31 @@ var joinParameters = function(url, baseParam, targetParam) {
             newParam = (targetVal != undefined) ? target + "=" + targetVal : "",
             appendedParam = (targetVal != undefined) ? target + "-" + targetVal : "";
 
-        if (newParamVal.indexOf(appendedParam) === -1) {
-            newParamVal += "-" + appendedParam;
-        } else {
-            newParamVal = updateJoinedParameters(
-                newParamVal,
-                target,
-                targetVal
-            );
-            url = updateParam(url, target, targetVal);
-        }
+        if (targetVal != undefined) {
+            if (newParamVal != undefined) {
+                if (newParamVal.indexOf(appendedParam) === -1) {
+                    newParamVal += "-" + appendedParam;
+                } else {
+                    newParamVal = updateJoinedParameters(
+                        newParamVal,
+                        target,
+                        targetVal
+                    );
+                    url = updateParam(url, target, targetVal);
+                }
+            }
 
-        if (url.indexOf(newParam) === -1) {
-            url = appendParam(url, target, targetVal);
-        } else {
-            updateParam(url, target, targetVal);
+            if (url.indexOf(newParam) === -1) {
+                url = appendParam(url, target, targetVal);
+            } else {
+                updateParam(url, target, targetVal);
+            }
+        } else if (targetVal === undefined) {
+            newParamVal += "-" + appendedParam;
         }
+        setCookie(baseParam, newParamVal);
     }
-    setCookie(baseParam, newParamVal);
+
     result = updateParam(url, baseParam, newParamVal);
     return result;
 };
