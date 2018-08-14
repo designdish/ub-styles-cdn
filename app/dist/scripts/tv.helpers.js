@@ -113,6 +113,11 @@ var checkParams = function(url, arr) {
 		    var cValue = cData.substring(cData.indexOf("=") + 1, cData.length);
 		    return cValue;
 		};
+var deleteCookieArray = function(cookies) {
+    for (var i = cookies.length - 1; i >= 0; i--) {
+        cookies[i].eraseCookie(cookies[i]);
+    }
+};
 var getValue = function(param) {
     var parameter =
         getParameterByName(param) != undefined ?
