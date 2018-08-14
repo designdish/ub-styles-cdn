@@ -20,14 +20,14 @@ var animationEnd = function(el) {
 	}
 };
 
-	var appendParam = function(url, param, paramVal) {
-	    // check for the presence of a query initiator and inject one into the url if it isn't, otherwise chain the parameters with the connector
-	    var newLink =
-	        url.indexOf("?") != -1 ?
-	        url + "&" + param + "=" + paramVal :
-	        url + "?" + param + "=" + paramVal;
-	    return newLink;
-	};
+var appendParam = function(url, param, paramVal) {
+    // check for the presence of a query initiator and inject one into the url if it isn't, otherwise chain the parameters with the connector
+    var newLink =
+        url.indexOf("?") != -1 ?
+        url + "&" + param + "=" + paramVal :
+        url + "?" + param + "=" + paramVal;
+    return newLink;
+};
 var checkParams = function(url, arr) {
     for (var i = arr.length - 1; i >= 0; i--) {
         var param = arr[i];
@@ -37,8 +37,8 @@ var checkParams = function(url, arr) {
         if ((paramVal === null) && (cookieVal === false)) {
             return url;
         } else {
-            url = appendParam(url, param, paramVal);
             setCookie(param, paramVal);
+            url = appendParam(url, param, paramVal);
             url = updateParam(url, param, paramVal);
             return url;
         }
@@ -113,21 +113,21 @@ var checkParams = function(url, arr) {
 		    var cValue = cData.substring(cData.indexOf("=") + 1, cData.length);
 		    return cValue;
 		};
-	var getValue = function(param) {
-	    var parameter =
-	        getParameterByName(param) != null ?
-	        getParameterByName(param) :
-	        getCookie(param);
-	    if (
-	        parameter === undefined ||
-	        parameter === false ||
-	        parameter === null
-	    ) {
-	        return "";
-	    } else {
-	        return parameter;
-	    }
-	};
+var getValue = function(param) {
+    var parameter =
+        getParameterByName(param) != null ?
+        getParameterByName(param) :
+        getCookie(param);
+    if (
+        parameter === undefined ||
+        parameter === false ||
+        parameter === null
+    ) {
+        return;
+    } else {
+        return parameter;
+    }
+};
 var getParameterByName = function(name, url) {
 	if (!url) url = window.location.href;
 	name = name.replace(/[\[\]]/g, "\\$&");
@@ -263,28 +263,28 @@ var showSlides = function(slides, time, inClass, outClass, slideIndex) {
 	    var paramText = temp + "" + param + "-" + paramVal;
 	    return baseParam + "-" + newParam + paramText;
 	};
-	var updateParam = function(url, param, paramVal) {
-	    var newURL, tempArray, baseURL, additionalURL, temp;
+var updateParam = function(url, param, paramVal) {
+    var newURL, tempArray, baseURL, additionalURL, temp;
 
-	    newURL = "";
-	    tempArray = url.split("?");
-	    baseURL = tempArray[0];
-	    additionalURL = tempArray[1];
-	    temp = "";
+    newURL = "";
+    tempArray = url.split("?");
+    baseURL = tempArray[0];
+    additionalURL = tempArray[1];
+    temp = "";
 
-	    if (additionalURL) {
-	        tempArray = additionalURL.split("&");
-	        for (var i = 0; i < tempArray.length; i++) {
-	            // setCookie(param, paramVal);
-	            if (tempArray[i].split("=")[0] != param) {
-	                newURL += temp + tempArray[i];
-	                temp = "&";
-	            }
-	        }
-	    }
-	    var paramText = temp + "" + param + "=" + paramVal;
-	    return baseURL + "?" + newURL + paramText;
-	};
+    if (additionalURL) {
+        tempArray = additionalURL.split("&");
+        for (var i = 0; i < tempArray.length; i++) {
+            // setCookie(param, paramVal);
+            if (tempArray[i].split("=")[0] != param) {
+                newURL += temp + tempArray[i];
+                temp = "&";
+            }
+        }
+    }
+    var paramText = temp + "" + param + "=" + paramVal;
+    return baseURL + "?" + newURL + paramText;
+};
 	var updateURL = function(params, str, joinParams) {
 	    var links = document.querySelectorAll("a");
 	    var currentPage = window.location.href;

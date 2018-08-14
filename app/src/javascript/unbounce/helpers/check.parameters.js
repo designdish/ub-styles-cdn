@@ -7,8 +7,8 @@ var checkParams = function(url, arr) {
         if ((paramVal === null) && (cookieVal === false)) {
             return url;
         } else {
-            url = appendParam(url, param, paramVal);
             setCookie(param, paramVal);
+            url = appendParam(url, param, paramVal);
             url = updateParam(url, param, paramVal);
             return url;
         }
