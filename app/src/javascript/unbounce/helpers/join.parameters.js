@@ -2,43 +2,49 @@ var joinParameters = function(url, baseParam, targetParam) {
     var newParamVal, result, newLink, joinedParams, baseParamVal;
 
     baseParamVal = getValue(baseParam);
-    newParamVal = baseParamVal != undefined ? baseParamVal : " ";
+    baseParamVal = (baseParamVal != undefined) ? baseParamVal : " ";
 
     for (var i = targetParam.length - 1; i >= 0; i--) {
-        //for each parameter in our target parameter array, check for a parameter or a cookie
+    //for each parameter in our target parameter array, check for a parameter or a cookie
         var target = targetParam[i],
-            targetVal =
-                getValue(targetParam[i]) != undefined
-                    ? getValue(targetParam[i])
-                    : " ",
-            subParam = targetVal != undefined ? target + "=" + targetVal : " ",
-            appendedParam =
-                targetVal != undefined
-                    ? target + "-" + targetVal
-                    : target + "-";
+            targetVal = getValue(targetParam[i]),
+            subParam = (targetVal != undefined) ? target + "=" + targetVal : undefined,
+            appendedParam = (targetVal != undefined) ? target + "-" + targetVal : target + '-';
+
+            if((targetVal != undefined) && (baseParamVal != undefined)){
+                subParam = joinSubParams(baseParamVal, target, targetVal);
+                url = appendParam(url, target, targetVal);
+             }
+
+            if((targetVal === undefined) && (baseParamVal === undefined)){
+                subParam = joinSubParams(baseParam, target, targetVal)
+                url = updateParam(url, target, targetVal); 
+            }
+
+
 
         if (targetVal != undefined) {
-            if (newParamVal != undefined) {
-                if (newParamVal.indexOf(appendedParam) === -1) {
-                    newParamVal = updateSubParams(newParamVal, appendedParam);
+            if (baseParamVal != undefined) {
+                if (baseParamVal.indexOf(appendedParam) === -1) {
+                   baseParamVal = updateSubParams(baseParamVal, appendedParam);
                 } else {
-                    newParamVal = joinSubParams(newParamVal, target, targetVal);
-                }
+                    baseParamVal = joinSubParams(baseParamVal, target, targetVal);
+                        }
                 url = updateParam(url, target, targetVal);
-            }
-
-            if (subParam != " ") {
-                if (url.indexOf(subParam) === -1) {
-                    url = appendParam(url, target, targetVal);
-                    url.replace(/ +?/g, '');
-                } else {
-                    url = updateParam(url, target, targetVal);
-                    url.replace(/ +?/g, '');
                 }
+
+                if (subParam != " ") {
+                    if (url.indexOf(subParam) === -1) {
+                        url = appendParam(url, target, targetVal);
+                        url.replace(/\s+/g, '');
+                    } else {
+                        url = updateParam(url, target, targetVal);
+                        url.replace(/\s+/g, '');
+                    }
+                }
+                setCookie(baseParam, baseParamVal);
             }
-            setCookie(baseParam, newParamVal);
         }
-    }
-    result = updateParam(url, baseParam, newParamVal);
-    return result;
+        result = updateParam(url, baseParam, baseParamVal);
+return result;
 };
