@@ -30,10 +30,10 @@ var joinParameters = function(url, baseParam, targetParam) {
             if (subParam != " ") {
                 if (url.indexOf(subParam) === -1) {
                     url = appendParam(url, target, targetVal);
-                    url.replace(/\s+/g, "");
+                    url.replace(/ +?/g, '');
                 } else {
                     url = updateParam(url, target, targetVal);
-                    url.replace(/\s+/g, "");
+                    url.replace(/ +?/g, '');
                 }
             }
             setCookie(baseParam, newParamVal);

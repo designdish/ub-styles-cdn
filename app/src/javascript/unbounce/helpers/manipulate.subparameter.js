@@ -1,5 +1,5 @@
 var joinSubParams = function(paramVal,target, targetVal){
-	targetVal = " " ? targetVal.replace(/\s+/g, "") : targetVal;
+	targetVal = " " ? targetVal.replace(/ +?/g, '') : targetVal;
 
 		joinedParameter =  updateJoinedParameters(
 		paramVal,
@@ -10,8 +10,9 @@ var joinSubParams = function(paramVal,target, targetVal){
 };
 
 var updateSubParams = function(paramVal, appendedParam){
-	paramVal = " " ? paramVal.replace(/\s+/g, "") : paramVal;
+	paramVal = " " ? paramVal.replace(/ +?/g, '') : paramVal;
 
 	var updatedParameter = paramVal += "-" + appendedParam;
 	return updatedParameter;
 }
+

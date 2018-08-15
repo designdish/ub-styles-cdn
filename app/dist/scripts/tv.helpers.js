@@ -179,10 +179,10 @@ var joinParameters = function(url, baseParam, targetParam) {
             if (subParam != " ") {
                 if (url.indexOf(subParam) === -1) {
                     url = appendParam(url, target, targetVal);
-                    url.replace(/\s+/g, "");
+                    url.replace(/ +?/g, '');
                 } else {
                     url = updateParam(url, target, targetVal);
-                    url.replace(/\s+/g, "");
+                    url.replace(/ +?/g, '');
                 }
             }
             setCookie(baseParam, newParamVal);
@@ -193,7 +193,7 @@ var joinParameters = function(url, baseParam, targetParam) {
 };
 
 var joinSubParams = function(paramVal,target, targetVal){
-	targetVal = " " ? targetVal.replace(/\s+/g, "") : targetVal;
+	targetVal = " " ? targetVal.replace(/ +?/g, '') : targetVal;
 
 		joinedParameter =  updateJoinedParameters(
 		paramVal,
@@ -204,11 +204,12 @@ var joinSubParams = function(paramVal,target, targetVal){
 };
 
 var updateSubParams = function(paramVal, appendedParam){
-	paramVal = " " ? paramVal.replace(/\s+/g, "") : paramVal;
+	paramVal = " " ? paramVal.replace(/ +?/g, '') : paramVal;
 
 	var updatedParameter = paramVal += "-" + appendedParam;
 	return updatedParameter;
 }
+
 
 var removeEl = function(el) {
 	if (el != undefined && el.parentNode.innerHTML.length > -1) {
