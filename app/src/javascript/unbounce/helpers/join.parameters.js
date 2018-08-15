@@ -11,15 +11,32 @@ var joinParameters = function(url, baseParam, targetParam) {
             subParam = (targetVal != undefined) ? target + "=" + targetVal : undefined,
             appendedParam = (targetVal != undefined) ? target + "-" + targetVal : target + '-';
 
+
+            // what happens when a both a target and a base parameter value are provided 
             if((targetVal != undefined) && (baseParamVal != undefined)){
-                subParam = joinSubParams(baseParamVal, target, targetVal);
-                url = appendParam(url, target, targetVal);
+                subParam = updateParam(baseParamVal, target, targetVal);
+                result = appendParam(url, target, targetVal);
              }
 
+            // what happens when neithher a target nor a base parameter value are provided 
             if((targetVal === undefined) && (baseParamVal === undefined)){
                 subParam = joinSubParams(baseParam, target, targetVal)
-                url = updateParam(url, target, targetVal); 
+                result = updateParam(url, target, targetVal); 
             }
+
+            // what happens when we have target value but not a base parameter value 
+            if((targetVal != undefined) && (baseParamVal === undefined)){
+                result = updateParam(url, target, targetVal);
+            }
+
+            // what happens when a we have a base parameter value, but not a target value
+            if((targetVal === undefined) && (baseParamVal != undefined)){
+                if (baseParamVal.indexOf(appendedParam) === -1) {
+                   baseParamVal = updateSubParams(baseParamVal, appendedParam);
+                }
+                result = appendParam(url, target, targetVal);;
+            }
+
 
         // if (targetVal != undefined) {
         //     if (baseParamVal != undefined) {
@@ -43,7 +60,8 @@ var joinParameters = function(url, baseParam, targetParam) {
         //         setCookie(baseParam, baseParamVal);
         //     }
         // }
+
+    }
     setCookie(baseParam, baseParamVal);
-    result = updateParam(url, baseParam, baseParamVal);
     return result;
 };

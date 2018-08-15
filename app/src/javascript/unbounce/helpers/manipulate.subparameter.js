@@ -10,4 +10,3 @@ var updateSubParams = function(paramVal, appendedParam){
 	var updatedParameter = paramVal += "-" + appendedParam;
 	return updatedParameter;
 }
-
