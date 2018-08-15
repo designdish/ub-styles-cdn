@@ -21,30 +21,29 @@ var joinParameters = function(url, baseParam, targetParam) {
                 url = updateParam(url, target, targetVal); 
             }
 
+        // if (targetVal != undefined) {
+        //     if (baseParamVal != undefined) {
+        //         if (baseParamVal.indexOf(appendedParam) === -1) {
+        //            baseParamVal = updateSubParams(baseParamVal, appendedParam);
+        //         } else {
+        //             baseParamVal = joinSubParams(baseParamVal, target, targetVal);
+        //                 }
+        //         url = updateParam(url, target, targetVal);
+        //         }
 
-
-        if (targetVal != undefined) {
-            if (baseParamVal != undefined) {
-                if (baseParamVal.indexOf(appendedParam) === -1) {
-                   baseParamVal = updateSubParams(baseParamVal, appendedParam);
-                } else {
-                    baseParamVal = joinSubParams(baseParamVal, target, targetVal);
-                        }
-                url = updateParam(url, target, targetVal);
-                }
-
-                if (subParam != " ") {
-                    if (url.indexOf(subParam) === -1) {
-                        url = appendParam(url, target, targetVal);
-                        url.replace(/\s+/g, '');
-                    } else {
-                        url = updateParam(url, target, targetVal);
-                        url.replace(/\s+/g, '');
-                    }
-                }
-                setCookie(baseParam, baseParamVal);
-            }
-        }
-        result = updateParam(url, baseParam, baseParamVal);
-return result;
+        //         if (subParam != " ") {
+        //             if (url.indexOf(subParam) === -1) {
+        //                 url = appendParam(url, target, targetVal);
+        //                 url.replace(/\s+/g, '');
+        //             } else {
+        //                 url = updateParam(url, target, targetVal);
+        //                 url.replace(/\s+/g, '');
+        //             }
+        //         }
+        //         setCookie(baseParam, baseParamVal);
+        //     }
+        // }
+    setCookie(baseParam, baseParamVal);
+    result = updateParam(url, baseParam, baseParamVal);
+    return result;
 };
