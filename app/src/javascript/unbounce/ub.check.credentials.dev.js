@@ -25,7 +25,7 @@ var visitorInfo = [{
     },
     {
         selector: '[name="lastname"]',
-        text: getParameterByName('first')
+        text: getParameterByName('last')
     },
     {
         selector: '[name="email"]',
