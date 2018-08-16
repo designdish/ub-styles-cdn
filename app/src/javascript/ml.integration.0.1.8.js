@@ -54,7 +54,7 @@ var loadHelpers = Promise.all([
 loadHelpers.then(function() {
     var mlp = ["lae_vid", "lae_eg", "ml_eg", "ml_acc", "ml_count"];
     //delete cookies for testing purposes 
-    deleteCookieArray(mlp);
+    // deleteCookieArray(mlp);
 
     var tvURL = "teamviewer.com";
     updateURL(mlp, tvURL, ["pid", mlp]);
