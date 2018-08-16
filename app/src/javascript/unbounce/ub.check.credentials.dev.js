@@ -10,7 +10,7 @@ var credentials = [{
 ];
 
 var token = md5(
-    getParameterByName("mailid").toLowerCase() + getParameterByName("utm_campaign").toLowerCase()
+    getParameterByName("mailid") + getParameterByName("utm_campaign").toLowerCase()
 );
 
 var user = {
@@ -45,7 +45,7 @@ var genCredentialsHash = function(credentials) {
     var accessKeys = [];
     for (var i = credentials.length - 1; i >= 0; i--) {
         var key = credentials[i];
-        key = (key.mailid.toLowerCase() + key.campaign.toLowerCase());
+        key = (key.mailid + key.campaign.toLowerCase());
         key = md5(key);
         accessKey.push(key);
     }
