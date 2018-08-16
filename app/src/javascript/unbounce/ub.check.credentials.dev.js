@@ -76,7 +76,7 @@ var populateKnownFieldValues = function(visitorInfo) {
 var checkCredentials = function(token, form) {
 
     var lpContainer = document.getElementById("lp-pom-root");
-    var hash = genCredentialsKey(credentials);
+    var hash = genCredentialsHash(credentials);
 
     var access = function() {
         for (var i = hash.length - 1; i >= 0; i--) {
