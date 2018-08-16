@@ -70,8 +70,7 @@ var injectHubSpotForm = function(portalId, formId, target, style) {
 var populateKnownFieldValues = function(visitorInfo) {
     for (var i = visitorInfo.length - 1; i >= 0; i--) {
         var visitor = visitorInfo[i];
-        var input = document.querySelector(visitor.selector);
-        injectUserInfo(input, visitor.text);
+        injectUserInfo(visitor.selector, visitor.text);
     }
 };
 
@@ -100,7 +99,8 @@ var checkCredentials = function(token, form) {
 };
 
 var injectUserInfo = function(el, str) {
-    waitFor(el).then(function() {
+
+    waitFor(document.querySelector(el)).then(function() {
 
         el.value = str;
 
