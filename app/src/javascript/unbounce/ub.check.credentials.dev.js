@@ -101,6 +101,7 @@ var checkCredentials = function(token, form) {
 var injectUserInfo = function(el, str) {
 
     waitFor(document.querySelector(el)).then(function() {
+        el = document.querySelector(el);
 
         el.value = str;
 
