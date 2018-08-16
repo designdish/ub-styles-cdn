@@ -1,4 +1,5 @@
 /* Import Vendors Contents */
+<<<<<<< HEAD
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license - http://opensource.org/licenses/MIT
@@ -4609,6 +4610,17 @@ readers do not read off random characters that represent icons */
     background-position: 63% 100%; }
   100% {
     background-position: 38% 0; } }
+=======
+/* Import Utils Contents */
+/* Import Base Contents */
+/* SASS / Social Media Brand Colors */
+/* Import Components Contents */
+#lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="text"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="email"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input[type="password"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .input input:not([type="image"]) {
+  height: 30px;
+  background: linear-gradient(white, #e1f5eb);
+  box-shadow: inset 2px 8px 14px 0px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.5); }
+>>>>>>> c911b581a34d165054291785d0a0a33a87060bce
 
 /* Import Layout Contents */
 /* Import Pages Contents */
@@ -4623,6 +4635,7 @@ readers do not read off random characters that represent icons */
 #lp-pom-root h6,
 #lp-pom-root p,
 #lp-pom-root span {
+<<<<<<< HEAD
   font-family: Roboto !important;
   font-style: normal; }
 
@@ -4633,6 +4646,9 @@ readers do not read off random characters that represent icons */
 #lp-pom-root a,
 #lp-pom-root a span {
   color: #038ff4 !important; }
+=======
+  font-family: Roboto !important; }
+>>>>>>> c911b581a34d165054291785d0a0a33a87060bce
 
 #lp-pom-root h1 {
   color: #038ff4; }
@@ -4652,6 +4668,7 @@ readers do not read off random characters that represent icons */
 #lp-pom-root h6 {
   color: #038ff4; }
 
+<<<<<<< HEAD
 #lp-pom-root #lp-pom-text-88 a,
 #lp-pom-root #lp-pom-text-88 a span {
   color: white !important;
@@ -4672,10 +4689,20 @@ readers do not read off random characters that represent icons */
     left: 0px;
     box-sizing: border-box;
     border: 1px solid #ddd; }
+=======
+#lp-pom-root #lp-pom-box-354 {
+  display: block;
+  background: linear-gradient(45deg, rgba(0, 175, 248, 0.4) 0%, rgba(0, 175, 248, 0.7) 100%);
+  border: 1px solid #d8d8d8; }
+  #lp-pom-root #lp-pom-box-354 #lp-code-348 {
+    height: auto;
+    width: 100%; }
+>>>>>>> c911b581a34d165054291785d0a0a33a87060bce
   #lp-pom-root #lp-pom-box-354 .hbspt-form {
     width: 100%;
     height: auto;
     min-height: 390px;
+<<<<<<< HEAD
     padding: 10px;
     margin-top: 50px; }
     #lp-pom-root #lp-pom-box-354 .hbspt-form label {
@@ -4727,3 +4754,10 @@ readers do not read off random characters that represent icons */
       width: calc(100% - 30px);
       margin: 0px;
       background: linear-gradient(0deg, #00aff8, #008bc5); }
+=======
+    padding: 20px; }
+    #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field {
+      width: calc(100% - 20px);
+      float: left;
+      margin: 10px auto; }
+>>>>>>> c911b581a34d165054291785d0a0a33a87060bce

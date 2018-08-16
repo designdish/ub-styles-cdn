@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @import "base";
+=======
+@import 'base';
+>>>>>>> c911b581a34d165054291785d0a0a33a87060bce
 
 #lp-pom-root {
     &,
@@ -10,6 +14,7 @@
     h5,
     h6,
     p,
+<<<<<<< HEAD
     span {
         font-family: Roboto !important;
         font-style: normal;
@@ -54,10 +59,28 @@
         display: block; // background: linear-gradient(45deg, rgba($BackgroundBlue, 0.1) 0%, rgba($BackgroundBlue, 0.1) 100%);
         border: none;
         background: transparent;
+=======
+    span,
+    {
+        font-family: Roboto !important;
+    }
+
+    @for $i from 1 through 6 {
+        h#{$i} {
+            color: $PrimaryBlue
+        }
+    }
+
+    #lp-pom-box-354 {
+        display: block;
+        background: linear-gradient(45deg, rgba($BackgroundBlue, 0.4) 0%, rgba($BackgroundBlue, 0.7) 100%);
+        border: 1px solid $Gray;
+>>>>>>> c911b581a34d165054291785d0a0a33a87060bce
 
         #lp-code-348 {
             height: auto;
             width: 100%;
+<<<<<<< HEAD
             background: linear-gradient( 45deg,
             rgba(200, 200, 250, 0.2),
             rgba(230, 240, 250, 0.4),
@@ -70,10 +93,15 @@
         }
 
 
+=======
+        }
+
+>>>>>>> c911b581a34d165054291785d0a0a33a87060bce
         .hbspt-form {
             width: 100%;
             height: auto;
             min-height: 390px;
+<<<<<<< HEAD
             padding: 10px;
             margin-top: 50px;
 
@@ -89,11 +117,18 @@
 
             .hs-form-field {
                 width: 100%;
+=======
+            padding: 20px;
+
+            .hs-form-field {
+                width: calc(100% - 20px);
+>>>>>>> c911b581a34d165054291785d0a0a33a87060bce
                 float: left;
                 margin: 10px auto;
 
                 .input {
                     input {
+<<<<<<< HEAD
                         @extend %input;
                     }
                 }
@@ -159,6 +194,12 @@
                 }
             }
             @extend %input;
+=======
+                        @extend %input
+                    }
+                }
+            }
+>>>>>>> c911b581a34d165054291785d0a0a33a87060bce
         }
     }
 }
