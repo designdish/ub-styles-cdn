@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-@import "base";
-=======
 @import 'base';
->>>>>>> c911b581a34d165054291785d0a0a33a87060bce
 
 #lp-pom-root {
     &,
@@ -14,7 +10,7 @@
     h5,
     h6,
     p,
-<<<<<<< HEAD
+
     span {
         font-family: Roboto !important;
         font-style: normal;
@@ -59,49 +55,46 @@
         display: block; // background: linear-gradient(45deg, rgba($BackgroundBlue, 0.1) 0%, rgba($BackgroundBlue, 0.1) 100%);
         border: none;
         background: transparent;
-=======
-    span,
-    {
-        font-family: Roboto !important;
-    }
 
-    @for $i from 1 through 6 {
-        h#{$i} {
-            color: $PrimaryBlue
-        }
-    }
-
-    #lp-pom-box-354 {
-        display: block;
-        background: linear-gradient(45deg, rgba($BackgroundBlue, 0.4) 0%, rgba($BackgroundBlue, 0.7) 100%);
-        border: 1px solid $Gray;
->>>>>>> c911b581a34d165054291785d0a0a33a87060bce
-
-        #lp-code-348 {
-            height: auto;
-            width: 100%;
-<<<<<<< HEAD
-            background: linear-gradient( 45deg,
-            rgba(200, 200, 250, 0.2),
-            rgba(230, 240, 250, 0.4),
-            rgba(200, 200, 250, 0.2));
-            padding: 0 15px 30px;
-            top: 0px;
-            left: 0px;
-            box-sizing: border-box;
-            border: 1px solid #ddd;
+        span,
+        {
+            font-family: Roboto !important;
         }
 
-
-=======
+        @for $i from 1 through 6 {
+            h#{$i} {
+                color: $PrimaryBlue
+            }
         }
 
->>>>>>> c911b581a34d165054291785d0a0a33a87060bce
+        #lp-pom-box-354 {
+            display: block;
+            background: linear-gradient(45deg, rgba($BackgroundBlue, 0.4) 0%, rgba($BackgroundBlue, 0.7) 100%);
+            border: 1px solid $Gray;
+
+
+            #lp-code-348 {
+                height: auto;
+                width: 100%;
+
+                background: linear-gradient( 45deg,
+                rgba(200, 200, 250, 0.2),
+                rgba(230, 240, 250, 0.4),
+                rgba(200, 200, 250, 0.2));
+                padding: 0 15px 30px;
+                top: 0px;
+                left: 0px;
+                box-sizing: border-box;
+                border: 1px solid #ddd;
+            }
+        }
+
+
         .hbspt-form {
             width: 100%;
             height: auto;
             min-height: 390px;
-<<<<<<< HEAD
+
             padding: 10px;
             margin-top: 50px;
 
@@ -117,89 +110,84 @@
 
             .hs-form-field {
                 width: 100%;
-=======
-            padding: 20px;
 
-            .hs-form-field {
-                width: calc(100% - 20px);
->>>>>>> c911b581a34d165054291785d0a0a33a87060bce
-                float: left;
-                margin: 10px auto;
+                padding: 20px;
 
-                .input {
-                    input {
-<<<<<<< HEAD
-                        @extend %input;
-                    }
-                }
-            }
-            .hs-fieldtype-radio {
-                // @extend %slideToggle;
-                //
-                input {
-                    display: none;
-                }
-                .hs-form-radio {
-                    label span {
-                        margin-left: 25px;
-                        margin-top: 10px;
-                    }
-                }
-                .hs-form-radio-display {
-                    span {
-                        &:before {
-                            border: 3px solid $DarkBlue;
-                            content: "";
-                            background: $PrimaryWhite;
-                            position: absolute;
-                            border-radius: 50%;
-                            margin-top: 0px;
-                            left: 25px;
-                            height: 1rem;
-                            width: 1rem;
-                            transition: all 0.25s ease-in-out;
+                .hs-form-field {
+                    width: calc(100% - 20px);
+
+                    float: left;
+                    margin: 10px auto;
+
+                    .input {
+                        input {
+
+                            @extend %input;
                         }
                     }
+                }
+                .hs-fieldtype-radio {
+                    // @extend %slideToggle;
+                    //
                     input {
-                        &:checked {
-                            &~span:before {
-                                @include fa-icon;
-                                font-family: "Font Awesome 5 Free";
-                                font-weight: 900;
-                                border: 3px solid darken($CTAButtonGreen, 5%);
-                                background: linear-gradient( $CTAButtonGreen,
-                                lighten($CTAButtonGreen, 10%));
-                                content: fa-content($fa-var-check);
-                                color: $PrimaryWhite;
-                                text-shadow: 1px 2px 10px $CTAButtonGreen;
-                                font-size: 1.3rem;
-                                line-height: 15px;
+                        display: none;
+                    }
+                    .hs-form-radio {
+                        label span {
+                            margin-left: 25px;
+                            margin-top: 10px;
+                        }
+                    }
+                    .hs-form-radio-display {
+                        span {
+                            &:before {
+                                border: 3px solid $DarkBlue;
+                                content: "";
+                                background: $PrimaryWhite;
+                                position: absolute;
+                                border-radius: 50%;
+                                margin-top: 0px;
+                                left: 25px;
+                                height: 1rem;
+                                width: 1rem;
                                 transition: all 0.25s ease-in-out;
+                            }
+                        }
+                        input {
+                            &:checked {
+                                &~span:before {
+                                    @include fa-icon;
+                                    font-family: "Font Awesome 5 Free";
+                                    font-weight: 900;
+                                    border: 3px solid darken($CTAButtonGreen, 5%);
+                                    background: linear-gradient( $CTAButtonGreen,
+                                    lighten($CTAButtonGreen, 10%));
+                                    content: fa-content($fa-var-check);
+                                    color: $PrimaryWhite;
+                                    text-shadow: 1px 2px 10px $CTAButtonGreen;
+                                    font-size: 1.3rem;
+                                    line-height: 15px;
+                                    transition: all 0.25s ease-in-out;
+                                }
                             }
                         }
                     }
                 }
-            }
-            .hs-input[type="radio"] {
-                @extend %slideToggle;
-            }
-            .hs_submit {
-                .hs-button {
-                    @extend %button;
-                    width: calc(100% - 30px);
-                    margin: 0px;
-                    background: linear-gradient( 0deg,
-                    rgba($BackgroundBlue, 1),
-                    rgba(darken($BackgroundBlue, 10%), 1));
+                .hs-input[type="radio"] {
+                    @extend %slideToggle;
                 }
-            }
-            @extend %input;
-=======
-                        @extend %input
+                .hs_submit {
+                    .hs-button {
+                        @extend %button;
+                        width: calc(100% - 30px);
+                        margin: 0px;
+                        background: linear-gradient( 0deg,
+                        rgba($BackgroundBlue, 1),
+                        rgba(darken($BackgroundBlue, 10%), 1));
                     }
                 }
+                @extend %input;
             }
->>>>>>> c911b581a34d165054291785d0a0a33a87060bce
         }
     }
 }

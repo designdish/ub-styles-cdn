@@ -1,100 +1,114 @@
-var mId = 18045513; //mailid
-var utmC = "news2018-Q3-August-Mig-MeetingUsers-T1-enUS"; //utm_campaign
+var credentials = [{
+        mailid: 18045513,
+        campaign: "news2018-Q3-August-Mig-MeetingUsers-T1-enUS"
+    },
+    {
+        mailid: 18073229,
+        campaign: "utm_campaign=news2018-Q3-August-Mig-NameYourPrice-T1B-enUS"
+    }
 
-var injectHubSpotForm = function(portalId, formId, target, style){
-		var hForm = hbspt.forms.create({
-			portalId: portalId,
-			formId: formId,
-			target:target,
-			cssClass:style
-		});
-		return hForm;
-};
+];
 
-
-var populateKnownFieldValues = function(){
-	var hsPortal, hsGuid, input;
-
-	var formFields = [];
-
-	var fn, ln, em;
-
-		fn = {
-			input:'[name="firstname"]',
-			value: user.firstName
-		};
-
-		ln = {
-			input:'[name="lastname"]',
-			value: user.lastName
-		};
-		em = {
-			input:'[name="email"]',
-			value: user.email
-		};
-
-		formFields.push(fn, ln, em);
-		waitFor(document.querySelector(fn.input)).then(function(){
-			for(var i = 0; i < formFields.length; i++){
-				var field = formFields[i];
-			input = document.querySelector(field.input);
-			injectUserInfo(input, field.value);
-		}
-	});
-};
-
-
-
-var checkCredentials = function(token) {
-	var lpContainer = document.getElementById("lp-pom-root");
-	var hash = md5(mId + utmC);
-	if (token != hash) {
-		window.location = "http://teamviewer.us";
-	} else {
-		injectHubSpotForm("3361423","7eaaeb92-f486-4996-adff-448c9b276b0c", "#lp-code-348", "hbspt-form stacked");
-		populateKnownFieldValues();
-		var cl = lpContainer.classList;
-		var classes = ["transition-all", "opacity-10"];
-		lpContainer.classList.add.apply(cl, classes);
-	}
-};
+var token = md5(
+    getParameterByName("mailid").toLowerCase() + getParameterByName("utm_campaign").toLowerCase()
+);
 
 var user = {
-	firstName: getParameterByName("first"),
-	lastName: getParameterByName("last"),
-	email: getParameterByName("email")
+    firstName: getParameterByName("first"),
+    lastName: getParameterByName("last"),
+    email: getParameterByName("email")
+};
+
+var visitorInfo = [{
+        selector: '[name="firstname"]',
+        text: getParameterByName('first')
+    },
+    {
+        selector: '[name="lastname"]',
+        text: getParameterByName('first')
+    },
+    {
+        selector: '[name="email"]',
+        text: getParameterByName('email')
+    }
+];
+
+var hsForm = {
+    portalId: "3361423",
+    formId: "7eaaeb92-f486-4996-adff-448c9b276b0c",
+    target: "#lp-code-348",
+    style: "hbspt-form stacked"
+};
+
+
+var genCredentialsHash = function(credentials) {
+    var accessKeys = [];
+    for (var i = credentials.length - 1; i >= 0; i--) {
+        var key = credentials[i];
+        key = (key.mailid.toLowerCase() + key.campaign.toLowerCase());
+        key = md5(key);
+        accessKey.push(key);
+    }
+    return accessKey;
+};
+
+
+var injectHubSpotForm = function(portalId, formId, target, style) {
+    var hForm = hbspt.forms.create({
+        portalId: portalId,
+        formId: formId,
+        target: target,
+        cssClass: style
+    });
+    return hForm;
+};
+
+var populateKnownFieldValues = function(visitorInfo) {
+    waitFor(document.querySelector(visitorInfo.selector)).then(function() {
+        for (var i = visitorInfo.length - 1; i >= 0; i--) {
+            var visitor = visitorInfo[i];
+            var input = document.querySelector(visitor.selector);
+            injectUserInfo(input, visitorInfo);
+        }
+    });
+};
+
+var checkCredentials = function(token, form) {
+
+    var lpContainer = document.getElementById("lp-pom-root");
+    var hash = genCredentialsKey(credentials);
+
+    var access = function() {
+        for (var i = hash.length - 1; i >= 0; i--) {
+            if (hash[i] === token) {
+                return true;
+            }
+            return false;
+        }
+    };
+    if (access === false) {
+        window.location = "http://teamviewer.us";
+    } else {
+        injectHubSpotForm(hsForm);
+        populateKnownFieldValues();
+        var cl = lpContainer.classList;
+        var classes = ["transition-all", "opacity-10"];
+        lpContainer.classList.add.apply(cl, classes);
+    }
 };
 
 var injectUserInfo = function(el, str) {
-	
-	el.value = str;
 
-	if('createEvent' in document){
-		var evt = document.createEvent('HTMLEvents');
-		evt.initEvent('change', false, true);
-		el.dispatchEvent(evt);
-	}else{
-		el.fireEvent("onChange");
-	}
-	el.value=str;
+    el.value = str;
+
+    if ('createEvent' in document) {
+        var evt = document.createEvent('HTMLEvents');
+        evt.initEvent('change', false, true);
+        el.dispatchEvent(evt);
+    } else {
+        el.fireEvent("onChange");
+    }
+    el.value = str;
 };
 
-var token = md5(
-	getParameterByName("mailid") + getParameterByName("utm_campaign")
-);
-
 checkCredentials(token);
-
-// checkCredentials(token);
-
-// var listenForHubSpotFormEvents = addEvent('message', event => {
-// 	if(event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmit'){
-
-// 	}
-// })
-
-
-var injectHubSpotFormValues = function(fName, fValue){
-
-
-}

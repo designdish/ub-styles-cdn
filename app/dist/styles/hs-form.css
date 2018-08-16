@@ -4462,47 +4462,47 @@ readers do not read off random characters that represent icons */
 .fab {
   font-family: 'Font Awesome 5 Brands'; }
 
-.opacity-0, #lp-pom-root.opacity-0 {
+.opacity-0 {
   opacity: 0;
   filter: alpha(opacity=0); }
 
-.opacity-1, #lp-pom-root.opacity-1 {
+.opacity-1 {
   opacity: 0.1;
   filter: alpha(opacity=10); }
 
-.opacity-2, #lp-pom-root.opacity-2 {
+.opacity-2 {
   opacity: 0.2;
   filter: alpha(opacity=20); }
 
-.opacity-3, #lp-pom-root.opacity-3 {
+.opacity-3 {
   opacity: 0.3;
   filter: alpha(opacity=30); }
 
-.opacity-4, #lp-pom-root.opacity-4 {
+.opacity-4 {
   opacity: 0.4;
   filter: alpha(opacity=40); }
 
-.opacity-5, #lp-pom-root.opacity-5 {
+.opacity-5 {
   opacity: 0.5;
   filter: alpha(opacity=50); }
 
-.opacity-6, #lp-pom-root.opacity-6 {
+.opacity-6 {
   opacity: 0.6;
   filter: alpha(opacity=60); }
 
-.opacity-7, #lp-pom-root.opacity-7 {
+.opacity-7 {
   opacity: 0.7;
   filter: alpha(opacity=70); }
 
-.opacity-8, #lp-pom-root.opacity-8 {
+.opacity-8 {
   opacity: 0.8;
   filter: alpha(opacity=80); }
 
-.opacity-9, #lp-pom-root.opacity-9 {
+.opacity-9 {
   opacity: 0.9;
   filter: alpha(opacity=90); }
 
-.opacity-10, #lp-pom-root.opacity-10 {
+.opacity-10 {
   opacity: 1;
   filter: alpha(opacity=100); }
 
@@ -4514,74 +4514,6 @@ readers do not read off random characters that represent icons */
   transition: ease-in-out all 0.25s; }
 
 /* Import Components Contents */
-#lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .hs_submit .hs-button {
-  display: inline-block;
-  margin: 0 10px;
-  box-shadow: inset 0 0 0 0;
-  font-size: 16px;
-  line-height: 170%;
-  padding: 0;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  text-decoration: none;
-  outline: 0;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 2.3px;
-  text-align: center;
-  float: left;
-  padding: 10px; }
-
-#lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .hs-input[type="radio"] {
-  position: relative;
-  width: 14rem;
-  padding: 0 1rem; }
-  #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .hs-input[type="radio"]:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 3rem;
-    background: black;
-    border-radius: 30px; }
-  #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .hs-input[type="radio"] .hs-form-radio-display {
-    display: inline-block;
-    width: 2rem;
-    padding: 1rem;
-    text-align: center;
-    cursor: pointer;
-    transition: color 200ms ease-out; }
-    #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .hs-input[type="radio"] .hs-form-radio-display:hover {
-      color: white; }
-  #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .hs-input[type="radio"] input#one:checked ~ .switch__indicator {
-    background: #3bafbf;
-    transform: translate3d(1rem, 0, 0); }
-  #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .hs-input[type="radio"] input#two:checked ~ .switch__indicator {
-    background: #3bafbf;
-    transform: translate3d(1rem, 0, 0); }
-  #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .hs-input[type="radio"] input#three:checked ~ .switch__indicator {
-    background: #3bafbf;
-    transform: translate3d(1rem, 0, 0); }
-  #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .hs-input[type="radio"] input[type="radio"]:not(:checked), #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .hs-input[type="radio"] input[type="radio"]:checked {
-    display: none; }
-
-#lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .hs-form-field .input input[type="text"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field[type="text"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .hs-form-field .input input[type="email"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field[type="email"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .hs-form-field .input input[type="tel"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field[type="tel"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .hs-form-field .input input[type="number"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field[type="number"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .hs-form-field .input input[type="password"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field[type="password"] {
-  height: 30px;
-  background: linear-gradient(white, #f2f2f2);
-  box-shadow: inset 2px 2px 9px 7px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  font-family: Roboto;
-  font-size: 1.1rem;
-  color: #4a4a4a; }
-
-#lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .hs-form-field .input input[type="password"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field[type="password"], #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .hs-form-field .input input:not([type="image"]), #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field:not([type="image"]) {
-  height: 30px;
-  background: linear-gradient(white, #e1f5eb);
-  box-shadow: inset 2px 8px 14px 0px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(0, 0, 0, 0.5); }
-
 .loader {
   position: fixed;
   height: 100%;
@@ -4619,138 +4551,6 @@ readers do not read off random characters that represent icons */
 /* Import Layout Contents */
 /* Import Pages Contents */
 /* Import Themes Contents */
-#lp-pom-root,
-#lp-pom-root a,
-#lp-pom-root h1,
-#lp-pom-root h2,
-#lp-pom-root h3,
-#lp-pom-root h4,
-#lp-pom-root h5,
-#lp-pom-root h6,
-#lp-pom-root p,
-#lp-pom-root span {
-  font-family: Roboto !important;
-  font-style: normal; }
-
-#lp-pom-root p {
-  line-height: 1.8rem;
-  margin: 10px; }
-
-#lp-pom-root a,
-#lp-pom-root a span {
-  color: #038ff4 !important; }
-
-#lp-pom-root h1 {
-  color: #038ff4; }
-
-#lp-pom-root h2 {
-  color: #038ff4; }
-
-#lp-pom-root h3 {
-  color: #038ff4; }
-
-#lp-pom-root h4 {
-  color: #038ff4; }
-
-#lp-pom-root h5 {
-  color: #038ff4; }
-
-#lp-pom-root h6 {
-  color: #038ff4; }
-
-#lp-pom-root #lp-pom-text-88 a,
-#lp-pom-root #lp-pom-text-88 a span {
-  color: white !important;
-  text-decoration: none !important; }
-
-#lp-pom-root #lp-pom-box-354 {
-  display: block;
-  border: none;
-  background: transparent; }
-  #lp-pom-root #lp-pom-box-354 .hidden {
-    display: none; }
-  #lp-pom-root #lp-pom-box-354 span {
-    font-family: Roboto !important; }
-  #lp-pom-root #lp-pom-box-354 h1 {
-    color: #038ff4; }
-  #lp-pom-root #lp-pom-box-354 h2 {
-    color: #038ff4; }
-  #lp-pom-root #lp-pom-box-354 h3 {
-    color: #038ff4; }
-  #lp-pom-root #lp-pom-box-354 h4 {
-    color: #038ff4; }
-  #lp-pom-root #lp-pom-box-354 h5 {
-    color: #038ff4; }
-  #lp-pom-root #lp-pom-box-354 h6 {
-    color: #038ff4; }
-  #lp-pom-root #lp-pom-box-354 #lp-pom-box-354 {
-    display: block;
-    background: linear-gradient(45deg, rgba(0, 175, 248, 0.4) 0%, rgba(0, 175, 248, 0.7) 100%);
-    border: 1px solid #d8d8d8; }
-    #lp-pom-root #lp-pom-box-354 #lp-pom-box-354 #lp-code-348 {
-      height: auto;
-      width: 100%;
-      background: linear-gradient(45deg, rgba(200, 200, 250, 0.2), rgba(230, 240, 250, 0.4), rgba(200, 200, 250, 0.2));
-      padding: 0 15px 30px;
-      top: 0px;
-      left: 0px;
-      box-sizing: border-box;
-      border: 1px solid #ddd; }
-  #lp-pom-root #lp-pom-box-354 .hbspt-form {
-    width: 100%;
-    height: auto;
-    min-height: 390px;
-    padding: 10px;
-    margin-top: 50px; }
-    #lp-pom-root #lp-pom-box-354 .hbspt-form label {
-      font-family: Roboto;
-      font-size: 0.9rem; }
-    #lp-pom-root #lp-pom-box-354 .hbspt-form .submitted-message.hs-form-7eaaeb92-f486-4996-adff-448c9b276b0c {
-      margin-top: 30px;
-      margin-left: -20px; }
-    #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field {
-      width: 100%;
-      padding: 20px; }
-      #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .hs-form-field {
-        width: calc(100% - 20px);
-        float: left;
-        margin: 10px auto; }
-      #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .hs-fieldtype-radio input {
-        display: none; }
-      #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .hs-fieldtype-radio .hs-form-radio label span {
-        margin-left: 25px;
-        margin-top: 10px; }
-      #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .hs-fieldtype-radio .hs-form-radio-display span:before {
-        border: 3px solid #295b8e;
-        content: "";
-        background: white;
-        position: absolute;
-        border-radius: 50%;
-        margin-top: 0px;
-        left: 25px;
-        height: 1rem;
-        width: 1rem;
-        transition: all 0.25s ease-in-out; }
-      #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .hs-fieldtype-radio .hs-form-radio-display input:checked ~ span:before {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        display: inline-block;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: normal;
-        line-height: 1;
-        vertical-align: -.125em;
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        border: 3px solid #a8d824;
-        background: linear-gradient(#b2de37, #c3e563);
-        content: "\f00c";
-        color: white;
-        text-shadow: 1px 2px 10px #b2de37;
-        font-size: 1.3rem;
-        line-height: 15px;
-        transition: all 0.25s ease-in-out; }
-      #lp-pom-root #lp-pom-box-354 .hbspt-form .hs-form-field .hs_submit .hs-button {
-        width: calc(100% - 30px);
-        margin: 0px;
-        background: linear-gradient(0deg, #00aff8, #008bc5); }
+form {
+  max-width: 1004px;
+  max-height: 712px; }

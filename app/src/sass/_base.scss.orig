@@ -1,23 +1,18 @@
 /* Import Vendors Contents */
 
+<<<<<<< HEAD
 @import "vendors/animate/animate";
-
-
 
 /* Import Utils Contents */
 
 @import "utils/breakpoints";
 @import "utils/mixins";
 
-
-
 /* Import Base Contents */
 
 @import "base/colors";
 @import "base/typography";
 @import "base/helpers";
-
-
 
 /* Import Components Contents */
 
@@ -27,6 +22,30 @@
 @import "components/carousel";
 @import "components/loader";
 
+/* Import Layout Contents */
+
+/* Import Pages Contents */
+
+/* Import Themes Contents */
+=======
+
+/* Import Utils Contents */
+
+@import 'utils/breakpoints';
+
+
+/* Import Base Contents */
+
+@import 'base/colors';
+@import 'base/typography';
+
+
+/* Import Components Contents */
+
+@import 'components/buttons';
+@import 'components/form';
+@import 'components/navigation';
+@import 'components/carousel';
 
 
 /* Import Layout Contents */
@@ -36,3 +55,4 @@
 
 
 /* Import Themes Contents */
+>>>>>>> c911b581a34d165054291785d0a0a33a87060bce
