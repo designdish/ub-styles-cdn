@@ -68,13 +68,11 @@ var injectHubSpotForm = function(portalId, formId, target, style) {
 };
 
 var populateKnownFieldValues = function(visitorInfo) {
-    waitFor(document.querySelector('input')).then(function() {
-        for (var i = visitorInfo.length - 1; i >= 0; i--) {
-            var visitor = visitorInfo[i];
-            var input = document.querySelector(visitor.selector);
-            injectUserInfo(input, visitor.text);
-        }
-    });
+    for (var i = visitorInfo.length - 1; i >= 0; i--) {
+        var visitor = visitorInfo[i];
+        var input = document.querySelector(visitor.selector);
+        injectUserInfo(input, visitor.text);
+    }
 };
 
 var checkCredentials = function(token, form) {
@@ -102,17 +100,19 @@ var checkCredentials = function(token, form) {
 };
 
 var injectUserInfo = function(el, str) {
+    waitFor(el).then(function() {
 
-    el.value = str;
+        el.value = str;
 
-    if ('createEvent' in document) {
-        var evt = document.createEvent('HTMLEvents');
-        evt.initEvent('change', false, true);
-        el.dispatchEvent(evt);
-    } else {
-        el.fireEvent("onChange");
-    }
-    el.value = str;
+        if ('createEvent' in document) {
+            var evt = document.createEvent('HTMLEvents');
+            evt.initEvent('change', false, true);
+            el.dispatchEvent(evt);
+        } else {
+            el.fireEvent("onChange");
+        }
+        el.value = str;
+    });
 };
 
 checkCredentials(token);
