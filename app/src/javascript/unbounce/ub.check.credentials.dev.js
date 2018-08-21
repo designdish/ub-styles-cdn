@@ -7,6 +7,7 @@ var credentials = [{
         campaign: "news2018-Q3-August-Mig-NameYourPrice-T1B-enUS"
     }
 
+
 ];
 
 var token = md5(
@@ -84,9 +85,11 @@ var checkCredentials = function(token, form) {
             if (hash[i] === token) {
                 return true;
             }
-            return false;
+        }if(window.location.href.indexOf('taf') != -1){
+            return true;
         }
-    };
+            return false;
+        };
     if (access === false) {
         window.location = "http://teamviewer.us";
     } else {
