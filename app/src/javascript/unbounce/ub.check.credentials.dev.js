@@ -90,14 +90,14 @@ var checkCredentials = function(token, form) {
     if (access === false) {
         window.location = "http://teamviewer.us";
     } else {
-       displayPage()
+       displayPage();
+       populateKnownFieldValues(visitorInfo);
     }
 };
 
 var displayPage = function(){
         var lpContainer = document.getElementById("lp-pom-root");
         injectHubSpotForm(hsForm);
-        populateKnownFieldValues(visitorInfo);
         var cl = lpContainer.classList;
         var classes = ["transition-all", "opacity-10"];
         lpContainer.classList.add.apply(cl, classes);
