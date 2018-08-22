@@ -11,8 +11,10 @@ var credentials = [{
 ];
 
 var token = function() {
-    if (getParameterByName("mailid") != undefined && getParameterByName("utm_campaign").toLowerCase() != undefined) {
-        return md5(getParameterByName("mailid").toLowerCase() + getParameterByName("utm_campaign").toLowerCase());
+    if ((getParameterByName("mailid") != null) && (getParameterByName("utm_campaign") != null)) {
+        var thisToken = md5(getParameterByName("mailid").toLowerCase() + getParameterByName("utm_campaign").toLowerCase());
+        console.log(thisToken);
+        return thisToken;
     }
     return false;
 };
@@ -91,7 +93,7 @@ var checkCredentials = function(token, form) {
                 return true;
             }
         }
-        if (window.location.href.indexOf('taf') !== -1 && token === false) {
+        if ((window.location.href.indexOf('taf') !== -1) && (token === false)) {
             return true;
         }
         return false;
@@ -124,4 +126,5 @@ var injectUserInfo = function(el, str) {
     });
 };
 
-checkCredentials(token);
+var accessToken = token();
+checkCredentials(accessToken);
