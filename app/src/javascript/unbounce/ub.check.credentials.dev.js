@@ -10,9 +10,12 @@ var credentials = [{
 
 ];
 
-var token = md5(
-    getParameterByName("mailid").toLowerCase() + getParameterByName("utm_campaign").toLowerCase()
-);
+var token = function() {
+    if (getParameterByName("mailid") != undefined && getParameterByName("utm_campaign").toLowerCase() != undefined) {
+        return md5(getParameterByName("mailid").toLowerCase() + getParameterByName("utm_campaign").toLowerCase());
+    }
+    return false;
+};
 
 var user = {
     firstName: getParameterByName("first"),
@@ -22,23 +25,31 @@ var user = {
 
 var visitorInfo = [{
         selector: '[name="firstname"]',
-        text: getParameterByName('first')
+        val: getParameterByName('first')
     },
     {
         selector: '[name="lastname"]',
-        text: getParameterByName('last')
+        val: getParameterByName('last')
     },
     {
         selector: '[name="email"]',
-        text: getParameterByName('email')
+        val: getParameterByName('email')
     }
 ];
+
+var populateKnownFieldValues = function(visitorInfo) {
+    for (var i = 0; i > visitorInfo.length; i++) {
+        var visitor = visitorInfo[i];
+        injectUserInfo(visitor.selector, visitor.text);
+    }
+};
 
 var hsForm = {
     portalId: "3361423",
     formId: "7eaaeb92-f486-4996-adff-448c9b276b0c",
     target: "#lp-code-348",
-    style: "hbspt-form stacked"
+    style: "hbspt-form stacked",
+    fn: setTimeout(function() { populateKnownFieldValues(visitorInfo); }, 250)
 };
 
 
@@ -54,26 +65,20 @@ var genCredentialsHash = function(credentials) {
 };
 
 
-var injectHubSpotForm = function(portalId, formId, target, style) {
+var injectHubSpotForm = function(hsForm) {
     waitFor(window.hbspt).then(function() {
         var hForm = hbspt.forms.create({
             portalId: hsForm.portalId,
             formId: hsForm.formId,
             target: hsForm.target,
-            cssClass: hsForm.style
+            cssClass: hsForm.style,
+            onFormReady: hsForm.fn
         });
-
         return hForm;
-
     });
 };
 
-var populateKnownFieldValues = function(visitorInfo) {
-    for (var i = visitorInfo.length - 1; i >= 0; i--) {
-        var visitor = visitorInfo[i];
-        injectUserInfo(visitor.selector, visitor.text);
-    }
-};
+
 
 var checkCredentials = function(token, form) {
 
@@ -85,16 +90,16 @@ var checkCredentials = function(token, form) {
             if (hash[i] === token) {
                 return true;
             }
-        }if(window.location.href.indexOf('taf') != -1){
+        }
+        if (window.location.href.indexOf('taf') !== -1 && token === false) {
             return true;
         }
-            return false;
-        };
+        return false;
+    };
     if (access === false) {
         window.location = "http://teamviewer.us";
     } else {
         injectHubSpotForm(hsForm);
-        populateKnownFieldValues(visitorInfo);
         var cl = lpContainer.classList;
         var classes = ["transition-all", "opacity-10"];
         lpContainer.classList.add.apply(cl, classes);
