@@ -9,9 +9,9 @@ var credentials = [{
 ];
 
 
-var token = (getParameterByName("mailid")!= null && (getParameterByName("utm_campaign") != null) ?
-            md5(getParameterByName("mailid").toLowerCase() + getParameterByName("utm_campaign").toLowerCase()):
-            false
+var token = (getParameterByName("mailid") != null && (getParameterByName("utm_campaign") != null) ?
+    md5(getParameterByName("mailid").toLowerCase() + getParameterByName("utm_campaign").toLowerCase()) :
+    false
 );
 
 var user = {
@@ -84,24 +84,25 @@ var checkCredentials = function(token, form) {
             if (hash[i] === token) {
                 return true;
             }
+            return false;
         }
-        return false;
+        if (access === false) {
+            window.location = "http://teamviewer.us";
+        } else {
+            displayPage();
+            populateKnownFieldValues(visitorInfo);
+        }
     };
-    if (access === false) {
-        window.location = "http://teamviewer.us";
-    } else {
-       displayPage();
-       populateKnownFieldValues(visitorInfo);
-    }
+
 };
 
-var displayPage = function(){
-        var lpContainer = document.getElementById("lp-pom-root");
-        injectHubSpotForm(hsForm);
-        var cl = lpContainer.classList;
-        var classes = ["transition-all", "opacity-10"];
-        lpContainer.classList.add.apply(cl, classes);
-}
+var displayPage = function() {
+    var lpContainer = document.getElementById("lp-pom-root");
+    injectHubSpotForm(hsForm);
+    var cl = lpContainer.classList;
+    var classes = ["transition-all", "opacity-10"];
+    lpContainer.classList.add.apply(cl, classes);
+};
 
 var injectUserInfo = function(el, str) {
 
@@ -122,9 +123,8 @@ var injectUserInfo = function(el, str) {
 };
 
 
-if(window.location.href.indexOf('taf') != -1){
-    displayPage(); 
-    }
-else {
+if (window.location.href.indexOf('taf') != -1) {
+    displayPage();
+} else {
     checkCredentials(token);
 }
