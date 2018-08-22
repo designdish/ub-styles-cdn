@@ -6,12 +6,12 @@ var credentials = [{
         mailid: 18073229,
         campaign: "news2018-Q3-August-Mig-NameYourPrice-T1B-enUS"
     }
-
-
 ];
 
-var token = md5(
-    getParameterByName("mailid").toLowerCase() + getParameterByName("utm_campaign").toLowerCase()
+
+var token = (getParameterByName("mailid")!= null && (getParameterByName("utm_campaign") != null) ?
+            md5(getParameterByName("mailid").toLowerCase() + getParameterByName("utm_campaign").toLowerCase()):
+            false
 );
 
 var user = {
@@ -77,7 +77,6 @@ var populateKnownFieldValues = function(visitorInfo) {
 
 var checkCredentials = function(token, form) {
 
-    var lpContainer = document.getElementById("lp-pom-root");
     var hash = genCredentialsHash(credentials);
 
     var access = function() {
@@ -96,7 +95,8 @@ var checkCredentials = function(token, form) {
 };
 
 var displayPage = function(){
- injectHubSpotForm(hsForm);
+        var lpContainer = document.getElementById("lp-pom-root");
+        injectHubSpotForm(hsForm);
         populateKnownFieldValues(visitorInfo);
         var cl = lpContainer.classList;
         var classes = ["transition-all", "opacity-10"];
@@ -120,8 +120,11 @@ var injectUserInfo = function(el, str) {
         el.value = str;
     });
 };
+
+
 if(window.location.href.indexOf('taf') != -1){
-displayPage(); }
-else{
+    displayPage(); 
+    }
+else {
     checkCredentials(token);
 }
