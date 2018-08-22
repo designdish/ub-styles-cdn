@@ -126,5 +126,7 @@ var injectUserInfo = function(el, str) {
 if (window.location.href.indexOf('taf') != -1) {
     displayPage();
 } else {
-    checkCredentials(token);
+    //checkCredentials(token);
+            displayPage();
+
 }
